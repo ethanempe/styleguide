@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" type="text/css" href="styles/reset.css">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		<link rel="stylesheet" type="text/css" href="styles/animations.css">
+
 		<script src="scripts/jquery-1.11.3.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="scripts/menu.js"></script>
 	</head>
 	<body>
-		<div id="fly-out-menu">
-			<div class="main-category">
-				<p>Parent Menu Item</p>
-			</div>
-			<div class="sub-category">
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-			</div>
-
-			<div class="main-category">
-				<p>Parent Menu Item</p>
-			</div>
-			<div class="sub-category">
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-				<p>Child Menu Item</p>
-			</div>
-		</div>
-
-
-
 		<div class="header">
-			<div id = "nav-button">
+			<div class="left" id="nav-button">
 				<div class="hamburger-close">
 					<span></span>
 					<span></span>
 					<span></span>
-					<p class="menu-text">MENU</p>
 				</div>
+				<p class="menu-text text-light">MENU</p>
 			</div>
 
-			<div id="optima-header">
-				<p>Optima Style Guide - DEV</p>
+			<div class="title">
+				<p class="text-light">Optima Style Guide - DEV</p>
+			</div>
+
+			<div class="right">
 				<div>
-					<p>Refresh</p>
+					<p class="text-light">Refresh</p>
 				</div>
 			</div>
+		</div>
 
+		<div class="menu">
+			<div class="list-title">
+				<p class="text-light">Parent Menu Item</p>
+			</div>
+			<div class="list">
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+			</div>
+
+			<div class="list-title">
+				<p>Parent Menu Item</p>
+			</div>
+			<div class="list">
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+				<p>Child Menu Item</p>
+			</div>
 		</div>
 	</body>
 <html>
