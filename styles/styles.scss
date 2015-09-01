@@ -1,3 +1,12 @@
+$white: #ffffff;
+$iron: #979797;
+
+$mud-light: #727272;
+$mud: #636363;
+$mud-dark: #595959;
+
+@import url('fonts/nucleo-glyph.min.css');
+
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -8,11 +17,20 @@
     src: url('fonts/ProximaNova-Light.otf'); /*URL to font*/
 }
 
+@font-face {
+    font-family: 'ProximaNova-Regular'; /*a name to be used later*/
+    src: url('fonts/ProximaNova-Regular.otf'); /*URL to font*/
+}
 
-/* TO DO: Add correct font-family */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+a, a:hover, a:visited, a:active, a:focus {
+    color: $white;
+    text-decoration: none;
+}
 
 body {
-	color: #FFF;
+	color: $white;
 	font-family: sans-serif;
 }
 
@@ -20,85 +38,21 @@ body {
     display: inline-block;
 }
 
-#nav-button {
-	background-color: #727272;
-	border-radius: 5px;
-	cursor: pointer;
-    padding: 17px;
-
-    .hamburger-close {
-    	width: 23px;
-        height: 10px;
-    	position: relative;
-    	display: inline-block;
-
-        span {
-        	display: block;
-        	position: absolute;
-        	height: 1px;
-        	width: 100%;
-        	background: #FFF;
-        	border-radius: 6px;
-        	opacity: 1;
-        	left: 0;
-
-        	transition: .25s ease-in-out;
-
-            -webkit-transform-origin: left center;
-            transform-origin: left center;
-
-            &:nth-child(1) { top: 0px; }
-            &:nth-child(2) { top: 6px; }
-            &:nth-child(3) { top: 12px; }
-        }
-
-        &.open span {
-            &:nth-child(1) {
-            	-webkit-transform: rotate(45deg);
-            	transform: rotate(45deg);
-            	top: -3px;
-            	left: 8px;
-            }
-
-            &:nth-child(2) {
-            	width: 0%;
-            	opacity: 0;
-            }
-
-            &:nth-child(3) {
-            	-webkit-transform: rotate(-45deg);
-            	transform: rotate(-45deg);
-            	top: 14px;
-            	left: 8px;
-            }
-        }
-    }
-
-    .menu-text {
-    	display: inline-block;
-        position: relative;
-        top: 2px;
-        padding-left: 10px;
-        font-size: 15px;
-    }
+.container {
+    position: relative;
 }
 
-
-#fly-out-menu {
-	display: none;
-}
-
-#fly-out-menu.open {
-	background-color: #595959;
-	position: absolute;
-	width: 100%;
-	display: block;
-	margin-top: 70px;
+.nc-icon-glyph::before {
+    font-family: 'Nucleo Glyph';
 }
 
 .header, .menu {
     .text-light {
         font-family: 'ProximaNova-Light';
+    }
+
+    .text {
+        font-family: 'ProximaNova-Regular';
     }
 }
 
@@ -108,8 +62,10 @@ body {
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
-    background-color: #636363;
+    background-color: $mud;
     padding: 10px;
+    position: relative;
+    z-index: 2000;
 
     p {
         margin-bottom: 0;
@@ -129,26 +85,123 @@ body {
     .right {
         text-align: right;
     }
+
+    .menu-btn {
+    	background-color: $mud-light;
+    	border-radius: 5px;
+    	cursor: pointer;
+        padding: 17px;
+
+        .hamburger-close {
+        	width: 23px;
+            height: 10px;
+        	position: relative;
+        	display: inline-block;
+
+            span {
+            	display: block;
+            	position: absolute;
+            	height: 1px;
+            	width: 100%;
+            	background: $white;
+            	border-radius: 6px;
+            	opacity: 1;
+            	left: 0;
+
+            	transition: .25s ease-in-out;
+
+                -webkit-transform-origin: left center;
+                transform-origin: left center;
+
+                &:nth-child(1) { top: 0px; }
+                &:nth-child(2) { top: 6px; }
+                &:nth-child(3) { top: 12px; }
+            }
+
+            &.open span {
+                &:nth-child(1) {
+                	-webkit-transform: rotate(45deg);
+                	transform: rotate(45deg);
+                	top: -3px;
+                	left: 8px;
+                }
+
+                &:nth-child(2) {
+                	width: 0%;
+                	opacity: 0;
+                }
+
+                &:nth-child(3) {
+                	-webkit-transform: rotate(-45deg);
+                	transform: rotate(-45deg);
+                	top: 14px;
+                	left: 8px;
+                }
+            }
+        }
+
+        .menu-text {
+        	display: inline-block;
+            position: relative;
+            top: 2px;
+            padding-left: 10px;
+            font-size: 15px;
+        }
+    }
 }
 
-.main-category {
-	margin: 0 40px;
-	height: 30px;
-	padding: 10px 0;
-	border-bottom: 1px solid #FFF;
-}
+.menu {
+    background-color: $mud-dark;
+	position: absolute;
+	width: 100%;
+	display: block;
+    z-index: 1000;
+    top: 70px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    padding: 0 40px;
+    opacity: 0;
 
-.main-category p {
-	font-size: 26px;
-	padding-top: 5px;
-}
+    &.in {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        opacity: 1;
+    }
 
-.sub-category {
-	margin: 0 40px;
-}
+    .list-title {
+        font-size: 25px;
+        padding: 16px 10px;
+        border-top: solid 1px $iron;
+        &:first-of-type { border: none; }
+        position: relative;
 
-.sub-category p {
-	padding-top: 10px;
-}
+        a {
+            padding: 16px 10px;
+            display: block;
+        }
 
-/* accordions */
+        .nc-icon-glyph::before {
+            position: absolute;
+            right: 16px;
+            transition: transform .2s ease-in-out;
+        }
+        &.open .nc-icon-glyph::before {
+            transform: rotate(-180deg);
+        }
+
+        .list {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 18px;
+
+            a {
+                margin: 0;
+                padding: 3px 10px;
+            }
+        }
+
+        &.open .list {
+            
+        }
+    }
+}
