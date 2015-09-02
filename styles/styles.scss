@@ -222,6 +222,8 @@ body {
     }
 
     .welcome-container h1{
+        font-size: 40px;
+        line-height: 40px;
         font-family: 'ProximaNova-Light';
         color: black;
     }
@@ -252,7 +254,8 @@ body {
     li.level-1 h1{
       font-size: 20px;
       color: #000000;
-      line-height: 30px;
+      line-height: 40px;
+      margin: 0;
     }
 
     li.level-1 a{
@@ -269,6 +272,7 @@ body {
 
     ul.level-2 {
       list-style-image: url('../images/bullet.svg');
+        list-style-position: inside;
     }
 
     // Responsive Sates

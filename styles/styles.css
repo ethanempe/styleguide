@@ -156,6 +156,8 @@ body {
     padding: 40px;
     float: left; }
   .homepage-container .welcome-container h1 {
+    font-size: 40px;
+    line-height: 40px;
     font-family: 'ProximaNova-Light';
     color: black; }
   .homepage-container .welcome-container p {
@@ -178,7 +180,8 @@ body {
   .homepage-container li.level-1 h1 {
     font-size: 20px;
     color: #000000;
-    line-height: 30px; }
+    line-height: 40px;
+    margin: 0; }
   .homepage-container li.level-1 a {
     color: #1657C6;
     font-size: 14px;
@@ -188,7 +191,8 @@ body {
   .homepage-container li.level-1 a:hover {
     text-decoration: underline; }
   .homepage-container ul.level-2 {
-    list-style-image: url("../images/bullet.svg"); }
+    list-style-image: url("../images/bullet.svg");
+    list-style-position: inside; }
   @media screen and (min-width: 500px) and (max-width: 900px) {
     .homepage-container li.level-1 {
       width: 50%; } }
