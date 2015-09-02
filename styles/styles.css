@@ -151,7 +151,8 @@ body {
   background-color: #EDEDED;
   color: #333333;
   position: absolute;
-  padding: 0 10px; }
+  padding: 0 10px;
+  width: 100%; }
   .homepage-container .welcome-container {
     padding: 40px;
     float: left; }
@@ -206,7 +207,7 @@ body {
       margin: 0 auto; } }
   @media screen and (min-width: 1200px) {
     .homepage-container li.level-1 {
-      width: 30%; }
+      width: 20%; }
     .homepage-container .welcome-container {
       padding: 40px 0;
       float: none;
