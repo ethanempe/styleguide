@@ -283,9 +283,27 @@ body {
         }
     }
 
-    @media screen and (min-width:900px) {
+    @media screen and (min-width:900px) and (max-width:1200px){
         li.level-1{
             width: 30%;
+        }
+        .welcome-container {
+            padding: 40px 0;
+            float: none;
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        li.level-1{
+            width: 30%;
+        }
+        .welcome-container {
+            padding: 40px 0;
+            float: none;
+            width: 700px;
+            margin: 0 auto;
         }
     }
 }

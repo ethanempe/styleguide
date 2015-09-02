@@ -196,8 +196,21 @@ body {
   @media screen and (min-width: 500px) and (max-width: 900px) {
     .homepage-container li.level-1 {
       width: 50%; } }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
     .homepage-container li.level-1 {
-      width: 30%; } }
+      width: 30%; }
+    .homepage-container .welcome-container {
+      padding: 40px 0;
+      float: none;
+      width: 700px;
+      margin: 0 auto; } }
+  @media screen and (min-width: 1200px) {
+    .homepage-container li.level-1 {
+      width: 30%; }
+    .homepage-container .welcome-container {
+      padding: 40px 0;
+      float: none;
+      width: 700px;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */
