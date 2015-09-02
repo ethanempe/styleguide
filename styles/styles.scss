@@ -31,7 +31,7 @@ a, a:hover, a:visited, a:active, a:focus {
 
 body {
 	color: $white;
-	font-family: sans-serif;
+    font-family: 'ProximaNova-Regular', sans-serif;
 }
 
 .left {
@@ -202,6 +202,86 @@ body {
 
         &.open .list {
             
+        }
+    }
+}
+
+
+/*  Caleb's Styles are starting here :)  */
+
+
+.homepage-container{
+  background-color: #EDEDED; 
+  color: #333333;
+  position:absolute;
+  padding:0 10px;
+
+    .welcome-container{
+      padding:40px;
+      float: left;
+    }
+
+    .welcome-container h1{
+        font-family: 'ProximaNova-Light';
+        color: black;
+    }
+
+    .welcome-container p{
+      font-size: 16px;
+      color: #686868;
+      line-height: 28px;
+    }
+
+    .menu-container{
+      float: left;
+      width: 100%;
+      background-color:white;
+      border-radius: 2px;
+      padding:30px 20px;
+      margin-bottom: 40px;
+      box-shadow: 0px 2px 0px 0px #D8D8D8;
+    }
+
+    li.level-1{
+      float:left;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-right: 20px;
+    }
+
+    li.level-1 h1{
+      font-size: 20px;
+      color: #000000;
+      line-height: 30px;
+    }
+
+    li.level-1 a{
+        color:#1657C6;
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 8px;
+        display: block;
+    }
+
+    li.level-1 a:hover{
+        text-decoration: underline;
+    }
+
+    ul.level-2 {
+      list-style-image: url('../images/bullet.svg');
+    }
+
+    // Responsive Sates
+
+    @media screen and (min-width:500px) and (max-width:900px) {
+        li.level-1{
+            width: 50%;
+        }
+    }
+
+    @media screen and (min-width:900px) {
+        li.level-1{
+            width: 30%;
         }
     }
 }
