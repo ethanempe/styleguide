@@ -145,3 +145,62 @@ body {
       .menu .list-title .list a {
         margin: 0;
         padding: 3px 10px; }
+
+
+
+/*  Caleb's Styles are starting here :)  */
+
+body{
+  margin: 0;
+}
+
+.homepage-container{
+  background-color: #EDEDED;
+  color: #333333;
+  position:absolute;
+}
+
+.welcome-container{
+  padding:40px;
+  float: left;
+}
+
+.welcome-container p{
+  font-size: 16px;
+  color: #686868;
+  line-height: 28px;
+}
+
+.menu-container{
+  float: left;
+  width: 100%;
+  margin:10px;
+  background-color:white;
+  border-radius: 2px;
+  padding:30px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 0px 0px #D8D8D8;
+}
+
+li.level-1{
+  float:left;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+li.level-1 h1{
+  font-size: 20px;
+  color: #000000;
+  line-height: 30px;
+}
+
+li.level-1 a{
+  color:#1657C6;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+ul.level-2 {
+  list-style-image: url('../images/bullet.svg');
+}
+
