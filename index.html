@@ -18,16 +18,22 @@
 	</head>
 	<body ng-app="StyleGuide">
 		<div class="container" ng-controller="Header">
+			<div class="left menu-btn" ng-click="toggleMenu()">
+				<div class="hamburger-close" ng-class="{ 'open': !menuCollapsed }">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<p class="menu-text text-light">MENU</p>
+			</div>
+
 			<div class="row header">
-				<div class="left menu-btn" ng-click="toggleMenu()">
-					<div class="hamburger-close" ng-class="{ 'open': !menuCollapsed }">
-						<span></span>
-						<span></span>
+				<div class="left menu-btn">
+					<div class="hamburger-close">
 						<span></span>
 					</div>
 					<p class="menu-text text-light">MENU</p>
 				</div>
-
 				<div class="title">
 					<p class="text-light">Kumquat Style Guide</p>
 				</div>
@@ -39,14 +45,20 @@
 				</div>
 			</div>
 
-			<accordion class="row menu collapse {{ menu[0].title }}" collapse="menuCollapsed" ng-controller="Menu" close-others="true">
-				<accordion-group class="list-title" heading="{{ menu[0].title }}" ng-repeat="list in menu">
-					<a href="" class="text-light nc-icon-glyph arrows-1_minimal-up">{{ list.title }}</a>
-					<div class="list" ng-repeat="item in list.list">
-						<a href="" class="text">{{ item }}</a>
+			<div class="row menu" id="menu" collapse="menuCollapsed" ng-controller="Menu" data-multiselectable="false">
+				<div class="menu-repeat panel" ng-repeat="obj in menu">
+					<div class="list-title" role="tab" id="menuItem{{ $index }}">
+						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed">{{ obj.title }}</a>
 					</div>
-				</accordion-group>
-			</accordion>
+					<div id="collapse{{ $index }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ $index }}">
+						<div class="list">
+							<div class="" ng-repeat="item in obj.list">
+								<a href="" class="text">{{ item }}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 <html>

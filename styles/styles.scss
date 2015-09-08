@@ -56,6 +56,78 @@ body {
     }
 }
 
+
+.menu-btn {
+	background-color: $mud-light;
+	border-radius: 5px;
+	cursor: pointer;
+    padding: 17px;
+    position: absolute;
+    z-index: 1001;
+    top: 7px;
+
+    p {
+        margin: 0;
+    }
+
+    .hamburger-close {
+    	width: 23px;
+        height: 10px;
+        top: -1px;
+    	position: relative;
+    	display: inline-block;
+
+        span {
+        	display: block;
+        	position: absolute;
+        	height: 1px;
+        	width: 100%;
+        	background: $white;
+        	border-radius: 6px;
+        	opacity: 1;
+        	left: 0;
+
+        	transition: .25s ease-in-out;
+
+            -webkit-transform-origin: left center;
+            transform-origin: left center;
+
+            &:nth-child(1) { top: 0px; }
+            &:nth-child(2) { top: 6px; }
+            &:nth-child(3) { top: 12px; }
+        }
+
+        &.open span {
+            &:nth-child(1) {
+            	-webkit-transform: rotate(45deg);
+            	transform: rotate(45deg);
+            	top: -3px;
+            	left: 8px;
+            }
+
+            &:nth-child(2) {
+            	width: 0%;
+            	opacity: 0;
+            }
+
+            &:nth-child(3) {
+            	-webkit-transform: rotate(-45deg);
+            	transform: rotate(-45deg);
+            	top: 14px;
+            	left: 8px;
+            }
+        }
+    }
+
+    .menu-text {
+    	display: inline-block;
+        position: relative;
+        top: 1px;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+}
+
 .header {
     height: 70px;
     display: flex;
@@ -63,12 +135,16 @@ body {
     align-items: center;
     -webkit-align-items: center;
     background-color: $mud;
-    padding: 10px;
+    padding: 10px 15px;
     position: relative;
-    z-index: 2000;
 
     p {
         margin-bottom: 0;
+    }
+
+    .menu-btn {
+        z-index: 0;
+        position: static;
     }
 
     .title {
@@ -85,69 +161,6 @@ body {
     .right {
         text-align: right;
     }
-
-    .menu-btn {
-    	background-color: $mud-light;
-    	border-radius: 5px;
-    	cursor: pointer;
-        padding: 17px;
-
-        .hamburger-close {
-        	width: 23px;
-            height: 10px;
-        	position: relative;
-        	display: inline-block;
-
-            span {
-            	display: block;
-            	position: absolute;
-            	height: 1px;
-            	width: 100%;
-            	background: $white;
-            	border-radius: 6px;
-            	opacity: 1;
-            	left: 0;
-
-            	transition: .25s ease-in-out;
-
-                -webkit-transform-origin: left center;
-                transform-origin: left center;
-
-                &:nth-child(1) { top: 0px; }
-                &:nth-child(2) { top: 6px; }
-                &:nth-child(3) { top: 12px; }
-            }
-
-            &.open span {
-                &:nth-child(1) {
-                	-webkit-transform: rotate(45deg);
-                	transform: rotate(45deg);
-                	top: -3px;
-                	left: 8px;
-                }
-
-                &:nth-child(2) {
-                	width: 0%;
-                	opacity: 0;
-                }
-
-                &:nth-child(3) {
-                	-webkit-transform: rotate(-45deg);
-                	transform: rotate(-45deg);
-                	top: 14px;
-                	left: 8px;
-                }
-            }
-        }
-
-        .menu-text {
-        	display: inline-block;
-            position: relative;
-            top: 2px;
-            padding-left: 10px;
-            font-size: 15px;
-        }
-    }
 }
 
 .menu {
@@ -156,28 +169,47 @@ body {
 	width: 100%;
 	display: block;
     z-index: 1000;
-    top: 70px;
+    top: 0;
     overflow: hidden;
     transition: all .2s ease-in-out;
     padding: 0 40px;
     opacity: 0;
 
+    &.collapse {
+        z-index: 0;
+    }
+
     &.in {
         padding-top: 20px;
         padding-bottom: 20px;
-        opacity: 1;
+        opacity: .97;
     }
 
+    /* Override Bootstrap's panel styles */
+    .panel {
+        margin: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .menu-repeat:first-of-type {
+        margin-top: 70px;
+        .list-title { border: none; }
+    }
     .list-title {
         font-size: 25px;
-        padding: 16px 10px;
         border-top: solid 1px $iron;
-        &:first-of-type { border: none; }
         position: relative;
 
-        a {
-            padding: 16px 10px;
+        > a {
+            padding: 20px 10px;
             display: block;
+
+            &:not(.collapsed).nc-icon-glyph::before {
+                transform: rotate(-180deg);
+            }
         }
 
         .nc-icon-glyph::before {
@@ -185,23 +217,17 @@ body {
             right: 16px;
             transition: transform .2s ease-in-out;
         }
-        &.open .nc-icon-glyph::before {
-            transform: rotate(-180deg);
-        }
+    }
 
-        .list {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            font-size: 18px;
+    .list {
+        padding-top: 5px;
+        padding-bottom: 25px;
+        font-size: 18px;
 
-            a {
-                margin: 0;
-                padding: 3px 10px;
-            }
-        }
-
-        &.open .list {
-            
+        a {
+            margin: 0;
+            padding: 3px 10px;
+            display: block;
         }
     }
 }
@@ -211,7 +237,7 @@ body {
 
 
 .homepage-container{
-  background-color: #EDEDED; 
+  background-color: #EDEDED;
   color: #333333;
   position:absolute;
   padding:0 10px;
