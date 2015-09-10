@@ -1,5 +1,8 @@
 $white: #ffffff;
 $iron: #979797;
+$coal: #282828;
+$coal-dark: #191919;
+$black: #000;
 
 $mud-light: #727272;
 $mud: #636363;
@@ -58,7 +61,7 @@ body {
 
 
 .menu-btn {
-	background-color: $mud-light;
+	background-color: $coal-dark;
 	border-radius: 5px;
 	cursor: pointer;
     padding: 17px;
@@ -136,7 +139,7 @@ body {
     display: -webkit-flex;
     align-items: center;
     -webkit-align-items: center;
-    background-color: $mud;
+    background-color: $black;
     padding: 10px 10px;
     position: relative;
 
@@ -166,7 +169,7 @@ body {
 }
 
 .menu {
-    background-color: $mud-dark;
+    background-color: $black;
 	position: absolute;
 	width: 100%;
 	display: block;
@@ -184,7 +187,7 @@ body {
     &.in {
         padding-top: 20px;
         padding-bottom: 20px;
-        opacity: .97;
+        opacity: .9;
         height: 100% !important;
         overflow-y: visible;
     }
@@ -237,7 +240,7 @@ body {
 }
 
 .category-list {
-    background-color: $mud-dark;
+    background-color: $coal-dark;
     padding: 10px 10px;
 
     .item-link {
@@ -313,7 +316,7 @@ body {
     .menu-container{
       float: left;
       width: 100%;
-      background-color:white;
+      background-color: $white;
       border-radius: 2px;
       padding:30px 20px;
       margin-bottom: 40px;

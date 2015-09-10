@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* Colors */
 /* loading animation */
-@import url("project/font.css");
-@import url("project/fonts/nucleo-glyph.min.css");
-@import url("project/fonts/nucleo-outline.min.css");
+@import url("font.css");
+@import url("fonts/nucleo-glyph.min.css");
+@import url("fonts/nucleo-outline.min.css");
 @-webkit-keyframes load7 {
   0%,
   80%,

@@ -6,7 +6,7 @@ angular.module('StyleGuide', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs']
 		})
 	})
 
-	.controller('Menu', ['$scope', '$http', function($scope, $http) {
+	.controller('Menu', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
 		$scope.state = {
 			'category': 0,
 			'menuCollapsed': true,
@@ -96,9 +96,17 @@ angular.module('StyleGuide', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs']
 			}
 		];
 
-		var response = $http.get('project/styles.css');
+		var response = $http.get('project/jquery.mobile-1.4.5.min.css');
 		response.success(function(data, status, headers, config) {
 			$scope.styles = data;
+		});
+		response.error(function(data, status, headers, config) {
+			console.log("Sometin' went wrong. :(");
+		});
+
+		response = $http.get('project/styles.css');
+		response.success(function(data, status, headers, config) {
+			$scope.styles += data;
 		});
 		response.error(function(data, status, headers, config) {
 			console.log("Sometin' went wrong. :(");
@@ -107,8 +115,18 @@ angular.module('StyleGuide', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs']
 		response = $http.get('project/checkboxes.html');
 		response.success(function(data, status, headers, config) {
 			$scope.previewHtml = data;
-			$scope.previewHtml = enhanceWithin($scope.previewHtml);
-			console.log($scope.previewHtml);
+			//$scope.compiledHtml = $sce.trustAsHtml($(data).enhanceWithin()[0].outerHTML);
+
+			var html = data;//$(data).enhanceWithin()[0].outerHTML;
+			var shadow = document.getElementById('shadow');
+			var root = shadow.createShadowRoot();
+			root.innerHTML = '<style>' + $scope.styles + '</style>' + html +
+			'<script src="project/js/jquery.mobile-1.4.5.min.js"></script>' +
+			'<script src="project/js/customselectmenu.js"></script>' +
+			'<script src="project/js/custompopup.js"></script>' +
+			'<script src="project/js/filterselect.js"></script>';
+
+			console.log(html);
 		});
 		response.error(function(data, status, headers, config) {
 			console.log("Sometin' went wrong. :(");
