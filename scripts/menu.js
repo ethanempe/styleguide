@@ -1,14 +1,18 @@
-angular.module('StyleGuide', ['ngAnimate', 'ui.bootstrap'])
-	.controller('Header', ['$scope', function($scope) {
-		$scope.menuCollapsed = true;
+angular.module('StyleGuide', ['ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs'])
+	.config(function (hljsServiceProvider) {
+		hljsServiceProvider.setOptions({
+			// replace tab with 4 spaces
+			tabReplace: '    '
+		})
+	})
 
-		$scope.toggleMenu = function() {
-			$scope.menuCollapsed = !$scope.menuCollapsed;
-		}
-	}])
+	.controller('Menu', ['$scope', '$http', function($scope, $http) {
+		$scope.state = {
+			'category': 0,
+			'menuCollapsed': true,
+			'linkSelected': 0
+		};
 
-	.controller('Menu', ['$scope', function($scope) {
-		$scope.name = 'Ethan';
 		$scope.menu = [
 			{
 				title: 'Lorem ipsum dolor',
@@ -92,5 +96,26 @@ angular.module('StyleGuide', ['ngAnimate', 'ui.bootstrap'])
 			}
 		];
 
+		var response = $http.get('project/styles.css');
+		response.success(function(data, status, headers, config) {
+			$scope.styles = data;
+		});
+		response.error(function(data, status, headers, config) {
+			console.log("Sometin' went wrong. :(");
+		});
+
+		response = $http.get('project/checkboxes.html');
+		response.success(function(data, status, headers, config) {
+			$scope.previewHtml = data;
+			$scope.previewHtml = enhanceWithin($scope.previewHtml);
+			console.log($scope.previewHtml);
+		});
+		response.error(function(data, status, headers, config) {
+			console.log("Sometin' went wrong. :(");
+		});
+
+		$scope.toggleMenu = function() {
+			$scope.state.menuCollapsed = !$scope.state.menuCollapsed;
+		}
 
 	}]);

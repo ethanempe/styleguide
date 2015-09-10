@@ -45,7 +45,9 @@ body {
   padding: 17px;
   position: absolute;
   z-index: 1001;
-  top: 7px; }
+  top: 7px;
+  left: 10px;
+  width: 113px; }
   .menu-btn p {
     margin: 0; }
   .menu-btn .hamburger-close {
@@ -99,7 +101,7 @@ body {
   align-items: center;
   -webkit-align-items: center;
   background-color: #636363;
-  padding: 10px 15px;
+  padding: 10px 10px;
   position: relative; }
   .header p {
     margin-bottom: 0; }
@@ -133,7 +135,9 @@ body {
   .menu.in {
     padding-top: 20px;
     padding-bottom: 20px;
-    opacity: .97; }
+    opacity: .97;
+    height: 100% !important;
+    overflow-y: visible; }
   .menu .panel {
     margin: 0;
     background: none;
@@ -165,6 +169,39 @@ body {
       margin: 0;
       padding: 3px 10px;
       display: block; }
+
+.category-list {
+  background-color: #595959;
+  padding: 10px 10px; }
+  .category-list .item-link {
+    font-size: 15px;
+    opacity: .5;
+    margin: 3px 10px;
+    display: inline-block; }
+    .category-list .item-link.active {
+      opacity: 1;
+      position: relative; }
+      .category-list .item-link.active::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        opacity: .5;
+        position: absolute;
+        bottom: 4px;
+        left: 0; }
+
+.code-snippet pre {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  display: -webkit-flex;
+  display: flex;
+  word-break: break-word; }
+.code-snippet code {
+  padding: 40px;
+  width: 100%; }
 
 /*  Caleb's Styles are starting here :)  */
 .homepage-container {

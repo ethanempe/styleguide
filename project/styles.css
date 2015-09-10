@@ -1,0 +1,3241 @@
+@charset "UTF-8";
+/* Colors */
+/* loading animation */
+@import url("project/font.css");
+@import url("project/fonts/nucleo-glyph.min.css");
+@import url("project/fonts/nucleo-outline.min.css");
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #3ea5ff; }
+
+  40% {
+    box-shadow: 0 2.5em 0 0 #3ea5ff; } }
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em #3ea5ff; }
+
+  40% {
+    box-shadow: 0 2.5em 0 0 #3ea5ff; } }
+.ui-page {
+  min-width: 600px; }
+
+/**
+    SELECT / DROPDOWN STYLES
+**/
+.ui-selectmenu.ui-custompopup {
+  background-color: white;
+  border: solid 2px #d8d8d8;
+  box-shadow: 0 2px 1px 0 #d8d8d8;
+  border-top: none;
+  box-sizing: border-box;
+  max-height: 420px;
+  overflow-y: auto; }
+  .ui-selectmenu.ui-custompopup .ui-header {
+    display: none; }
+  .ui-selectmenu.ui-custompopup .ui-selectmenu-list {
+    border: none;
+    padding: 5px 0; }
+    .ui-selectmenu.ui-custompopup .ui-selectmenu-list li {
+      height: 40px; }
+      .ui-selectmenu.ui-custompopup .ui-selectmenu-list li:hover {
+        background-color: #ededed; }
+      .ui-selectmenu.ui-custompopup .ui-selectmenu-list li .ui-btn {
+        border: none;
+        height: 40px;
+        box-sizing: border-box;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: white;
+        font-size: 14px;
+        font-weight: normal; }
+        .ui-selectmenu.ui-custompopup .ui-selectmenu-list li .ui-btn.ui-checkbox-off, .ui-selectmenu.ui-custompopup .ui-selectmenu-list li .ui-btn.ui-checkbox-on {
+          padding-left: 47px; }
+        .ui-selectmenu.ui-custompopup .ui-selectmenu-list li .ui-btn.ui-checkbox-on {
+          color: #0031ab; }
+        .ui-selectmenu.ui-custompopup .ui-selectmenu-list li .ui-btn.ui-btn-active {
+          background-color: #ededed;
+          color: black;
+          font-weight: normal;
+          text-shadow: none; }
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-off:before,
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-on:before {
+    background: none;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    color: #3EA5FF;
+    top: 50%;
+    margin-top: -8px;
+    left: 9px;
+    z-index: 100;
+    font-size: 28px;
+    line-height: 16px;
+    font-family: 'Nucleo Glyph';
+    content: "\e66f";
+    text-shadow: none;
+    transition: width 0.1s cubic-bezier(0.14, 0.71, 0.46, 0.1); }
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-on:before {
+    width: 25px; }
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-off:after,
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-on:after {
+    opacity: 1;
+    border: solid 2px #979797;
+    background-color: white;
+    background-image: none !important;
+    height: 21px;
+    width: 21px;
+    left: 9px;
+    margin-top: -12.5px;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px 0 #d8d8d8;
+    transition: border .15s ease-in-out; }
+  .ui-selectmenu.ui-custompopup .ui-btn.ui-checkbox-on:after {
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20enco…C5%200%2C8%204.966%2C13%204.983%2C12.982%205%2C13%20%22%2F%3E%3C%2Fsvg%3E");
+    border-color: #686868; }
+
+.ui-select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+  box-sizing: border-box; }
+  .ui-select .ui-btn {
+    background: initial;
+    text-shadow: none !important;
+    border-radius: 2px;
+    background-color: white !important;
+    border: solid 2px white !important;
+    box-shadow: 0 2px 1px #d8d8d8;
+    height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black !important;
+    box-sizing: border-box; }
+    .ui-select .ui-btn.ui-popup-open {
+      box-shadow: none !important;
+      border: solid 2px #3ea5ff !important;
+      color: #000;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
+    .ui-select .ui-btn.ui-btn-active, .ui-select .ui-btn:focus {
+      color: #000;
+      border-color: white !important; }
+    .ui-select .ui-btn:active {
+      background: initial; }
+    .ui-select .ui-btn:focus {
+      box-shadow: 0 2px 1px #d8d8d8 !important; }
+    .ui-select .ui-btn:after {
+      content: "\ea91";
+      font-family: "Nucleo Glyph";
+      background: none;
+      font-size: 12px;
+      line-height: 24px;
+      color: #686868; }
+    .ui-select .ui-btn span {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left; }
+    .ui-select .ui-btn .ui-li-count {
+      font-weight: normal;
+      font-size: 12px;
+      border: 0;
+      text-align: center;
+      color: white;
+      background-color: #3ea5ff;
+      text-shadow: none;
+      height: 15px;
+      right: 33px;
+      margin-top: -9px; }
+
+.ui-optima {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /**
+      BEGIN: PATIENT PROFILE
+  **/
+  /**
+      BEGIN: Single Column Row TO DO: Create a mxin if we have other cases where we need two columns or one column layouts
+  **/
+  /**
+      BEGIN: Multi Column Row -- TO DO: Create a mxin if we have other cases where we need two columns or one column layouts
+  **/
+  /**
+      END: PATIENT PROFILE
+  **/
+  /**
+      BEGIN: PATIENT SUMMARY
+  **/
+  /**
+      TWO COLUMN LAYOUT
+  **/
+  /**
+      DATA TABLE WITH AN ICON
+  **/
+  /**
+      FOUR-COLUMN
+  **/
+  /**
+      NUMBER ICON STYLES
+  **/
+  /**
+      BUTTON STYLES
+  **/
+  /**
+      DATA TABLE STYLES
+  **/
+  /**
+      NOTIFICATION STYLES
+  **/
+  /**
+      INPUT STYLES
+  **/
+  /* ONLY APPLIES TO VERTICAL RADIO BUTTONS */
+  /**
+      FLIPSWITCH STYLES
+  **/
+  /**
+      FILTER SEARCH STYLES
+  **/
+  /**
+      Sticky Header
+  **/
+  /**
+      MOO FORMS
+  **/
+  /**
+      PATIENT SEARCH
+  **/
+  /**
+      FOOTER NAVIGATION
+  **/
+  /**
+      CALENDAR WIDGET
+  **/
+  /*
+      ORDERS PAGE
+  */
+  /* if we add .row here then we will eliminate a lot of regression issues dealing witht he calendar numbers not receiving padding */
+  /**
+      ORDERS SEQUENCES
+  **/
+  /**
+      ORDERS CALENDAR
+  **/
+  /*
+      LOGIN SCREEN
+  */
+  /*
+      LOGIN SCREEN VALIDATION
+  */
+  /*
+      LOADING ANIMATION
+  */
+  /*
+      ORDERS HISTORY PAGE STYLES
+  */
+  /*
+      LIGHTBOX POPUPS
+  */
+  /*
+    End LIGHTBOXES
+  */
+  /**
+      TIMELINE
+  **/
+  /**
+      MEDICATIONS PAGE
+  **/
+  /*
+      Start Add Medications
+  */
+  /**
+      End Add Medication
+  **/
+  /**
+      TRUNK SUPPLIES
+  **/
+  /**
+      SUPPLIES SEARCH
+  **/
+  /**
+      SUPPLIES SEARCH
+  **/
+  /**
+      SUPPLIES REQUEST
+  **/ }
+  .ui-optima a {
+    color: #1556c6;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer; }
+    .ui-optima a.nc-icon-glyph::before {
+      font-family: 'Nucleo Glyph'; }
+    .ui-optima a:hover {
+      color: #3ea5ff; }
+    .ui-optima a:active {
+      color: #000082; }
+  .ui-optima p {
+    color: #686868;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 30px;
+    text-shadow: none; }
+    .ui-optima p.sm {
+      font-size: 13px;
+      line-height: 20px; }
+    .ui-optima p.lg {
+      font-size: 16px;
+      line-height: 28px; }
+    .ui-optima p.disclaimer {
+      color: #686868;
+      font-size: 12px; }
+    .ui-optima p.dark {
+      color: black !important; }
+    .ui-optima p.invert {
+      color: white !important; }
+  .ui-optima * {
+    box-sizing: border-box;
+    text-shadow: none !important; }
+  .ui-optima h1, .ui-optima h2, .ui-optima h3, .ui-optima h4, .ui-optima h5, .ui-optima h6, .ui-optima p.small-heading, .ui-optima label {
+    color: black;
+    margin-top: 0; }
+  .ui-optima p.small-heading, .ui-optima label {
+    display: block; }
+  .ui-optima h1, .ui-optima h2 {
+    font-weight: light; }
+  .ui-optima h1 {
+    font-size: 34px;
+    margin-bottom: 30px; }
+  .ui-optima h2 {
+    font-size: 28px;
+    margin-bottom: 25px; }
+  .ui-optima h3 {
+    font-size: 26px;
+    margin-bottom: 15px; }
+  .ui-optima h4 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .ui-optima h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold; }
+  .ui-optima p.small-heading {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold; }
+  .ui-optima label {
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #686868;
+    text-transform: uppercase; }
+    .ui-optima label.ui-btn {
+      text-transform: initial; }
+  .ui-optima .cf {
+    clear: both; }
+  .ui-optima label, .ui-optima .ui-btn {
+    background: initial;
+    font-size: 12px; }
+    .ui-optima label:active, .ui-optima .ui-btn:active {
+      background: initial; }
+  .ui-optima .ui-header {
+    min-width: 580px; }
+  .ui-optima .ui-header .btn-green.ui-link {
+    background: #539704;
+    font-size: 13px;
+    padding: 0 20px 0 20px;
+    height: 35px;
+    line-height: 35px;
+    top: -5px; }
+  .ui-optima .bg-azule-dark-dark {
+    background-color: #000059; }
+  .ui-optima .bg-azule-dark {
+    background-color: #000082; }
+  .ui-optima .bg-azule {
+    background-color: #0031ab; }
+  .ui-optima .bg-azule-light {
+    background-color: #1556c6; }
+  .ui-optima .bg-aqua {
+    background-color: #3ea5ff; }
+  .ui-optima .bg-slate {
+    background-color: #686868; }
+  .ui-optima .bg-seafoam-dark {
+    background-color: #69aeb3; }
+  .ui-optima .bg-seafoam {
+    background-color: #7dbdc1; }
+  .ui-optima .bg-seafoam-light {
+    background-color: #9dd0d4; }
+  .ui-optima .bg-silver-light {
+    background-color: #ededed; }
+  .ui-optima .bg-mango {
+    background-color: #ff9847; }
+  .ui-optima .bg-mango-light {
+    background-color: #ffc353; }
+  .ui-optima .bg-mango-dark {
+    background-color: #ff7747; }
+  .ui-optima .bg-cherry {
+    background-color: #fc5666; }
+  .ui-optima .bg-cherry-light {
+    background-color: #ff7380; }
+  .ui-optima .bg-cherry-dark {
+    background-color: #e34d5b; }
+  .ui-optima a, .ui-optima a:visited, .ui-optima a:hover, .ui-optima a:active, .ui-optima a:focus {
+    text-decoration: none; }
+  .ui-optima .nc-icon-glyph.ui-2_time:before {
+    font-weight: lighter; }
+  .ui-optima .hide {
+    display: none; }
+  .ui-optima .patient-profile, .ui-optima .patient-summary {
+    min-width: 580px; }
+    .ui-optima .patient-profile .ui-nav-1, .ui-optima .patient-summary .ui-nav-1 {
+      min-width: 600px; }
+  .ui-optima .patient-profile .form-group {
+    padding: 10px 0 10px 0;
+    border-bottom: 2px solid #ededed; }
+  .ui-optima p {
+    margin: 0;
+    line-height: 20px; }
+  .ui-optima p.title {
+    font-weight: bold;
+    font-size: 14px; }
+  .ui-optima p.label {
+    color: #686868;
+    margin-top: 20px; }
+  .ui-optima p.form-title {
+    font-size: 20px;
+    color: #000082;
+    font-family: "Roboto";
+    font-weight: normal;
+    margin: 0; }
+  .ui-optima label.label {
+    color: #686868;
+    margin-top: 20px; }
+  .ui-optima .row {
+    padding: 10px 10px 0 10px;
+    display: table;
+    width: 100%; }
+    .ui-optima .row .single-column {
+      width: 100%;
+      padding: 15px;
+      background-color: white;
+      border-radius: 2px;
+      display: table;
+      box-shadow: 0 2px 1px 0 #d8d8d8; }
+    .ui-optima .row hr.title-ruler {
+      margin: 20px 0 10px 0;
+      margin-bottom: 0px;
+      background-color: #000082; }
+    .ui-optima .row .half-column {
+      display: inline-block;
+      width: 50%;
+      border-radius: 2px;
+      padding-right: 20px;
+      float: left; }
+    .ui-optima .row .half-column.right {
+      padding-left: 15px; }
+  .ui-optima .two-column {
+    display: block;
+    width: 100%;
+    float: left;
+    padding-right: 0; }
+    .ui-optima .two-column .half-column {
+      width: 100%;
+      background-color: #FFF;
+      padding: 15px;
+      box-shadow: 0 2px 1px 0 #d8d8d8;
+      border-radius: 2px; }
+      .ui-optima .two-column .half-column hr.title-ruler {
+        margin: 15px 0 0 0;
+        background: #000082; }
+  .ui-optima .patient-summary .form-group {
+    border-bottom: 2px solid #ededed; }
+    .ui-optima .patient-summary .form-group .schedule .days p {
+      vertical-align: middle;
+      width: initial; }
+    .ui-optima .patient-summary .form-group.secondary-heading {
+      display: table;
+      padding: 6px 0 6px 0;
+      width: 100%; }
+      .ui-optima .patient-summary .form-group.secondary-heading label.label {
+        margin-top: 0;
+        display: table-cell;
+        padding-right: 8px; }
+      .ui-optima .patient-summary .form-group.secondary-heading a.diagnosis-link.ui-link {
+        display: table-cell;
+        width: 100%;
+        font-size: 13px; }
+      .ui-optima .patient-summary .form-group.secondary-heading p.diagnosis-link {
+        font-size: 13px; }
+  .ui-optima .patient-summary .form-group.no-graph {
+    padding: 20px 0 20px 0; }
+  .ui-optima .patient-summary .data-table-icon .form-group.summary .form-group-cell p:last-child {
+    padding-bottom: 10px; }
+  .ui-optima .patient-summary .two-column .half-column .form-group.secondary-heading {
+    padding: 6px 0 6px 0; }
+  .ui-optima .form-group:last-child {
+    border-bottom: 0;
+    padding-bottom: 0; }
+  .ui-optima .patient-summary .data-table-icon {
+    display: flex;
+    display: -webkit-flex; }
+    .ui-optima .patient-summary .data-table-icon .icon {
+      float: left;
+      margin-right: 20px;
+      margin-top: 12px;
+      margin-left: 5px; }
+  .ui-optima .patient-summary .form-group.summary {
+    float: left;
+    border-bottom: 2px solid #ededed;
+    padding-bottom: 0;
+    width: 490px;
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    margin-right: 20px; }
+  .ui-optima .patient-summary .form-group-cell p:last-child {
+    padding-bottom: 15px; }
+  .ui-optima .patient-summary .form-group-cell label {
+    margin-top: 5px; }
+  .ui-optima .patient-summary .no-graph label {
+    text-align: center; }
+  .ui-optima .patient-summary .data-table-no-icon .form-group.summary {
+    border-bottom: 0; }
+  .ui-optima .patient-summary .two-column.freq-duration .form-group.treatment-activities {
+    padding: 5px 0 5px 0;
+    font-weight: normal; }
+    .ui-optima .patient-summary .two-column.freq-duration .form-group.treatment-activities p {
+      font-size: 13px; }
+  .ui-optima .patient-summary .form-group.no-border {
+    border: 0; }
+  .ui-optima .patient-summary p.test-scores, .ui-optima .patient-summary label.reading-date {
+    display: inline-block;
+    margin-bottom: 0; }
+  .ui-optima .patient-summary p.test-scores {
+    color: #1556c6;
+    padding-top: 10px;
+    font-size: 20px; }
+  .ui-optima .patient-summary .test-scores-container .half-column {
+    padding-bottom: 20px; }
+  .ui-optima .patient-summary .data-table-icon .form-group.summary .form-group-cell:nth-child(1) {
+    padding-left: 0;
+    padding-right: 60px; }
+  .ui-optima .patient-summary .data-table-icon .form-group.summary .form-group-cell:nth-child(2) {
+    padding-right: 48px;
+    padding-left: 0; }
+  .ui-optima .patient-summary .data-table-icon .form-group.summary .form-group-cell:nth-child(3) {
+    padding-right: 60px;
+    padding-left: 0; }
+  .ui-optima .patient-summary .data-table-icon .form-group.summary .form-group-cell:nth-child(4) {
+    padding-right: 0;
+    padding-left: 0; }
+  .ui-optima .patient-summary .data-table-no-icon .form-group.summary .form-group-cell:nth-child(1) {
+    padding-right: 60px;
+    width: 185px; }
+  .ui-optima .patient-summary .data-table-no-icon .form-group.summary .form-group-cell:nth-child(2) {
+    padding-left: 0;
+    padding-right: 57px;
+    width: 201px; }
+  .ui-optima .patient-summary .data-table-no-icon .form-group.summary .form-group-cell:nth-child(3) {
+    padding-left: 0;
+    padding-right: 0px;
+    width: 135px; }
+  .ui-optima .patient-summary .ellipse {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .ui-optima .form-group.no-border {
+    border: 0;
+    padding: 15px 0 15px 0; }
+    .ui-optima .form-group.no-border.scores {
+      padding: 15px 0 0 0; }
+  .ui-optima .patient-summary .column .two-column .half-column .form-group.secondary-heading:last-child,
+  .ui-optima .patient-summary .column .two-column .half-column .form-group.no-graph:last-child,
+  .ui-optima .patient-summary .column .two-column .half-column .form-group.treatment-activities:last-child {
+    border: 0; }
+  .ui-optima .column {
+    display: block;
+    width: 50%;
+    float: left; }
+    .ui-optima .column.left {
+      padding: 0 5px 0 10px; }
+    .ui-optima .column.right {
+      padding: 0 10px 0 5px; }
+    .ui-optima .column .two-column {
+      margin-top: 0;
+      margin-bottom: 0; }
+  .ui-optima .column.left .two-column .half-column,
+  .ui-optima .column.right .two-column .half-column {
+    margin-top: 10px; }
+  .ui-optima .data-table-no-icon,
+  .ui-optima .data-table-icon {
+    background-color: #FFF;
+    padding: 10px 0 0 5px;
+    display: table;
+    width: 100%; }
+  .ui-optima .data-table-no-icon:last-child {
+    box-shadow: 0 2px 1px 0 #d8d8d8;
+    padding-left: 10px; }
+  .ui-optima .data-table-no-icon .form-group.summary {
+    padding-top: 0; }
+  .ui-optima .data-table-no-icon .form-group.summary .form-group-cell:first-child {
+    padding-left: 0; }
+  .ui-optima .data-table-icon .icon {
+    padding: 0;
+    vertical-align: middle;
+    width: 50px; }
+  .ui-optima .data-table-no-icon .form-group-cell,
+  .ui-optima .data-table-icon .form-group-cell {
+    padding: 0 20px 0 20px; }
+  .ui-optima .data-table-icon .form-group-cell:first-child {
+    padding-left: 0; }
+  .ui-optima .data-table-no-icon .icon,
+  .ui-optima .data-table-no-icon .form-group.summary,
+  .ui-optima .data-table-no-icon .form-group-cell,
+  .ui-optima .data-table-icon .icon,
+  .ui-optima .data-table-icon .form-group.summary,
+  .ui-optima .data-table-icon .form-group-cell {
+    display: table-cell; }
+  .ui-optima .data-table-no-icon .form-group.summary {
+    border-bottom: 0;
+    margin-left: 0; }
+  .ui-optima .data-table-icon .form-group.summary {
+    padding: 5px 0 5px 0; }
+  .ui-optima .data-table-no-icon .form-group-cell .data-table-date {
+    width: 115px; }
+  .ui-optima .data-table-no-icon .form-group-cell .data-table-payer {
+    width: 145px; }
+  .ui-optima .data-table-no-icon .form-group-cell .label.primary-physician {
+    width: 116px; }
+  .ui-optima .data-table-icon .icon-avatar-filled {
+    font-size: 44px;
+    background-color: #0031ab;
+    color: #FFF;
+    padding: 5px 4px 3px 4px;
+    border-radius: 2px; }
+  .ui-optima .row .data-table-icon .form-group.summary .form-group-cell p.label {
+    margin-top: 0;
+    color: #686868; }
+  .ui-optima .row .form-group.diagnosis label.label {
+    max-width: 30%;
+    width: 30%;
+    display: inline;
+    width: auto;
+    padding-right: 5px;
+    line-height: 18px;
+    vertical-align: top; }
+  .ui-optima .other-diagnosis-link {
+    width: 100%;
+    display: block; }
+  .ui-optima .no-border {
+    border-bottom: 0; }
+  .ui-optima .row .form-group.diagnosis a.diagnosis-link.ui-link {
+    max-width: 70%;
+    display: inline-block; }
+  .ui-optima .frequency-duration p {
+    display: inline-block; }
+  .ui-optima .form-group .schedule {
+    display: inline-block;
+    padding-left: 10px; }
+    .ui-optima .form-group .schedule .days p {
+      font-size: 13px;
+      display: inline-block; }
+    .ui-optima .form-group .schedule .days i.nc-icon-outline.ui-1_lock {
+      display: inline-block;
+      color: #848484; }
+  .ui-optima .form-group .border {
+    padding: 0 5px 0 5px;
+    color: #d8d8d8; }
+  .ui-optima .row .four-column {
+    display: table;
+    width: 100%; }
+  .ui-optima .row .four-column .column-container {
+    padding: 0 5px;
+    width: 25%;
+    float: left; }
+    .ui-optima .row .four-column .column-container:first-of-type {
+      padding-left: 0; }
+    .ui-optima .row .four-column .column-container:last-of-type {
+      padding-right: 0; }
+  .ui-optima .row .four-column .column {
+    width: 100%;
+    display: table;
+    background-color: #FFF;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 1px 0 #d8d8d8;
+    border-radius: 2px; }
+  .ui-optima .row .four-column .column:first-child {
+    border-left: 0; }
+  .ui-optima .row .four-column .column p.label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px; }
+  .ui-optima .row .four-column .column p.vitals {
+    color: #1556c6;
+    font-size: 32px;
+    padding-top: 10px;
+    text-align: center; }
+  .ui-optima .number {
+    background-color: #1657c6;
+    color: #FFF;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 2px;
+    vertical-align: top; }
+    .ui-optima .number.large {
+      height: 40px;
+      width: 40px; }
+      .ui-optima .number.large p {
+        padding-top: 10px;
+        line-height: 22px; }
+      .ui-optima .number.large.seafoam-dark {
+        background-color: #69aeb3; }
+  .ui-optima .number p {
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFF;
+    padding-top: 6px; }
+  .ui-optima .btn.inline {
+    display: inline-block;
+    margin-right: 11px; }
+    .ui-optima .btn.inline:last-of-type {
+      margin-right: 0; }
+  .ui-optima .btn, .ui-optima .btn-sm, .ui-optima .btn-lg {
+    text-shadow: none !important;
+    text-transform: uppercase;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+    height: 40px;
+    padding: 10px 13px;
+    transition: all .15s ease-in-out; }
+    .ui-optima .btn:not(.btn-scnd), .ui-optima .btn-sm:not(.btn-scnd), .ui-optima .btn-lg:not(.btn-scnd) {
+      color: white;
+      padding: 12px 15px; }
+    .ui-optima .btn.ui-btn.ui-state-disabled, .ui-optima .btn-sm.ui-btn.ui-state-disabled, .ui-optima .btn-lg.ui-btn.ui-state-disabled {
+      opacity: 1;
+      border-color: #d0d0d0;
+      color: #a5a5a5; }
+      .ui-optima .btn.ui-btn.ui-state-disabled:not(.btn-scnd), .ui-optima .btn-sm.ui-btn.ui-state-disabled:not(.btn-scnd), .ui-optima .btn-lg.ui-btn.ui-state-disabled:not(.btn-scnd) {
+        background-color: #d0d0d0; }
+  .ui-optima .btn-sm {
+    font-size: 13px;
+    height: 30px;
+    padding: 6px 10px; }
+    .ui-optima .btn-sm:not(.btn-scnd) {
+      padding: 8px 12px; }
+  .ui-optima .btn-lg {
+    font-size: 16px;
+    height: 50px;
+    padding: 14px 18px; }
+    .ui-optima .btn-lg:not(.btn-scnd) {
+      padding: 16px 20px; }
+  .ui-optima .btn-prim {
+    border: none;
+    border-radius: 2px;
+    background-color: #3ea5ff; }
+    .ui-optima .btn-prim:hover {
+      background-color: #73bdff; }
+    .ui-optima .btn-prim:active {
+      background-color: #1657c6; }
+  .ui-optima .btn-scnd {
+    color: #0031ab;
+    border: solid 2px #0031ab;
+    border-radius: 2px; }
+    .ui-optima .btn-scnd.invert {
+      color: white;
+      border: 1px solid white; }
+      .ui-optima .btn-scnd.invert:hover {
+        color: white;
+        border-color: white; }
+      .ui-optima .btn-scnd.invert:active {
+        color: white;
+        border-color: white; }
+    .ui-optima .btn-scnd:hover {
+      background: none;
+      color: #1556c6;
+      border-color: #1556c6; }
+    .ui-optima .btn-scnd:active {
+      color: #000082;
+      border-color: #000082; }
+  .ui-optima .btn-cfrm {
+    border: none;
+    border-radius: 2px;
+    background-color: #5fac05; }
+    .ui-optima .btn-cfrm:hover {
+      background-color: #72cd08; }
+    .ui-optima .btn-cfrm:active {
+      background-color: #539704; }
+  .ui-optima .btn-deny {
+    border: none;
+    border-radius: 2px;
+    background-color: #fc5666; }
+    .ui-optima .btn-deny:hover {
+      background-color: #ff7380; }
+    .ui-optima .btn-deny:active {
+      background-color: #e34d5b; }
+  .ui-optima .btn-white {
+    color: white; }
+    .ui-optima .btn-white:hover, .ui-optima .btn-white:active {
+      background: none; }
+  .ui-optima .btn-wrap {
+    margin: 15px; }
+    .ui-optima .btn-wrap.inline {
+      display: inline-block; }
+    .ui-optima .btn-wrap .inline {
+      display: inline-block; }
+  .ui-optima .data-table {
+    border: solid 2px #ededed;
+    border-radius: 2px;
+    border-bottom-width: 4px; }
+    .ui-optima .data-table table {
+      width: 100%;
+      text-align: right;
+      background-color: white;
+      padding: 30px 0;
+      border-collapse: collapse; }
+      .ui-optima .data-table table tr {
+        border-bottom: solid 2px #ededed;
+        height: 50px; }
+        .ui-optima .data-table table tr.head {
+          height: 60px; }
+          .ui-optima .data-table table tr.head td {
+            vertical-align: bottom;
+            margin: 0 5px; }
+            .ui-optima .data-table table tr.head td label {
+              margin-bottom: 15px;
+              text-overflow: ellipsis; }
+        .ui-optima .data-table table tr td {
+          font-size: 13px; }
+          .ui-optima .data-table table tr td.green {
+            color: #5fac05; }
+          .ui-optima .data-table table tr td.red {
+            color: #e34d5b; }
+          .ui-optima .data-table table tr td.gutter {
+            width: 30px; }
+    .ui-optima .data-table .footer {
+      height: 60px;
+      background-color: white;
+      padding-right: 30px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: flex-end;
+      -webkit-justify-content: flex-end; }
+      .ui-optima .data-table .footer i {
+        color: #686868;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 22px; }
+      .ui-optima .data-table .footer p {
+        margin: 0; }
+      .ui-optima .data-table .footer .arrows-1_minimal-left {
+        padding: 0 30px; }
+  .ui-optima.ui-popup-container {
+    top: -100px;
+    width: 100%;
+    max-width: 100% !important;
+    left: 0 !important;
+    transition: top .15s ease-in-out;
+    visibility: visible; }
+    .ui-optima.ui-popup-container.ui-popup-active {
+      top: 0; }
+    .ui-optima.ui-popup-container.ui-popup-position-relative {
+      position: relative; }
+    .ui-optima.ui-popup-container .top-notification {
+      padding: 15px;
+      border-radius: 0;
+      box-shadow: none;
+      text-shadow: none;
+      border: none;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center; }
+      .ui-optima.ui-popup-container .top-notification.deny {
+        background-color: #e34d5b; }
+        .ui-optima.ui-popup-container .top-notification.deny .close-btn:before {
+          color: #e34d5b; }
+      .ui-optima.ui-popup-container .top-notification.cfrm {
+        background-color: #539704; }
+      .ui-optima.ui-popup-container .top-notification .close-btn {
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+        margin: 0 15px 0 0;
+        box-shadow: none; }
+        .ui-optima.ui-popup-container .top-notification .close-btn:before {
+          line-height: 20px;
+          color: #539704; }
+      .ui-optima.ui-popup-container .top-notification p {
+        color: white;
+        display: inline-block;
+        padding-top: 2px;
+        margin: 0; }
+  .ui-optima hr {
+    height: 2px;
+    margin: 30px 0;
+    border: none;
+    background-color: #d8d8d8; }
+  .ui-optima .right-side-btn {
+    display: block; }
+    .ui-optima .right-side-btn hr {
+      margin-top: 0; }
+    .ui-optima .right-side-btn .ui-input-btn {
+      float: right; }
+  .ui-optima input {
+    /* DATE STYLES */ }
+    .ui-optima input[type=date] {
+      padding-top: 10px; }
+    .ui-optima input::-webkit-datetime-edit {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #979797;
+      margin-top: -5px; }
+    .ui-optima input::-webkit-datetime-edit-day-field, .ui-optima input::-webkit-datetime-edit-month-field, .ui-optima input::-webkit-datetime-edit-year-field {
+      color: black;
+      letter-spacing: 0;
+      margin-right: 5px; }
+      .ui-optima input::-webkit-datetime-edit-day-field:not([aria-valuetext=blank]), .ui-optima input::-webkit-datetime-edit-month-field:not([aria-valuetext=blank]), .ui-optima input::-webkit-datetime-edit-year-field:not([aria-valuetext=blank]) {
+        color: black; }
+    .ui-optima input::-webkit-clear-button, .ui-optima input::-webkit-inner-spin-button, .ui-optima input::-webkit-calendar-picker-indicator {
+      display: none; }
+    .ui-optima input[type=radio] {
+      display: none; }
+    .ui-optima input[type=checkbox] {
+      display: none; }
+    .ui-optima input[type=button] {
+      display: none; }
+    .ui-optima input[type=number] {
+      font-family: 'Roboto-Mono';
+      -moz-appearance: textfield; }
+  .ui-optima fieldset.ui-controlgroup {
+    width: 100%; }
+    .ui-optima fieldset.ui-controlgroup:first-of-type {
+      margin-top: -15px; }
+    .ui-optima fieldset.ui-controlgroup:last-of-type {
+      margin-bottom: -15px; }
+    .ui-optima fieldset.ui-controlgroup .ui-controlgroup-controls {
+      width: 100%; }
+      .ui-optima fieldset.ui-controlgroup .ui-controlgroup-controls .ui-btn.ui-input-btn {
+        border-bottom-width: 2px;
+        flex-shrink: 0;
+        -webkit-flex-shrink: 0; }
+        .ui-optima fieldset.ui-controlgroup .ui-controlgroup-controls .ui-btn.ui-input-btn.ui-1_simple-add:before {
+          position: relative;
+          top: 1px;
+          font-weight: bold;
+          margin-right: 12px; }
+    .ui-optima fieldset.ui-controlgroup label {
+      font-weight: normal;
+      font-size: 12px; }
+    .ui-optima fieldset.ui-controlgroup .ui-controlgroup-label {
+      float: none;
+      display: block;
+      width: inherit;
+      margin-top: 20px;
+      margin-bottom: 15px; }
+      .ui-optima fieldset.ui-controlgroup .ui-controlgroup-label legend {
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #686868; }
+    .ui-optima fieldset.ui-controlgroup .ui-input-text {
+      /* for input within checkbox */
+      height: 36px; }
+      .ui-optima fieldset.ui-controlgroup .ui-input-text.icd-9 {
+        display: inline-block;
+        width: 106px; }
+        .ui-optima fieldset.ui-controlgroup .ui-input-text.icd-9 input {
+          letter-spacing: 4px; }
+    .ui-optima fieldset.ui-controlgroup.nested {
+      padding-left: 35px; }
+    .ui-optima fieldset.ui-controlgroup.space-bot {
+      margin-bottom: 10px; }
+  .ui-optima .ui-controlgroup-label {
+    margin-top: 20px;
+    margin-bottom: 15px; }
+  .ui-optima .ui-input-text {
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 2px 1px 0 #d8d8d8;
+    transition: all .15s ease-in-out;
+    box-sizing: border-box;
+    border: solid white 2px;
+    padding: 0 10px 0 10px;
+        /*
+        TO DO: Verify that the classes ui-input-text.input-sm and ui-input-text.input-lg are being used
+        Are we adding .input-sm to the input tags? If so, are we sure that jQuery appends these classes to
+        the ui-input-text class and not, for example, a div nested under ui-input-text?
+
+            -DH
+        */ }
+    .ui-optima .ui-input-text.bordered {
+      box-shadow: 0 0 0 1px #d8d8d8; }
+      .ui-optima .ui-input-text.bordered.ui-focus {
+        box-shadow: none; }
+    .ui-optima .ui-input-text.half {
+      width: 80px; }
+    .ui-optima .ui-input-text.inline {
+      display: inline-block; }
+    .ui-optima .ui-input-text.number-rating {
+      width: 70px; }
+      .ui-optima .ui-input-text.number-rating input {
+        text-align: center; }
+    .ui-optima .ui-input-text input {
+      padding: 0;
+      height: 36px;
+      line-height: 36px; }
+@-moz-document url-prefix() {
+  .ui-optima .ui-input-text input {
+    padding-top: 2px; } }
+      .ui-optima .ui-input-text input::-moz-placeholder {
+        color: #979797;
+        opacity: 1; }
+    .ui-optima .ui-input-text.input-sm {
+      font-size: 13px;
+      padding-left: 6px;
+      padding-right: 6px; }
+      .ui-optima .ui-input-text.input-sm input {
+        height: 26px; }
+    .ui-optima .ui-input-text.input-lg {
+      font-size: 16px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      .ui-optima .ui-input-text.input-lg input {
+        height: 46px; }
+    .ui-optima .ui-input-text.error {
+      border-color: #e34d5b !important; }
+    .ui-optima .ui-input-text.valid {
+      border-color: #5fac05 !important; }
+    .ui-optima .ui-input-text.ui-state-disabled {
+      background-color: #d0d0d0;
+      color: #a5a5a5;
+      opacity: 1;
+      box-shadow: none;
+      border-color: #d0d0d0; }
+    .ui-optima .ui-input-text.ui-focus {
+      border: solid #3ea5ff 2px; }
+    .ui-optima .ui-input-text.date-input-wrapper {
+      height: 40px !important;
+      width: 128px;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-top: 7px;
+      margin-bottom: 7px; }
+      .ui-optima .ui-input-text.date-input-wrapper.ui-state-disabled {
+        background-color: #d0d0d0;
+        color: #a5a5a5;
+        opacity: 1;
+        box-shadow: none; }
+      .ui-optima .ui-input-text.date-input-wrapper .date-month,
+      .ui-optima .ui-input-text.date-input-wrapper .date-day,
+      .ui-optima .ui-input-text.date-input-wrapper .date-year {
+        margin: 0;
+        padding: 0;
+        width: 28px;
+        display: inline-block;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        height: 40px;
+        border: none; }
+        .ui-optima .ui-input-text.date-input-wrapper .date-month.ui-focus,
+        .ui-optima .ui-input-text.date-input-wrapper .date-day.ui-focus,
+        .ui-optima .ui-input-text.date-input-wrapper .date-year.ui-focus {
+          border: none; }
+        .ui-optima .ui-input-text.date-input-wrapper .date-month:before,
+        .ui-optima .ui-input-text.date-input-wrapper .date-day:before,
+        .ui-optima .ui-input-text.date-input-wrapper .date-year:before {
+          right: -3px;
+          top: 10px;
+          position: absolute;
+          content: '-';
+          font-familiy: 'Roboto-Mono';
+          color: #979797; }
+        .ui-optima .ui-input-text.date-input-wrapper .date-month input,
+        .ui-optima .ui-input-text.date-input-wrapper .date-day input,
+        .ui-optima .ui-input-text.date-input-wrapper .date-year input {
+          position: relative;
+          top: 0;
+          left: 5px; }
+      .ui-optima .ui-input-text.date-input-wrapper .date-year {
+        width: 45px; }
+        .ui-optima .ui-input-text.date-input-wrapper .date-year:before {
+          content: ''; }
+  .ui-optima .input-id {
+    width: 227px;
+    padding-right: 0;
+    position: relative; }
+    .ui-optima .input-id:after {
+      content: '_________________________';
+      position: absolute;
+      letter-spacing: 5px;
+      overflow: hidden;
+      left: 14px;
+      right: 10px;
+      bottom: 3px;
+      pointer-events: none;
+      font-family: Roboto-Mono;
+      color: #979797; }
+    .ui-optima .input-id input {
+      position: relative;
+      left: 6px;
+      letter-spacing: 5px;
+      font-family: 'Roboto-Mono'; }
+  .ui-optima .input-date {
+    width: 140px; }
+  .ui-optima .input-container {
+    padding: 15px; }
+  .ui-optima .input-message {
+    padding: 20px;
+    background-color: #d0d0d0;
+    margin-top: 10px;
+    overflow: hidden;
+    transition: all .15s ease-in-out;
+    max-height: 50vh;
+    border-radius: 2px;
+    box-shadow: 0 2px 1px 0 #d8d8d8; }
+    .ui-optima .input-message.hide {
+      display: block;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      max-height: 0; }
+    .ui-optima .input-message.error {
+      background-color: #e34d5b; }
+    .ui-optima .input-message.valid {
+      background-color: #5fac05; }
+    .ui-optima .input-message p {
+      color: white; }
+      .ui-optima .input-message p:last-of-type {
+        margin-bottom: 0; }
+  .ui-optima .ui-radio {
+    float: left;
+    margin-right: 10px; }
+    .ui-optima .ui-radio.ui-state-disabled {
+      opacity: 1; }
+      .ui-optima .ui-radio.ui-state-disabled .ui-btn {
+        color: #a5a5a5; }
+        .ui-optima .ui-radio.ui-state-disabled .ui-btn:after {
+          background-color: #d0d0d0;
+          border-color: #d0d0d0;
+          box-shadow: 0 0 0 2px #d0d0d0; }
+        .ui-optima .ui-radio.ui-state-disabled .ui-btn.ui-radio-on {
+          color: #a5a5a5; }
+          .ui-optima .ui-radio.ui-state-disabled .ui-btn.ui-radio-on:after {
+            border: solid 2px #a5a5a5;
+            box-shadow: 0 0 0 5px #d0d0d0;
+            width: 14px;
+            height: 14px;
+            top: 25px;
+            left: 3px; }
+    .ui-optima .ui-radio .ui-btn {
+      border: none;
+      font-weight: normal;
+      font-size: 12px;
+      padding-left: 40px; }
+      .ui-optima .ui-radio .ui-btn.ui-radio-on {
+        color: #0031ab; }
+        .ui-optima .ui-radio .ui-btn.ui-radio-on:after {
+          border-width: 4px;
+          box-shadow: 0 0 0 2px #686868, 0 2px 1px 2px #d8d8d8; }
+      .ui-optima .ui-radio .ui-btn:after {
+        border: solid 10px white;
+        box-shadow: 0 0 0 2px #979797, 0 2px 1px 2px #d8d8d8;
+        background-color: #3ea5ff;
+        opacity: 1;
+        height: 20px;
+        width: 20px;
+        box-sizing: border-box;
+        transition: all .15s ease-in-out;
+        top: 13px; }
+  .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio {
+    border-top: solid 2px #d8d8d8;
+    border-radius: 0;
+    width: 100%; }
+    .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio.no-border {
+      border: none; }
+    .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio:first-of-type {
+      border-top: none; }
+    .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio.contains {
+      padding-bottom: 10px; }
+    .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio label {
+      padding: 16px 0 14px 35px; }
+      .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio label:hover {
+        background: none; }
+      .ui-optima fieldset.ui-controlgroup-vertical > .ui-controlgroup-controls > .ui-radio label:after {
+        top: 22px;
+        left: 0; }
+  .ui-optima .ui-checkbox {
+    border-top: solid 2px #d8d8d8;
+    border-radius: 0;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    align-content: stretch;
+    -webkit-align-content: stretch; }
+    .ui-optima .ui-checkbox.no-border {
+      border: none; }
+    .ui-optima .ui-checkbox.large {
+      height: 54px; }
+    .ui-optima .ui-checkbox.inline {
+      width: auto;
+      display: inline-block; }
+    .ui-optima .ui-checkbox:first-of-type {
+      border-top: none; }
+    .ui-optima .ui-checkbox.ui-state-disabled {
+      opacity: 1; }
+      .ui-optima .ui-checkbox.ui-state-disabled .ui-btn {
+        color: #a5a5a5; }
+        .ui-optima .ui-checkbox.ui-state-disabled .ui-btn:before {
+          color: #a5a5a5; }
+        .ui-optima .ui-checkbox.ui-state-disabled .ui-btn:after {
+          border-color: #d0d0d0;
+          background-color: #d0d0d0;
+          box-shadow: none; }
+    .ui-optima .ui-checkbox .ui-input-text {
+      flex-grow: 10;
+      -webkit-flex-grow: 10;
+      position: relative;
+      margin: 0;
+      min-width: 175px; }
+      .ui-optima .ui-checkbox .ui-input-text input[type=text] {
+        top: 0; }
+  .ui-optima .ui-checkbox-off, .ui-optima .ui-checkbox-on {
+    border: none;
+    padding: 0 10px 0 45px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    height: 100%; }
+    .ui-optima .ui-checkbox-off:hover, .ui-optima .ui-checkbox-on:hover {
+      background: none; }
+    .ui-optima .ui-checkbox-off:before, .ui-optima .ui-checkbox-on:before {
+      width: 0;
+      overflow: hidden;
+      position: absolute;
+      color: #3ea5ff;
+      top: 50%;
+      margin-top: -8px;
+      left: 0;
+      z-index: 100;
+      font-size: 28px;
+      line-height: 16px;
+      font-family: 'Nucleo Glyph';
+      content: "\e66f";
+      text-shadow: none;
+      transition: width 0.1s cubic-bezier(0.14, 0.71, 0.46, 0.1); }
+    .ui-optima .ui-checkbox-off:after, .ui-optima .ui-checkbox-on:after {
+      opacity: 1;
+      border: solid 2px #979797;
+      background-color: white;
+      background-image: none !important;
+      height: 21px;
+      width: 21px;
+      left: 0;
+      margin-top: -12.5px;
+      border-radius: 2px;
+      box-shadow: 0 2px 1px 0 #d8d8d8;
+      transition: border .15s ease-in-out; }
+  .ui-optima .ui-checkbox-on {
+    color: #0031ab; }
+    .ui-optima .ui-checkbox-on:hover {
+      color: #0031ab; }
+    .ui-optima .ui-checkbox-on:before {
+      width: 25px; }
+    .ui-optima .ui-checkbox-on:after {
+      border-color: #686868; }
+  .ui-optima label[for=checkbox-based-flipswitch] {
+    width: auto;
+    margin-bottom: 0;
+    line-height: 26px; }
+  .ui-optima .ui-flipswitch {
+    border: none;
+    background-color: white;
+    border-radius: 13px;
+    box-shadow: 0 1px 2px 0 #d8d8d8;
+    height: 26px;
+    font-size: 9px;
+    padding-right: 10px; }
+    .ui-optima .ui-flipswitch.ui-flipswitch-active .ui-flipswitch-on {
+      background-color: #3ea5ff; }
+    .ui-optima .ui-flipswitch.icon-flipswitch {
+      background-color: #a5a5a5; }
+      .ui-optima .ui-flipswitch.icon-flipswitch.ui-flipswitch-active {
+        background-color: #3ea5ff; }
+      .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-off,
+      .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-on {
+        color: transparent; }
+        .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-off:before,
+        .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-on:before {
+          color: white;
+          font-family: "Nucleo Glyph";
+          font-weight: bold; }
+      .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-off:before {
+        content: "\e6ad";
+        position: relative;
+        left: .75em; }
+      .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-on {
+        background-color: white;
+        transition: color .1s ease-in-out; }
+        .ui-optima .ui-flipswitch.icon-flipswitch .ui-flipswitch-on:before {
+          content: "\e672"; }
+    .ui-optima .ui-flipswitch .ui-flipswitch-on,
+    .ui-optima .ui-flipswitch .ui-flipswitch-off {
+      font-family: "Roboto";
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #a5a5a5;
+      text-shadow: none;
+      transition: all .1s ease-in-out; }
+    .ui-optima .ui-flipswitch span {
+      margin-top: 4px;
+      position: relative;
+      top: -100%;
+      left: 1.5em; }
+    .ui-optima .ui-flipswitch .ui-btn {
+      height: 16px;
+      width: 16px;
+      margin: 5px;
+      background-color: #a5a5a5;
+      border: none;
+      box-shadow: none; }
+  .ui-optima .filter-select-wrapper {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 60px; }
+  .ui-optima .filter-select {
+    position: relative; }
+    .ui-optima .filter-select .filter-select-list {
+      position: absolute;
+      width: 100%;
+      top: 40px;
+      z-index: 900;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      background-color: white;
+      border-bottom: 2px solid #d8d8d8;
+      border-right: 2px solid #d8d8d8;
+      border-left: 2px solid #d8d8d8;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px; }
+      .ui-optima .filter-select .filter-select-list .option {
+        padding: 12px;
+        cursor: pointer; }
+        .ui-optima .filter-select .filter-select-list .option:hover, .ui-optima .filter-select .filter-select-list .option.hover {
+          background-color: #ededed; }
+  .ui-optima .filter-select-input, .ui-optima .search-input {
+    padding-right: 50px;
+    position: relative;
+    display: block; }
+    .ui-optima .filter-select-input::before, .ui-optima .search-input::before {
+      position: absolute;
+      right: -2px;
+      top: -2px;
+      height: 40px;
+      width: 50px;
+      background-color: #3ea5ff;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      line-height: 40px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+      cursor: pointer; }
+  .ui-optima ul.ui-nav-1,
+  .ui-optima ul.ui-nav-2,
+  .ui-optima ul.ui-nav-3,
+  .ui-optima ul.ui-nav-4 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    clear: both;
+    float: none;
+    font-size: 0;
+    /*text-shadow: none;*/ }
+  .ui-optima .ui-nav-1 li,
+  .ui-optima .ui-nav-2 li,
+  .ui-optima .ui-nav-3 li,
+  .ui-optima .ui-nav-4 li {
+    margin: 0;
+    display: inline-block; }
+  .ui-optima ul.ui-nav-1 {
+    height: 50px;
+    background-color: #000082;
+    box-sizing: content-box; }
+  .ui-optima .ui-nav-1 li {
+    height: 50px; }
+  .ui-optima .ui-nav-1 li a,
+  .ui-optima .ui-nav-1 li a:active,
+  .ui-optima .ui-nav-1 li a:focus,
+  .ui-optima .ui-nav-1 li a:visited {
+    font-size: 14px;
+    font-weight: lighter;
+    color: white;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px; }
+  .ui-optima .ui-nav-1 li:hover {
+    background-color: #0031ab; }
+  .ui-optima .ui-nav-1 li.active,
+  .ui-optima .ui-nav-1 li:active, .ui-optima .ui-nav-1 li:focus {
+    background-color: #1556c6; }
+  .ui-optima ul.ui-nav-2 {
+    position: relative;
+    font-size: 0;
+    display: initial;
+    background-color: white; }
+    .ui-optima ul.ui-nav-2 .indicator {
+      position: absolute;
+      height: 10px;
+      width: 100%;
+      display: none;
+      margin: 0;
+      top: 70px; }
+    .ui-optima ul.ui-nav-2 li.active .indicator {
+      display: block; }
+    .ui-optima ul.ui-nav-2 .indicator .icon-chevron {
+      margin: 0 auto;
+      width: 16px;
+      height: 9px;
+      font-size: 9px;
+      color: #c9c9c9; }
+    .ui-optima ul.ui-nav-2 li, .ui-optima ul.ui-nav-2 a {
+      height: 70px; }
+    .ui-optima ul.ui-nav-2 li {
+      position: relative;
+      width: 98px;
+      font-size: 14px;
+      border-right: solid 1px #ededed;
+      border-left: solid 1px #ededed; }
+    .ui-optima ul.ui-nav-2 a {
+      display: block;
+      text-align: center;
+      color: black;
+      font-weight: normal; }
+    .ui-optima ul.ui-nav-2 li.active a,
+    .ui-optima ul.ui-nav-2 a:hover,
+    .ui-optima ul.ui-nav-2 a:active {
+      background-color: #c9c9c9; }
+    .ui-optima ul.ui-nav-2 .icon {
+      display: block;
+      height: 43px;
+      margin: 0 auto;
+      padding-top: 14px;
+      font-size: 24px;
+      color: #686868; }
+  .ui-optima ul.ui-nav-3 {
+    background-color: #d8d8d8;
+    min-width: 600px; }
+  .ui-optima ul.ui-nav-3, .ui-optima .ui-nav-3 li, .ui-optima .ui-nav-3 a {
+    height: 50px;
+    font-weight: normal; }
+  .ui-optima .ui-nav-3 a {
+    font-size: 14px;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+    color: black; }
+  .ui-optima .ui-nav-3 li.active a {
+    height: 50px;
+    background-color: #FFF; }
+  .ui-optima ul.ui-nav-4, .ui-optima .ui-nav-4 li, .ui-optima .ui-nav-4 a {
+    height: 50px; }
+  .ui-optima .ui-nav-4 a {
+    font-weight: normal;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 15px;
+    color: #686868;
+    border-left: 1px solid #d8d8d8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 20px;
+    line-height: 20px; }
+  .ui-optima .ui-nav-4 li:first-child a {
+    border-left: 0; }
+  .ui-optima .ui-nav-4 li.active a {
+    color: #1556c6;
+    /* DH changed the height here from 30px to 20px in order
+    to match the height of the inactive a element */
+    height: 20px; }
+  .ui-optima .appointments-container {
+    background-color: #ededed;
+    height: 100%; }
+  .ui-optima .ui-listbox-container {
+    position: relative; }
+    .ui-optima .ui-listbox-container .top {
+      padding: 10px;
+      display: block;
+      position: relative;
+      height: 50px; }
+      .ui-optima .ui-listbox-container .top div {
+        display: inline-block; }
+      .ui-optima .ui-listbox-container .top .left {
+        padding-top: 7px;
+        float: left; }
+      .ui-optima .ui-listbox-container .top .right {
+        float: right; }
+        .ui-optima .ui-listbox-container .top .right a, .ui-optima .ui-listbox-container .top .right i {
+          vertical-align: top;
+          line-height: 30px;
+          color: #686868; }
+          .ui-optima .ui-listbox-container .top .right a.active, .ui-optima .ui-listbox-container .top .right i.active {
+            color: #0031ab;
+            border-bottom: solid #0031ab 2px;
+            padding-bottom: 5px; }
+            .ui-optima .ui-listbox-container .top .right a.active i, .ui-optima .ui-listbox-container .top .right i.active i {
+              color: #0031ab; }
+            .ui-optima .ui-listbox-container .top .right a.active.icon, .ui-optima .ui-listbox-container .top .right i.active.icon {
+              border: none; }
+        .ui-optima .ui-listbox-container .top .right .divider {
+          display: inline-block;
+          width: 1px;
+          background-color: #d8d8d8;
+          height: 24px;
+          margin: 4px 20px 0; }
+        .ui-optima .ui-listbox-container .top .right .nc-icon-glyph {
+          font-size: 18px; }
+    .ui-optima .ui-listbox-container .ui-listbox {
+      clear: both;
+      box-shadow: 0 2px 1px 0 #d8d8d8;
+      overflow: hidden;
+      background-color: white;
+      border-radius: 2px;
+      margin-bottom: 1px;
+      transition: all .15s ease-in-out; }
+      .ui-optima .ui-listbox-container .ui-listbox h5 {
+        font-size: 15px; }
+      .ui-optima .ui-listbox-container .ui-listbox .boxes {
+        border-radius: 2px;
+        border-bottom: solid 1px #ededed;
+        position: relative;
+        height: 100px;
+        width: 580px;
+        display: table;
+        margin-bottom: -1px; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .hide {
+          display: none; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes span {
+          display: block; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes i {
+          color: #848484;
+          margin: 0 5px;
+          font-size: 16px;
+          font-weight: bold; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes i.arrows-1_refresh-69 {
+            color: #7dbdc1; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes i.arrows-1_cloud-download-93 {
+            color: #fc5666; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes > .box {
+          position: relative;
+          padding-top: 25px;
+          display: table-cell; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes > .box .icon, .ui-optima .ui-listbox-container .ui-listbox .boxes > .box .text {
+            display: inline-block; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes > .box:not(.sync-box) .icon {
+            margin-top: -1px;
+            width: auto;
+            float: left; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes > .box h5, .ui-optima .ui-listbox-container .ui-listbox .boxes > .box p {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes > .box p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 13px; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .box.record {
+          border: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box {
+          width: 8%;
+          border-right: solid #ededed 1px;
+          height: 100%; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box .container {
+            width: 100%;
+            text-align: center;
+            display: inline-block; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box .arrows-1_cloud-download-93 {
+            display: none; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box .time {
+            font-weight: bold; }
+          .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box.unsynced {
+            vertical-align: middle;
+            padding-bottom: 10px; }
+            .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box.unsynced .arrows-1_cloud-download-93 {
+              display: block; }
+            .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box.unsynced .arrows-1_refresh-69 {
+              display: none; }
+            .ui-optima .ui-listbox-container .ui-listbox .boxes .sync-box.unsynced .time {
+              display: none; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .patient-box .ui-1_home-simple {
+          display: none; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .patient-box.home .ui-1_home-simple {
+          display: block; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .patient-box.home .health_bag-50 {
+          display: none; }
+        .ui-optima .ui-listbox-container .ui-listbox .boxes .loc-box {
+          width: 34%;
+          padding-right: 5px; }
+      .ui-optima .ui-listbox-container .ui-listbox .card {
+        height: 0px;
+        overflow: hidden;
+        background-color: white;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        padding: 0 15px;
+        transition: all .15s ease-in-out; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .btn-wrap {
+          display: inline-block;
+          float: left;
+          padding: 0 10px;
+          width: 33.333333%;
+          margin: 0; }
+          .ui-optima .ui-listbox-container .ui-listbox .card .btn-wrap input {
+            width: 100%; }
+        .ui-optima .ui-listbox-container .ui-listbox .card h4 {
+          margin-top: 20px;
+          margin-bottom: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox .card p {
+          margin: 8px 0; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .row {
+          clear: both;
+          display: block;
+          width: auto;
+          position: relative;
+          margin-right: -10px;
+          margin-left: -10px;
+          padding: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .col-3, .ui-optima .ui-listbox-container .ui-listbox .card .col-4, .ui-optima .ui-listbox-container .ui-listbox .card .col-5 {
+          padding-top: 20px; }
+          .ui-optima .ui-listbox-container .ui-listbox .card .col-3 > div, .ui-optima .ui-listbox-container .ui-listbox .card .col-4 > div, .ui-optima .ui-listbox-container .ui-listbox .card .col-5 > div {
+            padding-bottom: 15px; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .col-3 {
+          width: 25%;
+          float: left;
+          padding-left: 10px;
+          padding-right: 10px; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .col-4 {
+          width: 33.3333333%;
+          float: left;
+          padding-left: 10px;
+          padding-right: 10px; }
+        .ui-optima .ui-listbox-container .ui-listbox .card .col-5 {
+          width: 41.66666667%;
+          float: left;
+          padding-left: 10px;
+          padding-right: 10px; }
+      .ui-optima .ui-listbox-container .ui-listbox.open {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 2px; }
+        .ui-optima .ui-listbox-container .ui-listbox.open .boxes {
+          border-bottom: solid 1px #ededed;
+          border-radius: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox.open:first-child {
+          margin-top: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox.open:last-child {
+          margin-bottom: 0; }
+        .ui-optima .ui-listbox-container .ui-listbox.open .card {
+          height: 232px;
+          padding: 15px; }
+  .ui-optima .ui-header + * {
+    margin-top: 70px !important; }
+  .ui-optima .ui-header {
+    background: #0031ab;
+    color: white;
+    padding: 20px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    z-index: 1000; }
+    .ui-optima .ui-header * {
+      color: white; }
+    .ui-optima .ui-header h1 {
+      font-size: 26px;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      padding: 0;
+      margin-top: 0;
+      font-family: Roboto;
+      position: absolute;
+      top: 19px;
+      left: 0;
+      right: 0;
+      z-index: 101; }
+    .ui-optima .ui-header .ui-btn-left,
+    .ui-optima .ui-header .divider,
+    .ui-optima .ui-header .ui-btn-right {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      z-index: 102;
+      font-size: 22px; }
+    .ui-optima .ui-header .divider, .ui-optima .ui-header .ui-btn-right {
+      float: right; }
+    .ui-optima .ui-header .ui-btn-left {
+      float: left; }
+    .ui-optima .ui-header .ui-btn-right {
+      padding-left: 20px; }
+    .ui-optima .ui-header .divider {
+      border-right: solid 1px #000083;
+      width: 2px;
+      margin-right: 4px;
+      height: 25px;
+      display: block; }
+    .ui-optima .ui-header .divider + .ui-btn-right {
+      padding-right: 15px; }
+    .ui-optima .ui-header .ui-btn-left, .ui-optima .ui-header .ui-btn-right {
+      background: transparent;
+      text-shadow: none;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      color: inherit; }
+      .ui-optima .ui-header .ui-btn-left .nc-icon-outline, .ui-optima .ui-header .ui-btn-right .nc-icon-outline {
+        font-size: 22px; }
+    .ui-optima .ui-header .menu {
+      background-color: #000059;
+      width: 195px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      right: -195px;
+      top: 70px;
+      bottom: 0;
+      z-index: 103;
+      transition: 0.25s ease-out right; }
+      .ui-optima .ui-header .menu.opened {
+        right: 0; }
+      .ui-optima .ui-header .menu li {
+        margin: 0;
+        padding: 24px 0;
+        height: 70px;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        font-size: 15px; }
+        .ui-optima .ui-header .menu li .inbox-num {
+          border-radius: 2px;
+          float: right;
+          position: initial;
+          margin: 2px 10px;
+          height: 16px;
+          line-height: 16px;
+          text-align: center;
+          background-color: #3f4e79; }
+        .ui-optima .ui-header .menu li a {
+          color: #3fa5ff;
+          text-shadow: none; }
+          .ui-optima .ui-header .menu li a .nc-icon-outline,
+          .ui-optima .ui-header .menu li a .icon-poc {
+            color: white;
+            padding: 0 20px;
+            font-size: 20px;
+            vertical-align: -3px; }
+        .ui-optima .ui-header .menu li:last-child {
+          border-top: solid 1px rgba(255, 255, 255, 0.2);
+          border-bottom: 0;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 195px; }
+  .ui-optima .moo-form .label {
+    background-color: #dedede;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    display: -webkit-flex; }
+    .ui-optima .moo-form .label > div {
+      padding: 10px 0;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: center;
+      -webkit-justify-content: center; }
+    .ui-optima .moo-form .label .bg-azule-dark {
+      width: 12%;
+      text-align: center; }
+      .ui-optima .moo-form .label .bg-azule-dark span {
+        font-family: Roboto-Mono;
+        color: white;
+        align-self: center;
+        -webkit-align-self: center; }
+    .ui-optima .moo-form .label .details {
+      width: 88%;
+      padding-right: 10px;
+      padding-left: 10px;
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      align-items: center;
+      -webkit-align-items: center; }
+      .ui-optima .moo-form .label .details .text {
+        padding-right: 10px; }
+        .ui-optima .moo-form .label .details .text h5 {
+          color: #000082;
+          margin-bottom: 0; }
+      .ui-optima .moo-form .label .details .icons {
+        flex-shrink: 0;
+        -webkit-flex-shrink: 0; }
+        .ui-optima .moo-form .label .details .icons i, .ui-optima .moo-form .label .details .icons div {
+          display: inline-block; }
+        .ui-optima .moo-form .label .details .icons .nc-icon-glyph {
+          font-size: 20px;
+          color: #1556c6; }
+        .ui-optima .moo-form .label .details .icons .divider {
+          background-color: #c9c9c9;
+          height: 20px;
+          width: 2px;
+          margin: 0 10px; }
+  .ui-optima .moo-form .section-header {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    text-transform: uppercase; }
+    .ui-optima .moo-form .section-header i {
+      color: #686868;
+      margin-right: 5px; }
+  .ui-optima .moo-form .content {
+    padding: 15px 0 45px 10px; }
+  .ui-optima .moo-form table {
+    width: 100%; }
+    .ui-optima .moo-form table .head label {
+      padding-left: 2px;
+      margin-bottom: 0; }
+    .ui-optima .moo-form table .head:not(:first-of-type) td {
+      padding-top: 20px; }
+    .ui-optima .moo-form table tr td.icd-9-wrapper {
+      width: 106px; }
+    .ui-optima .moo-form table tr.head:not(:first-of-type) {
+      height: 2.5em; }
+    .ui-optima .moo-form table td.tight {
+      width: 1%; }
+    .ui-optima .moo-form table td.row-label {
+      width: 28px; }
+      .ui-optima .moo-form table td.row-label label {
+        text-transform: initial; }
+    .ui-optima .moo-form table td.list {
+      display: inline; }
+    .ui-optima .moo-form table td.top {
+      vertical-align: top; }
+      .ui-optima .moo-form table td.top .ui-input-text {
+        margin-top: 0; }
+    .ui-optima .moo-form table td.pad-top {
+      padding-top: 10px; }
+    .ui-optima .moo-form table td.nowrap {
+      white-space: nowrap; }
+    .ui-optima .moo-form table td p {
+      font-size: 12px;
+      margin: 0;
+      color: black; }
+    .ui-optima .moo-form table .inline-radio {
+      display: inline-block;
+      position: relative;
+      top: 12px;
+      padding-left: 30px; }
+    .ui-optima .moo-form table.three-col tr td:nth-of-type(2) {
+      padding-right: 10px; }
+    .ui-optima .moo-form table.diagnoses-order .up-down-btns {
+      padding: 0 7px; }
+      .ui-optima .moo-form table.diagnoses-order .up-down-btns i {
+        font-size: 18px;
+        display: block;
+        color: #686868; }
+        .ui-optima .moo-form table.diagnoses-order .up-down-btns i.inactive {
+          color: #848484; }
+  .ui-optima .patient-searchbar-container {
+    height: 60px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    padding: 0 10px; }
+    .ui-optima .patient-searchbar-container .ui-btn {
+      margin: 0 10px 0 15px; }
+    .ui-optima .patient-searchbar-container .ui-input-text {
+      margin: 0;
+      box-shadow: none;
+      flex-grow: 2;
+      -webkit-flex-grow: 2;
+      height: 40px; }
+      .ui-optima .patient-searchbar-container .ui-input-text input {
+        line-height: 2.65em; }
+    .ui-optima .patient-searchbar-container i {
+      color: white;
+      font-size: 20px;
+      margin: 0 10px; }
+  .ui-optima .ui-listbox-container.patient-result .top {
+    padding-top: 7px; }
+    .ui-optima .ui-listbox-container.patient-result .top p.small-heading {
+      color: #686868;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0; }
+  .ui-optima .ui-listbox-container.patient-result .ui-listbox .boxes {
+    padding: 16px 5px 20px 20px; }
+    .ui-optima .ui-listbox-container.patient-result .ui-listbox .boxes h5 {
+      padding: 0 0 13px;
+      margin: 0; }
+    .ui-optima .ui-listbox-container.patient-result .ui-listbox .boxes .box {
+      width: 33.3333333%;
+      float: left; }
+    .ui-optima .ui-listbox-container.patient-result .ui-listbox .boxes .row {
+      padding: 0;
+      display: block; }
+    .ui-optima .ui-listbox-container.patient-result .ui-listbox .boxes label {
+      margin-top: 1px; }
+  .ui-optima .footer-nav-btmspace {
+    height: 60px; }
+  .ui-optima .footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
+    .ui-optima .footer-nav.open .top-bar .up-btn i.arrows-1_minimal-up {
+      display: none; }
+    .ui-optima .footer-nav.open .top-bar .up-btn i.arrows-1_minimal-down {
+      display: initial; }
+    .ui-optima .footer-nav.open .bottom-panel {
+      max-height: 100vh;
+      padding: 30px 0; }
+    .ui-optima .footer-nav .top-bar {
+      color: white;
+      font-size: 11px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      height: 50px; }
+      .ui-optima .footer-nav .top-bar i {
+        font-size: 16px;
+        font-weight: bold;
+        vertical-align: middle;
+        padding: 0 15px; }
+      .ui-optima .footer-nav .top-bar span {
+        vertical-align: middle;
+        display: inline-block;
+        line-height: 17px;
+        padding-bottom: 2px; }
+      .ui-optima .footer-nav .top-bar .up-btn {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -40px;
+        width: 60px;
+        height: 30px;
+        opacity: 0.8;
+        font-size: 24px;
+        text-align: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        cursor: pointer; }
+        .ui-optima .footer-nav .top-bar .up-btn i {
+          font-size: 24px;
+          line-height: 36px; }
+          .ui-optima .footer-nav .top-bar .up-btn i.arrows-1_minimal-down {
+            line-height: 36px;
+            display: none; }
+      .ui-optima .footer-nav .top-bar .title {
+        font-size: 14px;
+        font-weight: bold; }
+        .ui-optima .footer-nav .top-bar .title span {
+          display: block;
+          padding-bottom: 0; }
+      .ui-optima .footer-nav .top-bar .right-btn {
+        text-align: right; }
+    .ui-optima .footer-nav .bottom-panel {
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      transition: all .2s ease-in-out; }
+      .ui-optima .footer-nav .bottom-panel .left, .ui-optima .footer-nav .bottom-panel .right {
+        width: 50%;
+        float: left; }
+        .ui-optima .footer-nav .bottom-panel .left a, .ui-optima .footer-nav .bottom-panel .right a {
+          display: block;
+          font-size: 16px;
+          color: #3ea5ff;
+          line-height: 24px;
+          padding: 10px 20px; }
+          .ui-optima .footer-nav .bottom-panel .left a.active, .ui-optima .footer-nav .bottom-panel .right a.active {
+            color: white; }
+          .ui-optima .footer-nav .bottom-panel .left a:first-of-type, .ui-optima .footer-nav .bottom-panel .right a:first-of-type {
+            padding-top: 0; }
+          .ui-optima .footer-nav .bottom-panel .left a:last-of-type, .ui-optima .footer-nav .bottom-panel .right a:last-of-type {
+            padding-bottom: 0; }
+      .ui-optima .footer-nav .bottom-panel .right {
+        border-left: solid 2px rgba(255, 255, 255, 0.2); }
+  .ui-optima .sticky-header .inbox-num {
+    font-size: 12px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    line-height: 20px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: -8px;
+    right: 10px; }
+  .ui-optima .sticky-header.ui-header .divider + .ui-btn-right {
+    margin-top: 0;
+    padding-right: 20px;
+    overflow: visible; }
+  .ui-optima .sticky-header.ui-header .btn-green.ui-link {
+    top: -3px; }
+  .ui-optima .sticky-header .ui-btn {
+    z-index: 200; }
+  .ui-optima .sticky-header .divider, .ui-optima .sticky-header a.ui-link {
+    top: 3px;
+    right: 0;
+    margin-right: 0; }
+  .ui-optima .sticky-header .icon-logo {
+    font-size: 34px;
+    display: block; }
+  .ui-optima .calendar-widget,
+  .ui-optima .orders-calendar-wrapper .calendar {
+    background-color: white;
+    color: #686868;
+    border: 0px solid #686868;
+    box-shadow: 0 2px 0 0 #d8d8d8;
+    width: 370px;
+    margin: 0 auto; }
+    .ui-optima .calendar-widget .header,
+    .ui-optima .orders-calendar-wrapper .calendar .header {
+      background-color: #3ea5ff;
+      color: white;
+      font-size: 18px;
+      height: 50px; }
+      .ui-optima .calendar-widget .header .month-dropdown,
+      .ui-optima .orders-calendar-wrapper .calendar .header .month-dropdown {
+        display: block;
+        float: left;
+        width: 50%; }
+    .ui-optima .calendar-widget .weekdays,
+    .ui-optima .orders-calendar-wrapper .calendar .weekdays {
+      display: table;
+      width: 100%;
+      height: 24px;
+      background-color: #0031ab; }
+      .ui-optima .calendar-widget .weekdays p,
+      .ui-optima .orders-calendar-wrapper .calendar .weekdays p {
+        color: #FFF;
+        line-height: 22px; }
+      .ui-optima .calendar-widget .weekdays .weekday-cell,
+      .ui-optima .orders-calendar-wrapper .calendar .weekdays .weekday-cell {
+        display: table-cell;
+        width: 53px;
+        text-align: center;
+        border: 1px solid #0031ab; }
+    .ui-optima .calendar-widget .dates-row,
+    .ui-optima .orders-calendar-wrapper .calendar .dates-row {
+      display: table;
+      width: 100%;
+      height: 53px; }
+      .ui-optima .calendar-widget .dates-row .date-cell,
+      .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell {
+        display: table-cell;
+        width: 53px;
+        border-right: 1px solid #d8d8d8;
+        border-top: 1px solid #d8d8d8; }
+        .ui-optima .calendar-widget .dates-row .date-cell:first-child,
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell:first-child {
+          border-left: 1px solid #d8d8d8; }
+        .ui-optima .calendar-widget .dates-row .date-cell.active,
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell.active {
+          background-color: #3ea5ff; }
+          .ui-optima .calendar-widget .dates-row .date-cell.active p,
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell.active p {
+            color: white; }
+        .ui-optima .calendar-widget .dates-row .date-cell p,
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell p {
+          color: #686868;
+          font-size: 18px;
+          font-weight: 200;
+          text-align: center;
+          margin-top: 16px; }
+    .ui-optima .calendar-widget .disabled,
+    .ui-optima .orders-calendar-wrapper .calendar .disabled {
+      background-color: #ededed; }
+    .ui-optima .calendar-widget .month-select, .ui-optima .calendar-widget .year-select,
+    .ui-optima .orders-calendar-wrapper .calendar .month-select,
+    .ui-optima .orders-calendar-wrapper .calendar .year-select {
+      display: inline-block;
+      margin: 0;
+      height: 50px;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.3); }
+      .ui-optima .calendar-widget .month-select .ui-select a.ui-btn, .ui-optima .calendar-widget .year-select .ui-select a.ui-btn,
+      .ui-optima .orders-calendar-wrapper .calendar .month-select .ui-select a.ui-btn,
+      .ui-optima .orders-calendar-wrapper .calendar .year-select .ui-select a.ui-btn {
+        background: #3ea5ff !important;
+        border-width: 0 !important;
+        box-shadow: none;
+        color: #FFF !important;
+        padding-top: 15px; }
+        .ui-optima .calendar-widget .month-select .ui-select a.ui-btn:after, .ui-optima .calendar-widget .year-select .ui-select a.ui-btn:after,
+        .ui-optima .orders-calendar-wrapper .calendar .month-select .ui-select a.ui-btn:after,
+        .ui-optima .orders-calendar-wrapper .calendar .year-select .ui-select a.ui-btn:after {
+          color: #FFF !important;
+          padding-top: 5px; }
+        .ui-optima .calendar-widget .month-select .ui-select a.ui-btn span, .ui-optima .calendar-widget .year-select .ui-select a.ui-btn span,
+        .ui-optima .orders-calendar-wrapper .calendar .month-select .ui-select a.ui-btn span,
+        .ui-optima .orders-calendar-wrapper .calendar .year-select .ui-select a.ui-btn span {
+          text-align: center; }
+    .ui-optima .calendar-widget .month-select,
+    .ui-optima .orders-calendar-wrapper .calendar .month-select {
+      margin-left: 73px;
+      width: 120px; }
+    .ui-optima .calendar-widget .year-select,
+    .ui-optima .orders-calendar-wrapper .calendar .year-select {
+      margin-right: 73px;
+      border-left-width: 0;
+      width: 100px; }
+  .ui-optima .one-column {
+    padding: 0 20px;
+    position: relative; }
+  .ui-optima .btn-new-order {
+    display: inline-block;
+    float: right;
+    margin: 0; }
+  .ui-optima .ui-nav-4 {
+    background-color: #FFF; }
+  .ui-optima hr.title-ruler {
+    margin: 10px 0 30px 0; }
+  .ui-optima .new-section-heading {
+    display: inline-block;
+    margin-bottom: 0; }
+  .ui-optima .title-with-btn {
+    padding-top: 24px; }
+  .ui-optima .dark-blue {
+    color: #000082; }
+  .ui-optima .mango-dark {
+    color: #ff7747; }
+  .ui-optima .gray {
+    color: #686868; }
+  .ui-optima .list {
+    padding-left: 20px;
+    margin-bottom: 0; }
+    .ui-optima .list li {
+      padding-bottom: 15px;
+      font-size: 13px; }
+    .ui-optima .list li:last-child {
+      padding-bottom: 0; }
+  .ui-optima .bg-dark-blue {
+    background-color: #000082; }
+  .ui-optima .fixed-row {
+    height: 40px;
+    width: 476px; }
+    .ui-optima .fixed-row.communications {
+      display: table; }
+      .ui-optima .fixed-row.communications .left {
+        width: 171px; }
+    .ui-optima .fixed-row.communication-history {
+      width: 100%;
+      height: 20px; }
+      .ui-optima .fixed-row.communication-history .right label {
+        margin-right: 20px; }
+      .ui-optima .fixed-row.communication-history div:first-child {
+        width: 485px; }
+  .ui-optima .date {
+    width: 69px; }
+  .ui-optima .summary {
+    width: 414px; }
+  .ui-optima .status {
+    width: 56px; }
+    .ui-optima .status.approved {
+      color: #5fac05; }
+    .ui-optima .status.draft {
+      color: #f3a410; }
+  .ui-optima .left {
+    float: left;
+    display: inline-block; }
+  .ui-optima .right {
+    float: right;
+    display: inline-block;
+    margin-right: 0; }
+  .ui-optima .row .label.mango-dark.status {
+    padding-top: 19px;
+    margin-right: 90px; }
+  .ui-optima .orders-summary .schedule {
+    padding-left: 16px; }
+    .ui-optima .orders-summary .schedule .days p {
+      font-size: 14px; }
+  .ui-optima .schedule label {
+    display: inline-block;
+    width: 121px; }
+  .ui-optima .freq-duration .days p {
+    display: inline-block;
+    width: 121px;
+    vertical-align: top; }
+  .ui-optima .row.np {
+    padding: 0 !important; }
+  .ui-optima label {
+    color: #686868; }
+  .ui-optima textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    border: 0;
+    box-shadow: 0 2px 1px 0 #d8d8d8;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 13px; }
+  .ui-optima .sub-section {
+    width: 100%;
+    padding-bottom: 25px;
+    display: table; }
+  .ui-optima .select-status-container {
+    padding-top: 18px; }
+    .ui-optima .select-status-container .btn-scnd {
+      float: right;
+      margin: 0;
+      width: 77px;
+      height: 50px;
+      line-height: 25px; }
+  .ui-optima .select-status-container .ui-select {
+    width: 279px;
+    float: left;
+    display: inline-block; }
+  .ui-optima .record {
+    border-top: 2px solid #d8d8d8; }
+    .ui-optima .record .left {
+      padding: 1px 0 10px;
+      float: none;
+      display: table-cell;
+      vertical-align: top; }
+      .ui-optima .record .left:first-child {
+        width: 20px; }
+    .ui-optima .record p.status, .ui-optima .record p.summary, .ui-optima .record label.date {
+      font-size: 12px;
+      margin: 0;
+      line-height: 19px; }
+    .ui-optima .record p.summary {
+      padding-right: 10px;
+      width: auto; }
+  .ui-optima .two-button .left-btn, .ui-optima .two-button .right-btn {
+    padding: 20px; }
+    .ui-optima .two-button .left-btn span, .ui-optima .two-button .right-btn span {
+      font-size: 16px;
+      color: white; }
+  .ui-optima .section-group {
+    padding: 25px 0;
+    display: table;
+    width: 100%; }
+    .ui-optima .section-group .ui-btn.ui-btn-right {
+      top: initial; }
+  .ui-optima .form-group.no-border.np:last-child {
+    padding: 15px 0 0 0; }
+  .ui-optima .nc-icon-glyph.ui-1_lock:before {
+    color: #848484; }
+  .ui-optima .orders-sequences .date {
+    width: initial;
+    display: block;
+    padding-bottom: 15px; }
+  .ui-optima .orders-sequences .form-group {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    width: 560px; }
+    .ui-optima .orders-sequences .form-group .number.large {
+      flex: 0 0 auto;
+      -webkit-flex: 0 0 auto; }
+    .ui-optima .orders-sequences .form-group .schedule {
+      display: flex;
+      display: -webkit-flex;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      flex: 1 0 auto;
+      -webkit-flex: 1 0 auto;
+      padding-left: 20px; }
+      .ui-optima .orders-sequences .form-group .schedule .input-box {
+        flex: 1 0 auto;
+        -webkit-flex: 1 0 auto;
+        display: inline-block;
+        float: left;
+        padding-right: 20px;
+        height: 90px; }
+        .ui-optima .orders-sequences .form-group .schedule .input-box label {
+          margin-bottom: 0;
+          padding-top: 1px; }
+        .ui-optima .orders-sequences .form-group .schedule .input-box .row {
+          padding: 0; }
+          .ui-optima .orders-sequences .form-group .schedule .input-box .row span {
+            padding-left: 10px; }
+        .ui-optima .orders-sequences .form-group .schedule .input-box .days {
+          height: 18px; }
+          .ui-optima .orders-sequences .form-group .schedule .input-box .days a {
+            font-weight: normal;
+            position: relative; }
+            .ui-optima .orders-sequences .form-group .schedule .input-box .days a:before {
+              display: none;
+              position: absolute;
+              right: -24px;
+              font-size: 16px;
+              line-height: 12px;
+              color: #848484; }
+            .ui-optima .orders-sequences .form-group .schedule .input-box .days a.locked:before {
+              display: initial; }
+    .ui-optima .orders-sequences .form-group .remove-btn i {
+      color: #848484;
+      font-size: 25px; }
+  .ui-optima .orders-sequences .add-seq {
+    height: 66px; }
+    .ui-optima .orders-sequences .add-seq .ui-btn {
+      float: right; }
+  .ui-optima .orders-calendar-wrapper a {
+    font-weight: normal; }
+  .ui-optima .orders-calendar-wrapper .calendar {
+    width: initial;
+    box-shadow: none; }
+    .ui-optima .orders-calendar-wrapper .calendar .header {
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: space-between;
+      -webkit-justify-content: space-between; }
+      .ui-optima .orders-calendar-wrapper .calendar .header .left {
+        border-right: solid 1px rgba(255, 255, 255, 0.3); }
+      .ui-optima .orders-calendar-wrapper .calendar .header .right {
+        border-left: solid 1px rgba(255, 255, 255, 0.3); }
+      .ui-optima .orders-calendar-wrapper .calendar .header .left, .ui-optima .orders-calendar-wrapper .calendar .header .right {
+        width: 70px;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center; }
+        .ui-optima .orders-calendar-wrapper .calendar .header .left i, .ui-optima .orders-calendar-wrapper .calendar .header .right i {
+          font-weight: bold; }
+      .ui-optima .orders-calendar-wrapper .calendar .header .month span {
+        font-weight: lighter; }
+      .ui-optima .orders-calendar-wrapper .calendar .header .weekdays .weekday-cell p {
+        line-height: 34px;
+        font-size: 16px;
+        font-weight: lighter; }
+    .ui-optima .orders-calendar-wrapper .calendar .dates-row {
+      height: 80px;
+      position: relative;
+      border-right: solid 1px #d8d8d8;
+      border-left: solid 1px #d8d8d8; }
+      .ui-optima .orders-calendar-wrapper .calendar .dates-row:last-of-type {
+        border-bottom: solid 1px #d8d8d8;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px; }
+      .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell {
+        height: 80px;
+        border: solid 1px #d8d8d8;
+        vertical-align: top; }
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .flex-cell {
+          display: flex;
+          display: -webkit-flex;
+          flex-direction: column;
+          -webkit-flex-direction: column;
+          width: 100%;
+          height: 100%; }
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders {
+          flex: 1 0 auto;
+          -webkit-flex: 1 0 auto;
+          display: flex;
+          display: -webkit-flex;
+          flex-direction: column;
+          -webkit-flex-direction: column;
+          justify-content: center;
+          -webkit-justify-content: center;
+          padding: 3px 8px;
+          width: 100%; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"] {
+            display: flex;
+            display: -webkit-flex;
+            height: 10px;
+            width: 100%;
+            margin-top: 3px;
+            border-radius: 2px;
+            overflow: hidden;
+            transition: all 0.15s cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+            .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"].start {
+              border-top-left-radius: 0px;
+              border-bottom-left-radius: 0px; }
+              .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"].start:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 5px solid transparent;
+                border-left: 8px solid white;
+                border-bottom: 5px solid transparent; }
+            .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"].hide {
+              height: 0;
+              margin: 0;
+              opacity: 0; }
+            .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"] .section {
+              flex: 1 0 auto;
+              -webkit-flex: 1 0 auto;
+              height: 100%;
+              border-right: 2px solid white; }
+              .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders [class*="type-"] .section:last-of-type {
+                border-right: none; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-sn {
+            background-color: #1657c6; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-pt {
+            background-color: #69aeb3; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-ot {
+            background-color: #e34d5b; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-st {
+            background-color: #f3a410; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-hha {
+            background-color: #3fa5ff; }
+          .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell .orders .type-msw {
+            background-color: #ac5de1; }
+        .ui-optima .orders-calendar-wrapper .calendar .dates-row .date-cell p {
+          align-self: flex-end;
+          -webkit-align-self: flex-end;
+          display: block;
+          padding: 2px;
+          line-height: 12px;
+          font-size: 12px;
+          color: #686868;
+          opacity: .5;
+          text-align: right;
+          margin: 0; }
+  .ui-optima .orders-calendar-wrapper .checkboxes {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    margin-top: 36px; }
+    .ui-optima .orders-calendar-wrapper .checkboxes.hide {
+      display: none; }
+    .ui-optima .orders-calendar-wrapper .checkboxes > label {
+      padding-right: 20px;
+      text-transform: uppercase;
+      margin: 1px 0 0;
+      color: #848484; }
+    .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls {
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: space-between;
+      -webkit-justify-content: space-between; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .ui-checkbox-on {
+        color: black; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-sn .ui-checkbox-on:before {
+        color: #1657c6; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-pt .ui-checkbox-on:before {
+        color: #69aeb3; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-ot .ui-checkbox-on:before {
+        color: #e34d5b; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-st .ui-checkbox-on:before {
+        color: #f3a410; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-hha .ui-checkbox-on:before {
+        color: #3fa5ff; }
+      .ui-optima .orders-calendar-wrapper .checkboxes .ui-controlgroup-controls .type-msw .ui-checkbox-on:before {
+        color: #ac5de1; }
+  .ui-optima .lightbox-background {
+    background: -webkit-linear-gradient(top, #0031ab, #000082);
+    background: -o-linear-gradient(bottom, #0031ab, #000082);
+    background: -moz-linear-gradient(bottom, #0031ab, #000082);
+    background: linear-gradient(to bottom, #0031ab, #000082);
+    opacity: 0.85;
+    position: fixed;
+    height: 100%;
+    width: 100%; }
+  .ui-optima .login-screen {
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    .ui-optima .login-screen .icon-logo {
+      color: #FFF;
+      padding: 0 0 95px 0;
+      font-size: 70px;
+      display: block;
+      text-align: center; }
+    .ui-optima .login-screen .login-icon-container i.icon-u-n-person, .ui-optima .login-screen .login-icon-container i.icon-p-w-lock {
+      font-size: 20px;
+      padding: 0 0 0 10px;
+      line-height: 40px;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      margin-top: -5px; }
+    .ui-optima .login-screen .placeholder-icon {
+      position: relative;
+      font-size: 20px;
+      padding-top: 10px;
+      padding-left: 9px;
+      color: #FFF; }
+    .ui-optima .login-screen .login-input-fields div {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      color: white; }
+    .ui-optima .login-screen .login-input-fields .ui-input-text.ui-body-inherit.ui-corner-all.input-sm.ui-shadow-inset {
+      border-bottom: 1px solid white;
+      margin-bottom: 30px; }
+    .ui-optima .login-screen .input-sm input {
+      padding-left: 45px;
+      font-size: 16px; }
+    .ui-optima .login-screen .btn-wrap {
+      width: 100%;
+      margin: 0;
+      padding-top: 30px; }
+      .ui-optima .login-screen .btn-wrap .ui-btn.ui-input-btn.btn-lg.btn-prim.ui-corner-all.ui-shadow.ui-btn-inline {
+        width: 100%; }
+      .ui-optima .login-screen .btn-wrap .ui-link.ui-btn.ui-shadow.ui-corner-all {
+        background-color: #3ea5ff;
+        padding: 16px 20px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #FFF;
+        height: 50px; }
+    .ui-optima .login-screen fieldset {
+      width: 50%;
+      float: left; }
+    .ui-optima .login-screen a.password-link {
+      float: right;
+      font-size: 13px;
+      color: #FFF;
+      font-weight: 200;
+      line-height: 13px; }
+    .ui-optima .login-screen .login-controls {
+      padding-top: 20px; }
+      .ui-optima .login-screen .login-controls * {
+        border: 0;
+        text-shadow: none; }
+      .ui-optima .login-screen .login-controls label {
+        color: white;
+        line-height: 32px; }
+      .ui-optima .login-screen .login-controls .ui-checkbox-off:after, .ui-optima .login-screen .login-controls .ui-checkbox-on:after {
+        border: 0; }
+    .ui-optima .login-screen .proper-case-checkbox {
+      font-family: inherit;
+      font-weight: 200;
+      text-transform: capitalize;
+      font-size: 13px; }
+      .ui-optima .login-screen .proper-case-checkbox:before {
+        color: #FFF; }
+      .ui-optima .login-screen .proper-case-checkbox:after {
+        background-color: transparent;
+        box-shadow: none;
+        border: 1px solid white !important; }
+    .ui-optima .login-screen .password {
+      font-size: 26px;
+      letter-spacing: 3px; }
+  .ui-optima .ui-input-text.error {
+    border-bottom-color: #fc5666; }
+  .ui-optima i.error {
+    background-color: #ff7380; }
+  .ui-optima .loader:before,
+  .ui-optima .loader:after,
+  .ui-optima .loader {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out; }
+  .ui-optima .loader {
+    font-size: 13px;
+    margin: 20px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
+  .ui-optima .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  .ui-optima .loader:after {
+    left: 3.5em; }
+  .ui-optima .loader:before,
+  .ui-optima .loader:after {
+    content: '';
+    position: absolute;
+    top: 0; }
+  .ui-optima .loading-container {
+    position: relative;
+    top: 31%; }
+  .ui-optima .loading-font {
+    color: white;
+    font-size: 28px;
+    font-weight: 200;
+    text-align: center; }
+  .ui-optima .orders-summary.history .fixed-row {
+    width: 100%; }
+    .ui-optima .orders-summary.history .fixed-row .left {
+      margin-right: 55px; }
+    .ui-optima .orders-summary.history .fixed-row .left:nth-child(3) {
+      margin-right: 0; }
+  .ui-optima .orders-summary.history .button-icon {
+    padding-left: 10px; }
+  .ui-optima .orders-summary.history .row {
+    padding-bottom: 50px; }
+  .ui-optima .orders-summary.history .history-list-heading {
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10px; }
+  .ui-optima .orders-summary.history .history-list {
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 0; }
+    .ui-optima .orders-summary.history .history-list:first-child {
+      border-radius: 2px 2px 0 0; }
+    .ui-optima .orders-summary.history .history-list:last-child {
+      border-radius: 0 0 2px 2px;
+      border-bottom: 0; }
+  .ui-optima .orders-summary.history .frequency-duration-label {
+    color: #686868; }
+    .ui-optima .orders-summary.history .frequency-duration-label .data-field {
+      color: #000; }
+  .ui-optima .orders-summary.history .frequency-duration.order-history label.frequency-duration-label {
+    width: 185px;
+    margin-right: 50px; }
+  .ui-optima .orders-summary.history .schedule .days p.frequency-duration-label {
+    width: 185px;
+    margin-right: 50px; }
+  .ui-optima .orders-summary.history .control-group .ui-btn-right {
+    position: static;
+    float: right;
+    margin-left: 15px;
+    margin-right: 0; }
+  .ui-optima .orders-summary.history .schedule .days p,
+  .ui-optima .orders-summary.history .schedule .frequency-duration label {
+    width: 120px; }
+  .ui-optima label.green {
+    color: #5fac05; }
+  .ui-optima .custom-lightbox.ui-popup-screen.in {
+    opacity: 0.98;
+    background-color: #000059; }
+  .ui-optima .popup-lightbox {
+    width: 514px;
+    height: 299px; }
+    .ui-optima .popup-lightbox .popup-lightbox-content {
+      padding: 30px 30px;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 2px 1px 0 black; }
+      .ui-optima .popup-lightbox .popup-lightbox-content p {
+        color: #686868;
+        font-family: "Roboto";
+        font-size: 16px;
+        line-height: 28px;
+        margin: 15px 0; }
+      .ui-optima .popup-lightbox .popup-lightbox-content .popup-lightbox-buttons {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        height: 48px; }
+        .ui-optima .popup-lightbox .popup-lightbox-content .popup-lightbox-buttons .popup-anchor {
+          margin-right: 15px;
+          width: 86px;
+          outline: none; }
+          .ui-optima .popup-lightbox .popup-lightbox-content .popup-lightbox-buttons .popup-anchor:last-child {
+            margin-right: 0px; }
+  .ui-optima .popup-lightbox-fullsize {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-height: 100% !important;
+    overflow-y: scroll; }
+    .ui-optima .popup-lightbox-fullsize .popup-lightbox-content {
+      padding: 25px 40px 15px 40px;
+      height: 100vh;
+      width: 100vw;
+      min-width: 600px;
+      background-color: #000059;
+      -khtml-opacity: 0.98;
+      -moz-opacity: 0.98;
+      -ms-filter: ”alpha(opacity=98) ”;
+      filter: alpha(opacity=98);
+      filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.98);
+      opacity: 0.98;
+      border: none;
+      border-radius: 2px; }
+      .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .fixed-row {
+        width: 100%; }
+      .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table {
+        margin-top: 10px; }
+        .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table .section-table-heading {
+          margin-bottom: 10px; }
+          .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table .section-table-heading .section-heading-style {
+            font-size: 12px; }
+        .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table .sub-section-row {
+          min-height: 30px;
+          width: 100%;
+          display: inline-block;
+          margin-bottom: -5px;
+          padding-top: 2px;
+          border-top: 1px solid white;
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box; }
+          .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table .sub-section-row .cell-spacing {
+            max-width: 445px;
+            margin-left: 20px; }
+          .ui-optima .popup-lightbox-fullsize .popup-lightbox-content .sub-section-table .sub-section-row .row-data {
+            font-size: 12px;
+            line-height: 24px; }
+    .ui-optima .popup-lightbox-fullsize p, .ui-optima .popup-lightbox-fullsize label, .ui-optima .popup-lightbox-fullsize span, .ui-optima .popup-lightbox-fullsize li {
+      color: #ffffff; }
+    .ui-optima .popup-lightbox-fullsize i.nc-icon-glyph.ui-1_lock, .ui-optima .popup-lightbox-fullsize i.nc-icon-glyph.ui-1_simple-remove {
+      color: #ffffff !important; }
+    .ui-optima .popup-lightbox-fullsize i.nc-icon-glyph.ui-1_simple-remove {
+      font-size: 28px; }
+    .ui-optima .popup-lightbox-fullsize .custom-ul-blue-bullet {
+      padding: 0;
+      margin: 0; }
+      .ui-optima .popup-lightbox-fullsize .custom-ul-blue-bullet li {
+        list-style: none;
+        font-size: 13px;
+        padding-bottom: 20px; }
+      .ui-optima .popup-lightbox-fullsize .custom-ul-blue-bullet li:last-child {
+        padding-bottom: 0; }
+      .ui-optima .popup-lightbox-fullsize .custom-ul-blue-bullet li:before {
+        content: url("images/icons-svg/bullet-blue.svg");
+        line-height: 15px;
+        margin-right: 10px; }
+  .ui-optima .color-azule-light {
+    background-color: #1556c6; }
+  .ui-optima .lightbox-heading {
+    font-size: 22px; }
+  .ui-optima .lightbox-ruler {
+    height: 1px;
+    background-color: #ffffff; }
+  .ui-optima .lightbox-title-ruler {
+    margin: 35px 0 40px 0; }
+  .ui-optima .lightbox-sub-ruler {
+    margin: 20px 0;
+    opacity: 0.4; }
+  .ui-optima .sub-ruler-silver {
+    color: #ededed; }
+  .ui-optima .cell-space-left {
+    margin-left: 60px; }
+  .ui-optima .space-bottom {
+    margin-bottom: 20px; }
+  .ui-optima .label-margin-top {
+    margin-top: 3px; }
+  .ui-optima .fixed-cells {
+    margin-left: 20px;
+    min-width: 210px; }
+  .ui-optima .status-font {
+    color: #72cd08 !important;
+    font-size: 14px; }
+  .ui-optima .sub-section-heading {
+    font-size: 18px; }
+  .ui-optima .timeline {
+    background-color: #ededed;
+    padding: 0 10px 10px 30px; }
+    .ui-optima .timeline .item {
+      display: block;
+      padding-top: 10px;
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      -webkit-align-items: center;
+      position: relative; }
+      .ui-optima .timeline .item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 2px;
+        height: 100%;
+        background-color: #848484; }
+      .ui-optima .timeline .item:first-of-type::before {
+        top: 50%;
+        height: 50%; }
+      .ui-optima .timeline .item:last-of-type::before {
+        bottom: 50%;
+        height: 50%; }
+      .ui-optima .timeline .item.day-marker {
+        padding-top: 20px; }
+        .ui-optima .timeline .item.day-marker span {
+          position: relative;
+          left: -15px;
+          display: inline-block;
+          color: white;
+          background-color: #848484;
+          border-radius: 2px;
+          padding: 7px 10px 5px;
+          text-transform: uppercase;
+          font-weight: lighter;
+          font-size: 13px; }
+      .ui-optima .timeline .item .box {
+        background-color: white;
+        box-shadow: 0 2px 1px -1px #d8d8d8;
+        border-radius: 2px;
+        padding: 20px 15px;
+        flex: 1 0 0;
+        -webkit-flex: 1 0 0; }
+        .ui-optima .timeline .item .box::before {
+          content: '';
+          height: 0;
+          width: 0;
+          border-top: 5px solid transparent;
+          border-right: 5px solid white;
+          border-bottom: 5px solid transparent;
+          position: absolute;
+          left: 25px;
+          top: 50%; }
+        .ui-optima .timeline .item .box .title {
+          padding-bottom: 4px; }
+          .ui-optima .timeline .item .box .title span {
+            font-size: 15px;
+            color: black;
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased; }
+            .ui-optima .timeline .item .box .title span::before {
+              content: '';
+              display: inline-block;
+              position: relative;
+              top: 1px;
+              height: 13px;
+              width: 2px;
+              background-color: #c9c9c9;
+              margin: 0 8px 0 5px; }
+            .ui-optima .timeline .item .box .title span:first-of-type::before {
+              display: none; }
+        .ui-optima .timeline .item .box p {
+          color: #686868;
+          font-size: 13px; }
+          .ui-optima .timeline .item .box p span.highlight {
+            font-weight: bold;
+            -webkit-font-smoothing: antialiased; }
+      .ui-optima .timeline .item i {
+        flex: 0 0 auto;
+        -webkit-flex: 0 0 auto; }
+        .ui-optima .timeline .item i.circle {
+          position: relative;
+          left: -15px;
+          color: white;
+          height: 30px;
+          width: 30px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 20px; }
+      .ui-optima .timeline .item.cal i.circle {
+        background-color: #1556c6; }
+        .ui-optima .timeline .item.cal i.circle::before {
+          content: '\e668'; }
+      .ui-optima .timeline .item.bell i.circle {
+        background-color: #fc5666; }
+        .ui-optima .timeline .item.bell i.circle::before {
+          content: '\e65c'; }
+      .ui-optima .timeline .item.paper i.circle {
+        background-color: #69aeb3; }
+        .ui-optima .timeline .item.paper i.circle::before {
+          content: '\e964'; }
+      .ui-optima .timeline .item.doc i.circle {
+        background-color: #5fac05; }
+        .ui-optima .timeline .item.doc i.circle::before {
+          content: '\e61e';
+          font-family: 'icomoon'; }
+      .ui-optima .timeline .item.cal span.highlight {
+        color: #1556c6; }
+      .ui-optima .timeline .item.bell span.highlight {
+        color: #fc5666; }
+      .ui-optima .timeline .item.paper span.highlight {
+        color: #69aeb3; }
+      .ui-optima .timeline .item.doc span.highlight {
+        color: #5fac05; }
+  .ui-optima .timeline-footer {
+    height: 60px;
+    padding: 0 0 0 20px;
+    color: white;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between; }
+    .ui-optima .timeline-footer .footer-buttons, .ui-optima .timeline-footer .footer-label {
+      width: 60px;
+      display: inline-block;
+      text-align: -webkit-center;
+      text-align: center;
+      font-size: 20px;
+      vertical-align: middle;
+      line-height: 60px;
+      height: 60px; }
+      .ui-optima .timeline-footer .footer-buttons span, .ui-optima .timeline-footer .footer-label span {
+        font-size: 14px; }
+      .ui-optima .timeline-footer .footer-buttons i, .ui-optima .timeline-footer .footer-label i {
+        margin-top: 21px; }
+    .ui-optima .timeline-footer .footer-buttons {
+      cursor: pointer; }
+    .ui-optima .timeline-footer .footer-buttons.active {
+      background-color: #000059; }
+    .ui-optima .timeline-footer .footer-buttons.txt-switch.active {
+      background-color: #000082; }
+    .ui-optima .timeline-footer .text-icon {
+      font-weight: 700; }
+    .ui-optima .timeline-footer .text-icon.active {
+      color: #000059;
+      background-color: #3ea5ff; }
+    .ui-optima .timeline-footer .cal:before {
+      content: '\e668'; }
+    .ui-optima .timeline-footer .paper:before {
+      content: '\e964'; }
+    .ui-optima .timeline-footer .doc:before {
+      content: '\e61e';
+      font-family: 'icomoon'; }
+    .ui-optima .timeline-footer .bell:before {
+      content: '\e65c'; }
+    .ui-optima .timeline-footer .note:before {
+      content: url("images/icons-svg/write-note.svg"); }
+  .ui-optima .footer-text-area {
+    background-color: #000082;
+    padding: 18px;
+    height: 146px;
+    z-index: 1000; }
+    .ui-optima .footer-text-area .buttons {
+      padding: 0 0 1px 15px; }
+    .ui-optima .footer-text-area .text-input {
+      height: 110px;
+      width: 100%;
+      border-radius: 2px; }
+    .ui-optima .footer-text-area .icon-container {
+      height: 50px;
+      line-height: 48px;
+      width: 50px;
+      text-align: -webkit-center;
+      text-align: center;
+      font-size: 18px;
+      vertical-align: middle;
+      border: solid 2px white;
+      border-radius: 3px;
+      color: white;
+      cursor: pointer; }
+    .ui-optima .footer-text-area .icon-container.green {
+      background-color: #5fac05;
+      border: none;
+      margin-bottom: 10px;
+      font-size: 20px; }
+  .ui-optima .medications-page .top-section {
+    padding-left: 10px; }
+    .ui-optima .medications-page .top-section .left {
+      align-self: flex-end;
+      -webkit-align-self: flex-end; }
+    .ui-optima .medications-page .top-section .right {
+      margin-bottom: -4px; }
+  .ui-optima .medications-page .ui-listbox {
+    padding: 0 15px 10px; }
+    .ui-optima .medications-page .ui-listbox a.edit {
+      font-size: 16px;
+      font-weight: normal; }
+      .ui-optima .medications-page .ui-listbox a.edit::before {
+        padding-right: 10px;
+        font-size: 18px; }
+    .ui-optima .medications-page .ui-listbox p {
+      color: black; }
+      .ui-optima .medications-page .ui-listbox p.disclaimer {
+        color: #686868; }
+      .ui-optima .medications-page .ui-listbox p.green {
+        color: #5fac05; }
+      .ui-optima .medications-page .ui-listbox p.red {
+        color: #fc5666; }
+    .ui-optima .medications-page .ui-listbox .info {
+      margin-top: -12px; }
+      .ui-optima .medications-page .ui-listbox .info .left {
+        width: 60%; }
+      .ui-optima .medications-page .ui-listbox .info .right {
+        width: 40%; }
+      .ui-optima .medications-page .ui-listbox .info .border-right {
+        position: relative; }
+        .ui-optima .medications-page .ui-listbox .info .border-right::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 12px;
+          bottom: 12px;
+          width: 1px;
+          background-color: #ededed; }
+      .ui-optima .medications-page .ui-listbox .info .pad-left {
+        padding-left: 20px; }
+      .ui-optima .medications-page .ui-listbox .info label {
+        margin-bottom: 2px; }
+    .ui-optima .medications-page .ui-listbox .third {
+      width: 33.333333%;
+      float: left; }
+    .ui-optima .medications-page .ui-listbox .item {
+      padding: 12px 10px 12px 0; }
+  .ui-optima .block {
+    display: block;
+    clear: both; }
+  .ui-optima .card-heading {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000082;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    margin: 0; }
+  .ui-optima .card-filter {
+    padding-bottom: 9px; }
+    .ui-optima .card-filter a {
+      color: #686868;
+      font-size: 14px;
+      font-weight: normal;
+      padding: 2px 0;
+      display: inline-block;
+      margin-right: 35px;
+      position: relative; }
+      .ui-optima .card-filter a.active {
+        color: #1556c6;
+        border-bottom: 2px solid #1556c6; }
+      .ui-optima .card-filter a::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 1px;
+        height: 25px;
+        background-color: #686868;
+        opacity: .2;
+        right: -20px;
+        bottom: -1px; }
+      .ui-optima .card-filter a:last-of-type {
+        margin-right: 0; }
+        .ui-optima .card-filter a:last-of-type::after {
+          display: none; }
+  .ui-optima .flex {
+    display: flex !important;
+    display: -webkit-flex !important;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center; }
+    .ui-optima .flex.fx-v {
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      align-items: stretch;
+      -webkit-align-items: stretch;
+      justify-content: space-between;
+      -webkit-justify-content: space-between; }
+    .ui-optima .flex.stretch-x {
+      align-items: stretch;
+      -webkit-align-items: stretch; }
+    .ui-optima .flex.around {
+      justify-content: space-around;
+      -webkit-justify-content: space-around; }
+    .ui-optima .flex.fill > * {
+      flex: 1 0 auto;
+      -webkit-flex: 1 0 auto; }
+    .ui-optima .flex.fill-even > * {
+      flex: 1 0 0;
+      -webkit-flex: 1 0 0; }
+    .ui-optima .flex .fx-end {
+      align-self: flex-end;
+      -webkit-align-self: flex-end; }
+    .ui-optima .flex .fx-start {
+      align-self: flex-start;
+      -webkit-align-self: flex-start; }
+    .ui-optima .flex .fx-fixed {
+      -webkit-flex: 0 0 auto;
+      flex: 0 0 auto; }
+  .ui-optima .inline {
+    display: inline-block; }
+  .ui-optima .space-lg {
+    height: 70px; }
+  .ui-optima .space-sm {
+    height: 50px; }
+  .ui-optima .no-margin {
+    margin: 0 !important; }
+  .ui-optima .pad {
+    padding: 10px; }
+  .ui-optima .pad-top {
+    padding-top: 10px; }
+  .ui-optima .pad-bot {
+    padding-bottom: 10px; }
+  .ui-optima .pad-right {
+    padding-right: 10px; }
+  .ui-optima .pad-left {
+    padding-left: 10px; }
+  .ui-optima .pad-v {
+    padding: 10px 0; }
+  .ui-optima .pad-h {
+    padding: 0 10px; }
+  .ui-optima .pad-u {
+    padding: 0 10px 10px; }
+  .ui-optima .pad-n {
+    padding: 10px 10px 0; }
+  .ui-optima .no-shadow {
+    box-shadow: none; }
+  .ui-optima .underline-sec-head {
+    border-bottom: solid 2px #000082;
+    margin-bottom: 20px; }
+    .ui-optima .underline-sec-head h3 {
+      float: left;
+      font-size: 20px;
+      color: #000082;
+      margin-bottom: 12px; }
+    .ui-optima .underline-sec-head .ui-btn {
+      float: right; }
+  .ui-optima .add-medicine-container input {
+    height: 40px !important; }
+  .ui-optima .add-medicine-container .full-size-box, .ui-optima .add-medicine-container .small-size-box {
+    display: inline-block;
+    float: left;
+    margin-top: 15.6px; }
+  .ui-optima .add-medicine-container .full-size-box {
+    width: 100%; }
+  .ui-optima .add-medicine-container .small-size-box {
+    max-width: 47%;
+    min-width: 47%;
+    margin-right: 30.5px;
+    clear: right; }
+    .ui-optima .add-medicine-container .small-size-box p.results {
+      margin-top: 45px; }
+  .ui-optima .add-medicine-container .smaller-size-box {
+    max-width: 45%;
+    min-width: 45%;
+    margin-right: 20px;
+    float: left;
+    clear: right; }
+  .ui-optima .add-medicine-container .small-size-box.right, .ui-optima .add-medicine-container .smaller-size-box.right {
+    float: right !important; }
+  .ui-optima .add-medicine-container .full-size-box.white-box {
+    min-height: 60px;
+    background-color: white;
+    border: solid 2px #ededed;
+    margin-top: -2px; }
+    .ui-optima .add-medicine-container .full-size-box.white-box.active {
+      background-color: #ededed; }
+    .ui-optima .add-medicine-container .full-size-box.white-box.spacing-top {
+      margin-top: 20px; }
+    .ui-optima .add-medicine-container .full-size-box.white-box p {
+      color: black; }
+    .ui-optima .add-medicine-container .full-size-box.white-box .col-desc {
+      display: inline-block;
+      margin-left: 13px;
+      max-width: 54%;
+      min-width: 54%;
+      padding: 19px 0;
+      vertical-align: text-top; }
+    .ui-optima .add-medicine-container .full-size-box.white-box .col-qty {
+      display: inline-block;
+      margin-left: 20px;
+      max-width: 17%;
+      min-width: 17%;
+      padding: 19px 0;
+      vertical-align: text-top; }
+  .ui-optima .add-medicine-container .ui-select {
+    height: 40px;
+    margin: .5em 0; }
+    .ui-optima .add-medicine-container .ui-select #select-route-listbox {
+      max-width: 120px; }
+    .ui-optima .add-medicine-container .ui-select span {
+      color: #979797; }
+  .ui-optima .add-medicine-container .select-option-color span {
+    color: black !important; }
+  .ui-optima .add-medicine-container .date-input-wrapper {
+    width: 100%; }
+  .ui-optima .add-medicine-container .hide {
+    display: none !important; }
+  .ui-optima .no-margin-right {
+    margin-right: 0 !important; }
+  .ui-optima .no-margin-left {
+    margin-left: 0 !important; }
+  .ui-optima .no-box-shadow {
+    box-shadow: none; }
+  .ui-optima .input-search {
+    background-image: url("images/icons-svg/search-grey.svg");
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    height: 40px !important; }
+    .ui-optima .input-search:focus {
+      background: none; }
+  .ui-optima .supplies {
+    height: 100%; }
+    .ui-optima .supplies .ui-listbox .view {
+      position: relative;
+      padding-right: 26px;
+      font-size: 16px;
+      font-weight: normal; }
+      .ui-optima .supplies .ui-listbox .view::before {
+        font-weight: lighter;
+        font-size: 17px;
+        position: absolute;
+        right: 0;
+        top: -2px; }
+    .ui-optima .supplies .ui-listbox .group {
+      padding: 5px; }
+      .ui-optima .supplies .ui-listbox .group.amount {
+        width: 240px; }
+      .ui-optima .supplies .ui-listbox .group.source {
+        width: 172px;
+        height: 83px; }
+        .ui-optima .supplies .ui-listbox .group.source p {
+          padding-top: 17px; }
+      .ui-optima .supplies .ui-listbox .group .ui-input-text {
+        margin-right: 10px; }
+  .ui-optima .supplies-lightbox .ui-listbox.pad-u {
+    padding: 0 15px 15px; }
+  .ui-optima .supplies-search .ui-listbox.pad-u {
+    padding: 0 15px 10px; }
+  .ui-optima .supplies-search .ui-listbox p:not(.sm) {
+    margin-bottom: 2px; }
+  .ui-optima .supplies-search .ui-listbox .quantity {
+    padding-top: 25px; }
+    .ui-optima .supplies-search .ui-listbox .quantity .ui-input-text {
+      margin-right: 10px; }
+  .ui-optima .supplies-history .ui-listbox.pad-u {
+    padding: 0 15px 20px; }
+  .ui-optima .supplies-history .ui-listbox p:not(.sm) {
+    margin-bottom: 2px; }
+  .ui-optima .supplies-history .ui-listbox .info {
+    width: 55%; }
+  .ui-optima .supplies-history .ui-listbox .approve {
+    width: 30%; }
+  .ui-optima .supplies-history .ui-listbox .quantity {
+    width: 15%; }
+  .ui-optima .supplies-request .ui-listbox.pad-u {
+    padding: 0 15px 20px; }
+  .ui-optima .supplies-request .ui-listbox.readonly .save-btn, .ui-optima .supplies-request .ui-listbox.readonly .ui-input-text {
+    display: none; }
+  .ui-optima .supplies-request .ui-listbox.readonly p.pad-left {
+    padding-left: 4px; }
+  .ui-optima .supplies-request .ui-listbox.edit .edit-btn, .ui-optima .supplies-request .ui-listbox.edit .readonly-text {
+    display: none; }
+  .ui-optima .supplies-request .ui-listbox.edit p.pad-left {
+    padding-left: 15px; }
+  .ui-optima .supplies-request .ui-listbox .quantity {
+    padding-top: 25px; }

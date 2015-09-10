@@ -65,6 +65,8 @@ body {
     position: absolute;
     z-index: 1001;
     top: 7px;
+    left: 10px;
+    width: 113px;
 
     p {
         margin: 0;
@@ -135,7 +137,7 @@ body {
     align-items: center;
     -webkit-align-items: center;
     background-color: $mud;
-    padding: 10px 15px;
+    padding: 10px 10px;
     position: relative;
 
     p {
@@ -183,6 +185,8 @@ body {
         padding-top: 20px;
         padding-bottom: 20px;
         opacity: .97;
+        height: 100% !important;
+        overflow-y: visible;
     }
 
     /* Override Bootstrap's panel styles */
@@ -229,6 +233,51 @@ body {
             padding: 3px 10px;
             display: block;
         }
+    }
+}
+
+.category-list {
+    background-color: $mud-dark;
+    padding: 10px 10px;
+
+    .item-link {
+        font-size: 15px;
+        opacity: .5;
+        margin: 3px 10px;
+        display: inline-block;
+
+        &.active {
+            opacity: 1;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                opacity: .5;
+                position: absolute;
+                bottom: 4px;
+                left: 0;
+            }
+        }
+    }
+}
+
+.code-snippet {
+    pre {
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        display: -webkit-flex;
+        display: flex;
+        word-break: break-word;
+    }
+
+    code {
+        padding: 40px;
+        width: 100%;
     }
 }
 
