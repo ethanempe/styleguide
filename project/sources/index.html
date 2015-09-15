@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1400">
+    <title>Styleguide</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,900,900italic,300,300italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+<body>
+    <div class="page-container">
+        <h2>Optima UI Styleguide</h2>
+
+        <a class="download-button" href="code.tar.gz">Download Source Code</a>
+        <div class="cf"></div>
+        <br />
+
+        <div id="widget-selection"></div>
+        
+        <div class="cf"></div>
+        <div class="selected-widget-container">
+            <h3 id="widget-name"></h3>
+            <a href="#" id="snippet-toggle">View Snippet</a>
+            <div id="snippet-toggle-container">
+                <p><em>Code Snippet</em></p>
+                <pre id="snippet" contenteditable></pre>
+            </div>
+            
+            <p><em>Widget Preview</em></p>
+            <hr />
+            <a href="#" id="view" target="_blank">View</a>
+            <div class="preview-container">
+                <iframe id="preview" frameborder="0" width="602" height="400"></iframe>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script src="components.js"></script>
+<script>
+
+    components = components.reverse();
+    var widgets = [];
+
+    function init() {
+        for (var i = 0; i < components.length; i++) {
+            var next = components[i];
+            var widget = $('<div>').addClass('widget-button').text(next);
+            $('#widget-selection').append(widget);
+            widgets.push(widget);
+        }
+        
+        widgets = widgets.reverse();
+        
+        loadNext();
+    }
+    
+    
+    function loadNext() {
+        if (components.length > 0) {
+            var next = components.pop();
+            var widget = widgets.pop();
+            $.get('components/' + next + '.html', createHandler(next, widget));
+        }
+    }
+    
+    function selectWidget(codeName, meta, html, widgetButton) {
+        $('#widget-name').text(meta.name);
+        $('#preview').attr('src', 'preview-1.html?' + codeName);
+        $('#view').attr('href', 'preview-1.html?' + codeName);
+        
+        $('#preview').attr('height', meta.height ? meta.height : '400');
+        
+        $('#snippet').text(html);
+        $('#snippet-toggle-container').hide();
+        
+        $('.widget-button').removeClass('active');
+        widgetButton.addClass('active');
+    }
+    
+    $('#snippet-toggle').on('click', function (e) {
+        e.preventDefault();
+        $('#snippet-toggle-container').toggle();
+    });
+    
+    var isFirst = true;
+
+    function createHandler(name, widget) {
+        return function (html) {
+            $.get('components/' + name + '-docs.json', function (info) {
+                widget.text(info.name);
+                widget.on('click', function () {
+                    selectWidget(name, info, html, widget);
+                });
+                
+                if (isFirst) {
+                    selectWidget(name, info, html, widget);
+                    isFirst = false;
+                }
+                
+                loadNext();
+            });
+        };
+    }
+
+    init();
+
+</script>
+<style>
+
+@import url('font.css');
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+.cf { float: none; clear: both; }
+
+h2 {
+    background-color: #000082;
+    padding: 10px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.page-container {
+    width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 15px;
+}
+
+.download-button {
+    float: right; padding: 10px; background-color: #060; color: #fff; text-decoration: none;
+}
+
+.widget-button {
+    display: block;
+    float: left;
+    width: 178px;
+    height: 41px;
+    border: solid 1px #ccc;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.widget-button:hover,
+.widget-button.active {
+    background-color: #eee;
+}
+
+.selected-widget-container {
+    margin: 0 auto;
+    
+    clear: both;
+    float: none;
+}
+
+pre {
+    border: 2px solid #efefef;
+    background-color: #fafafa;
+    padding: 10px;
+    display: block;
+}
+
+h3 {
+    margin-top: 40px;
+    display: block;
+}
+
+a.snippet-link {
+    font-size: 0.8em;
+}
+
+.preview-container {
+    width: 602px;
+    margin: 0 auto;
+}
+
+iframe {
+    margin-left: -16px;
+    border: solid 1px #000;
+}
+
+</style>
+</body>
+</html>

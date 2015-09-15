@@ -1,0 +1,91 @@
+<div class="ui-optima">
+	<div style="padding: 45px 10px; background-color: #ededed; height: 100%;">
+
+		<div id="M0150" class="moo-form">
+			<div class="label">
+				<div class="bg-azule-dark">
+					<span>M0150</span>
+				</div>
+				<div class="details">
+					<div class="text">
+						<h5>Current payment source for home care</h5>
+					</div>
+					<div class="icons">
+						<i class="nc-icon-glyph ui-2_chat-content"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_time"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph business_chart-bar-33"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+						<legend>(Mark all that apply)</legend>
+						<input type="checkbox" name="checkbox-1b" id="checkbox-1b" />
+						<label for="checkbox-1b">0 - None; no charge for current services</label>
+
+						<input type="checkbox" name="checkbox-2b" id="checkbox-2b" />
+						<label for="checkbox-2b">1 - Medicare (traditional fee-for-service)</label>
+
+						<input type="checkbox" name="checkbox-3b" id="checkbox-3b" />
+						<label for="checkbox-3b">2 - Medicare (hmo/managed care/advantage plan)</label>
+
+						<input type="checkbox" name="checkbox-4b" id="checkbox-4b" />
+						<label for="checkbox-4b">3 - Medicaid (traditional fee-for-service)</label>
+
+						<input type="checkbox" name="checkbox-5b" id="checkbox-5b" />
+						<label for="checkbox-5b">4 - Medicaid (hmo/managed care)</label>
+
+						<input type="checkbox" name="checkbox-6b" id="checkbox-6b" />
+						<label for="checkbox-6b">5 - Worker's compensation</label>
+
+						<input type="checkbox" name="checkbox-7b" id="checkbox-7b" />
+						<label for="checkbox-7b">6 - Title programs (for example, title iii, v, or xx)</label>
+
+						<input type="checkbox" name="checkbox-8b" id="checkbox-8b" />
+						<label for="checkbox-8b">7 - Other government (for example, tricare, va)</label>
+
+						<input type="checkbox" name="checkbox-9b" id="checkbox-9b" />
+						<label for="checkbox-9b">8 - Private insurance</label>
+
+						<input type="checkbox" name="checkbox-10a" id="checkbox-10a" />
+						<label for="checkbox-10a">9 - Private hmo/managed care</label>
+
+						<input type="checkbox" name="checkbox-11a" id="checkbox-11a" />
+						<label for="checkbox-11a">10 - Self-pay</label>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-12a" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">11 - Other</label>
+							<input type="checkbox" id="checkbox-12a" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input id="e1" type="text" data-disabled="true" placeholder="Please specify" />
+						</div>
+
+						<input type="checkbox" name="checkbox-13a" id="checkbox-13a" />
+						<label for="checkbox-13a">UK - Unknown</label>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	// This function has been written for demonstration purpose only.
+	var toggleNextEnabled = function (e, c) {
+		setInterval(function(last) {
+			if (e.checked == last) return;
+
+			if (e.checked)
+				$(e).next().removeClass(c);
+			else
+				$(e).next().addClass(c);
+
+			last = e.checked;
+		}, 0);
+	}
+</script>

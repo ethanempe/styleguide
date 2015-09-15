@@ -1,0 +1,38 @@
+	<h4>Input field sizes</h4>
+
+	<div class="input-container">
+		<label><label>Small Field</label></label>
+		<input type="text" placeholder="Jonathan Smith" data-wrapper-class="input-sm">
+	</div>
+
+	<div class="input-container">
+		<label><label>Medium Field</label></label>
+		<input type="text" placeholder="Jonathan Smith">
+	</div>
+
+	<div class="input-container">
+		<label><label>Large Field</label></label>
+		<input type="text" placeholder="Jonathan Smith" data-wrapper-class="input-lg">
+	</div>
+
+	<h4>Form field states</h4>
+
+	<div class="input-container">
+		<label><label>Default/Active</label></label>
+		<input type="text" placeholder="Client's First Name">
+	</div>
+
+	<div class="input-container">
+		<label><label>Disabled/Read only</label></label>
+		<input type="text" disabled="disabled" placeholder="Jonathan Smith">
+	</div>
+
+	<div class="input-container">
+		<label><label>Validation error (Optional)</label></label>
+		<input type="text" placeholder="Client's First Name" data-wrapper-class="error">
+	</div>
+
+	<div class="input-container">
+		<label><label>Validation Success (Optional)</label></label>
+		<input type="text" placeholder="Client's First Name" data-wrapper-class="valid">
+	</div>

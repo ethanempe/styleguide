@@ -1,0 +1,1311 @@
+	<div id="M0020" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0020</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Patient ID number</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<input type="text" name="name" id="basic" value="" maxlength="15" data-wrapper-class="input-id">
+		</div>
+	</div>
+
+	<div id="M0030" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0030</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Start of care date</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-input-text date-input-wrapper">
+				<input type="number" pattern="[0-9]" maxlength="2" placeholder="MM" data-wrapper-class="date-month">
+				<input type="number" pattern="[0-9]" maxlength="2" placeholder="DD" data-wrapper-class="date-day">
+				<input type="number" pattern="[0-9]" maxlength="4" placeholder="YYYY" data-wrapper-class="date-year">
+			</div>
+		</div>
+	</div>
+
+	<div id="M0069" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0069</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Gender</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup" class="radio-horizontal" data-enhanced="true">
+					<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked">
+					<label for="radio-choice-1">1 - Male</label>
+					<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2">
+					<label for="radio-choice-2">2 - Female</label>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M0140" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0140</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Race / ethnicity</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>(Mark all that apply)</legend>
+
+					<input type="checkbox" name="checkbox-1a" id="checkbox-1a" />
+					<label for="checkbox-1a">1 - American Indian or Alaska native</label>
+
+					<input type="checkbox" name="checkbox-2a" id="checkbox-2a" />
+					<label for="checkbox-2a">2 - Asian</label>
+
+					<input type="checkbox" name="checkbox-3a" id="checkbox-3a" />
+					<label for="checkbox-3a">3 - Black or African American</label>
+
+					<input type="checkbox" name="checkbox-4a" id="checkbox-4a" />
+					<label for="checkbox-4a">4 - Hispanic or Latino</label>
+
+					<input type="checkbox" name="checkbox-5a" id="checkbox-5a" />
+					<label for="checkbox-5a">5 - Native Hawiian or Pasific Islander</label>
+
+					<input type="checkbox" name="checkbox-6a" id="checkbox-6a" />
+					<label for="checkbox-6a">6 - White</label>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M0150" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0150</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Current payment source for home care</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>(Mark all that apply)</legend>
+					<input type="checkbox" name="checkbox-1b" id="checkbox-1b" />
+					<label for="checkbox-1b">0 - None; no charge for current services</label>
+
+					<input type="checkbox" name="checkbox-2b" id="checkbox-2b" />
+					<label for="checkbox-2b">1 - Medicare (traditional fee-for-service)</label>
+
+					<input type="checkbox" name="checkbox-3b" id="checkbox-3b" />
+					<label for="checkbox-3b">2 - Medicare (hmo/managed care/advantage plan)</label>
+
+					<input type="checkbox" name="checkbox-4b" id="checkbox-4b" />
+					<label for="checkbox-4b">3 - Medicaid (traditional fee-for-service)</label>
+
+					<input type="checkbox" name="checkbox-5b" id="checkbox-5b" />
+					<label for="checkbox-5b">4 - Medicaid (hmo/managed care)</label>
+
+					<input type="checkbox" name="checkbox-6b" id="checkbox-6b" />
+					<label for="checkbox-6b">5 - Worker's compensation</label>
+
+					<input type="checkbox" name="checkbox-7b" id="checkbox-7b" />
+					<label for="checkbox-7b">6 - Title programs (for example, title iii, v, or xx)</label>
+
+					<input type="checkbox" name="checkbox-8b" id="checkbox-8b" />
+					<label for="checkbox-8b">7 - Other government (for example, tricare, va)</label>
+
+					<input type="checkbox" name="checkbox-9b" id="checkbox-9b" />
+					<label for="checkbox-9b">8 - Private insurance</label>
+
+					<input type="checkbox" name="checkbox-10a" id="checkbox-10a" />
+					<label for="checkbox-10a">9 - Private hmo/managed care</label>
+
+					<input type="checkbox" name="checkbox-11a" id="checkbox-11a" />
+					<label for="checkbox-11a">10 - Self-pay</label>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-12a" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">11 - Other</label>
+						<input type="checkbox" id="checkbox-12a" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input id="e1" type="text" data-disabled="true" placeholder="Please specify" />
+					</div>
+
+					<input type="checkbox" name="checkbox-13a" id="checkbox-13a" />
+					<label for="checkbox-13a">UK - Unknown</label>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M0100" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M0100</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>This assesment is currently being completed for the following reason:</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>Start/resumption of care</legend>
+
+					<input type="checkbox" name="checkbox-1c" id="checkbox-1c" />
+					<label for="checkbox-1c">1 - Start of care - further visits planned</label>
+
+					<input type="checkbox" name="checkbox-2c" id="checkbox-2c" />
+					<label for="checkbox-2c">2 - Resumption of care (after inpatient stay)</label>
+			    </fieldset>
+
+				<fieldset data-role="controlgroup">
+				    <legend>Follow up</legend>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-3c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">3 - Recertification (follow-up) reassessment</label>
+						<input type="checkbox" id="checkbox-3c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input type="button" id="e2" value="M0100" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-4c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">4 - Other follow-up</label>
+						<input type="checkbox" name="checkbox-4c" id="checkbox-4c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"/>
+						<input type="button" id="e3" value="M0100" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+
+			    </fieldset>
+
+				<fieldset data-role="controlgroup">
+				    <legend>Transfer to an inpatient facility</legend>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-5c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">5 - Transferred to an inpatient facility - patient not discharged from agency</label>
+						<input type="checkbox" id="checkbox-5c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input type="button" id="e4" value="M01041" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-6c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">6 - Transferred to an inpatient facility - patient discharged from agency</label>
+						<input type="checkbox" id="checkbox-6c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input type="button" id="e5" value="M01041" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+			    </fieldset>
+
+				<fieldset data-role="controlgroup">
+				    <legend>Discharge from Agency - Not to an Inpatient Facility</legend>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-7c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">7 - Death at home</label>
+						<input type="checkbox" id="checkbox-7c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input type="button" id="e6" value="M0903" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+
+					<div class="ui-checkbox large">
+						<label for="checkbox-8c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">8 - Discharge from agency</label>
+						<input type="checkbox" id="checkbox-8c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<input type="button" id="e7" value="M0141" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+					</div>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1010" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1010</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Inpatient diagnosis</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>List each Inpatient Diagnosis and ICD-9-CD code at the level of highest specificity for only those conditions treated during an inpatient stay within the last 14 days. (no E-codes, or V-codes).</legend>
+
+				    <table class="three-col">
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Inpatient Facility Diagnosis</label></td>
+				    		<td class="icd-9-col"><label>ICD-9-CM Code</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>b.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>c.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>d.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>e.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>f.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    		<td class="icd-9-wrapper">
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1020" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1020</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Primary diagnosis</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 1
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Diagnoses (Sequencing of diagnoses should reflect the seriousness of each condition and support the disciplines and services provided).
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Inpatient Facility Diagnosis</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+			<hr />
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 2
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	ICD-9-CM and symptom control rating for each symptom. Note that the sequencing of these ratings may not match the sequencing of the diagnoses.
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Inpatient Facility Diagnosis</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+
+								<fieldset class="inline-radio radio-horizontal" data-role="controlgroup" data-enhanced="true">
+					    			<input type="radio" name="radio-choice-a" id="radio-choice-1a" value="0" checked="checked">
+									<label for="radio-choice-1a">0</label>
+					    			<input type="radio" name="radio-choice-a" id="radio-choice-2a" value="1">
+									<label for="radio-choice-2a">1</label>
+					    			<input type="radio" name="radio-choice-a" id="radio-choice-3a" value="2">
+									<label for="radio-choice-3a">2</label>
+					    			<input type="radio" name="radio-choice-a" id="radio-choice-4a" value="3">
+									<label for="radio-choice-4a">3</label>
+					    			<input type="radio" name="radio-choice-a" id="radio-choice-5a" value="4">
+									<label for="radio-choice-5a">4</label>
+								</fieldset>
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1024" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1024</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Payment diagnosis (optional)</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 3
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Complete if a V-Code is assigned under certain circumstances to Section 2 in place of a case mix diagnosis.
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Description (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Primary Diagnosis Description">
+				    		</td>
+				    	</tr>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>ICD-9-CM (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>b.</label></td>
+				    		<td>
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+			<hr />
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 4
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Complete ONLY if the V-Code in Section 2 is reported in place of a case mix diagnosis that is a multiple coding situation (e.g. a manifestation code).
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Description (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Primary Diagnosis Description">
+				    		</td>
+				    	</tr>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>ICD-9-CM (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>b.</label></td>
+				    		<td>
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1022-1" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1022</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Other diagnosis</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 1
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Diagnoses (Sequencing of diagnoses should reflect the seriousness of each condition and support the disciplines and services provided).
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Inpatient Facility Diagnosis</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Inpatient Facility Diagnosis">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+			<hr />
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 2
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	ICD-9-CM and symptom control rating for each symptom. Note that the sequencing of these ratings may not match the sequencing of the diagnoses.
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Inpatient Facility Diagnosis</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+
+								<fieldset class="inline-radio radio-horizontal" data-role="controlgroup" data-enhanced="true">
+					    			<input type="radio" name="radio-choice-b" id="radio-choice-1b" value="0" checked="checked">
+									<label for="radio-choice-1b">0</label>
+					    			<input type="radio" name="radio-choice-b" id="radio-choice-2b" value="1">
+									<label for="radio-choice-2b">1</label>
+					    			<input type="radio" name="radio-choice-b" id="radio-choice-3b" value="2">
+									<label for="radio-choice-3b">2</label>
+					    			<input type="radio" name="radio-choice-b" id="radio-choice-4b" value="3">
+									<label for="radio-choice-4b">3</label>
+					    			<input type="radio" name="radio-choice-b" id="radio-choice-5b" value="4">
+									<label for="radio-choice-5b">4</label>
+								</fieldset>
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1024-1" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1024</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Payment diagnosis (optional)</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 3
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Complete if a V-Code is assigned under certain circumstances to Section 2 in place of a case mix diagnosis.
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Description (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Primary Diagnosis Description">
+				    		</td>
+				    	</tr>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>ICD-9-CM (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>b.</label></td>
+				    		<td>
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+			<hr />
+			<p class="section-header small-heading">
+				<i class="nc-icon-glyph ui-2_menu-square"></i>
+				Section 4
+			</p>
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>
+				    	Complete ONLY if the V-Code in Section 2 is reported in place of a case mix diagnosis that is a multiple coding situation (e.g. a manifestation code).
+				    </legend>
+
+				    <table>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>Description (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>a.</label></td>
+				    		<td>
+				    			<input type="text" placeholder="Primary Diagnosis Description">
+				    		</td>
+				    	</tr>
+				    	<tr class="head">
+				    		<td></td>
+				    		<td><label>ICD-9-CM (V- or E- Codes are not allowed)</label></td>
+				    	</tr>
+				    	<tr>
+				    		<td class="row-label"><label>b.</label></td>
+				    		<td>
+				    			<input type="text" data-wrapper-class="icd-9" placeholder="___-__">
+				    		</td>
+				    	</tr>
+				    </table>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div class="right-side-btn">
+		<hr />
+		<input type="button" data-wrapper-class="btn btn-scnd" value="Add Diagnosis">
+		<div class="cf"></div>
+	</div>
+
+	<div class="diagnoses-order moo-form">
+		<div class="content">
+			<fieldset data-role="controlgroup">
+				<legend>
+					Drag and grop to rank the below diagnoses in order of severity, with 1 being most severe.
+				</legend>
+
+				<table class="diagnoses-order three-col">
+					<tr class="head">
+						<td></td>
+						<td><label>Diagnosis</label></td>
+						<td><label>ICD-9-CM Code</label></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>1.</label></td>
+						<td>
+							<input type="text" placeholder="Primary Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up inactive"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>2.</label></td>
+						<td>
+							<input type="text" placeholder="Other Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>3.</label></td>
+						<td>
+							<input type="text" placeholder="Other Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>4.</label></td>
+						<td>
+							<input type="text" placeholder="Other Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>5.</label></td>
+						<td>
+							<input type="text" placeholder="Other Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down"></i>
+						</td>
+					</tr>
+					<tr>
+						<td class="row-label"><label>6.</label></td>
+						<td>
+							<input type="text" placeholder="Other Diagnosis">
+						</td>
+						<td class="tight">
+							<input type="text" placeholder="___-__" data-wrapper-class="icd-9">
+						</td>
+						<td class="up-down-btns tight">
+							<i class="nc-icon-glyph arrows-1_small-triangle-up"></i>
+							<i class="nc-icon-glyph arrows-1_small-triangle-down inactive"></i>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</div>
+	</div>
+
+	<div id="M1034" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1034</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Overall status</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+				    <legend>Which description best fits the patient's overall status?</legend>
+
+					<input type="radio" name="radio-choice-c" id="radio-choice-1c" value="0" checked="checked">
+					<label for="radio-choice-1c">0 - The patient is stable with no heightened risk(s) for serious complications and death (beyond those of the typical patient's age).</label>
+
+					<input type="radio" name="radio-choice-c" id="radio-choice-2c" value="0">
+					<label for="radio-choice-2c">1 - The patient is temporarily facing high health risk(s) but is likely to return to being stable without heightened risk(s) for serious complications and death (beyond those typical of the patient's age).</label>
+
+					<input type="radio" name="radio-choice-c" id="radio-choice-3c" value="0">
+					<label for="radio-choice-3c">2 - The patient is likely to remain in fragile health and have ongoing high risk(s) of serious complications and death.</label>
+
+					<input type="radio" name="radio-choice-c" id="radio-choice-4c" value="0">
+					<label for="radio-choice-4c">3 - The patient has serious progressive conditions that could lead to death within a year.</label>
+
+					<input type="radio" name="radio-choice-c" id="radio-choice-5c" value="0">
+					<label for="radio-choice-5c">UK - The patient's situation is unknown or unclear.</label>
+			    </fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1100" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1100</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Patient living situation</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+					<legend>
+						Which of the following best describes the patient's residential circumstance and availability of assistance?
+					</legend>
+					<table>
+						<tr class="head">
+							<td class="row-label"><label>a.</label></td>
+							<td><label>Patient lives alone</label></td>
+						</tr>
+						<tr>
+							<td class="row-label"></td>
+							<td class="list">
+								<fieldset data-role="controlgroup">
+									<input type="radio" name="radio-choice-d" id="radio-choice-1d" value="0" checked="checked">
+									<label for="radio-choice-1d">01 - Around the clock</label>
+
+									<input type="radio" name="radio-choice-d" id="radio-choice-2d" value="0">
+									<label for="radio-choice-2d">02 - Regular daytime</label>
+
+									<input type="radio" name="radio-choice-d" id="radio-choice-3d" value="0">
+									<label for="radio-choice-3d">03 - Regular nighttime</label>
+
+									<input type="radio" name="radio-choice-d" id="radio-choice-4d" value="0">
+									<label for="radio-choice-4d">04 - Occasional/short-term assistance</label>
+
+									<input type="radio" name="radio-choice-d" id="radio-choice-5d" value="0">
+									<label for="radio-choice-5d">05 - No assistance available</label>
+							    </fieldset>
+							</td>
+						</tr>
+						<tr class="head">
+							<td class="row-label"><label>b.</label></td>
+							<td><label>Patient lives with other person(s) in the home</label></td>
+						</tr>
+						<tr>
+							<td class="row-label"></td>
+							<td class="list">
+								<fieldset data-role="controlgroup">
+									<input type="radio" name="radio-choice-e" id="radio-choice-6d" value="0" checked="checked">
+									<label for="radio-choice-6d">06 - Around the clock</label>
+
+									<input type="radio" name="radio-choice-e" id="radio-choice-7d" value="0">
+									<label for="radio-choice-7d">07 - Regular daytime</label>
+
+									<input type="radio" name="radio-choice-e" id="radio-choice-8d" value="0">
+									<label for="radio-choice-8d">08 - Regular nighttime</label>
+
+									<input type="radio" name="radio-choice-e" id="radio-choice-9d" value="0">
+									<label for="radio-choice-9d">09 - Occasional/short-term assistance</label>
+
+									<input type="radio" name="radio-choice-e" id="radio-choice-10d" value="0">
+									<label for="radio-choice-10d">10 - No assistance available</label>
+							    </fieldset>
+							</td>
+						</tr>
+						<tr class="head">
+							<td class="row-label"><label>c.</label></td>
+							<td><label>Patient lives in congregate situation (For example, assisted living, residential care home)</label></td>
+						</tr>
+						<tr>
+							<td class="row-label"></td>
+							<td class="list">
+								<fieldset data-role="controlgroup">
+									<input type="radio" name="radio-choice-f" id="radio-choice-11d" value="0" checked="checked">
+									<label for="radio-choice-11d">11 - Around the clock</label>
+
+									<input type="radio" name="radio-choice-f" id="radio-choice-12d" value="0">
+									<label for="radio-choice-12d">12 - Regular daytime</label>
+
+									<input type="radio" name="radio-choice-f" id="radio-choice-13d" value="0">
+									<label for="radio-choice-13d">13 - Regular nighttime</label>
+
+									<input type="radio" name="radio-choice-f" id="radio-choice-14d" value="0">
+									<label for="radio-choice-14d">14 - Occasional/short-term assistance</label>
+
+									<input type="radio" name="radio-choice-f" id="radio-choice-15d" value="0">
+									<label for="radio-choice-15d">15 - No assistance available</label>
+							    </fieldset>
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1307" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1307</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Oldest Stage II pressure ulcer</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+					<legend>
+						The Oldest Stage II pressure ulcer that is present at discharge. <br />(Excludes healed Stage II Pressure ulcers).
+					</legend>
+					<input type="radio" name="radio-choice-g" id="radio-choice-1g" value="0" checked="checked">
+					<label for="radio-choice-1g">01 - Around the clock</label>
+
+					<div class="ui-radio contains">
+						<label for="radio-choice-2g" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-radio-off">02 - Developed since the most recent soc/roc assessment. Record date pressure ulcer first identified.</label>
+						<input type="radio" name="radio-choice-g" id="radio-choice-2g" value="1" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+						<div id="e8" class="ui-input-text date-input-wrapper ui-state-disabled">
+							<input type="text" maxlength="2" pattern="[0-9]" placeholder="MM" data-wrapper-class="date-month">
+							<input type="text" maxlength="2" pattern="[0-9]" placeholder="DD" data-wrapper-class="date-day">
+							<input type="text" maxlength="4" pattern="[0-9]" placeholder="YYYY" data-wrapper-class="date-year">
+						</div>
+					</div>
+
+					<input type="radio" name="radio-choice-g" id="radio-choice-3g" value="2">
+					<label for="radio-choice-3g">NA - No Stage II pressure ulcers are present at discharge</label>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1308" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1308</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Current number of unhealed pressure ulcers at each stage or unstagable</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+					<legend>
+						Enter "0" if none; Excludes Stage I pressure ulcers aand healed Stage II pressure ulcers.
+					</legend>
+					<table class="three-col">
+						<tr class="head">
+							<td class="row-label"></td>
+							<td><label>Stage descriptions - Unhealed pressure ulcers</label></td>
+							<td class="nowrap"><label>Number currently <br/>present</label></td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>a.</p></td>
+							<td class="top pad-top">
+								<p>Stage II: partial thickness loss of dermis presenting as a shallow open ulcer with red pink wound bed, without slough. May also present as an intact or open/ruptured serum-filled blister.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>b.</p></td>
+							<td class="top pad-top">
+								<p>Stage III: full thickness tissue loss. Subcutaneous fat may be visible but bone, tendon, or muscles are not exposed. Slough may be present but does not obscure the depth of tissue loss. May include undermining and tunneling.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>c.</p></td>
+							<td class="top pad-top">
+								<p>Stage IV: full thickness tissue loss with visible bone, tendon, or muscle. Slough or eschar may be present on some parts of the wound bed. Often includes undermining and tunneling.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>d.1</p></td>
+							<td class="top pad-top">
+								<p>Unstageable: known or likely but enstageable due to non-removable dressing or device.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>d.2</p></td>
+							<td class="top pad-top">
+								<p>Unstageable: known or likely but unstageable due to coverage of wound bed by slouth and/or eschar.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label top pad-top"><p>d.3</p></td>
+							<td class="top pad-top">
+								<p>Unstageable: suspected deep tissue injury in evolution.</p>
+							</td>
+							<td class="top pad-top">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1309" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1309</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Worsening in pressure ulcer status since SOC/ROC</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+					<legend>
+						For Stage II, III, and IV pressure ulcers, roport the number that are new or have increased in numerical stage since the most recent SOC/ROC.
+						<br/><br/>
+						Enter number: Enter "0" if there are no current Stage II, III, or IV pressure ulcers OR if all current Stage II, III, or IV pressure ulcers existed at the same numerical stage at the most recent SOC/ROC.
+					</legend>
+					<table class="three-col">
+						<tr>
+							<td class="row-label"><p>a.</p></td>
+							<td>
+								<p>Stage II</p>
+							</td>
+							<td class="tight">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label"><p>b.</p></td>
+							<td>
+								<p>Stage III</p>
+							</td>
+							<td class="tight">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+						<tr>
+							<td class="row-label"><p>c.</p></td>
+							<td>
+								<p>Stage IV</p>
+							</td>
+							<td class="tight">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset data-role="controlgroup">
+					<legend>
+						For pressure ulcers that are Unstageable due to slough/eschar, report the number that are new or were a Stage I or II at the most recent SOC/ROC.
+						<br/><br/>
+						Enter number: Enter "0" if there are no Unstageable pressure ulcers at discharge OR if all current Unstageable pressure ulcers were Stage III or IV or were Unstageable at the most recent SOC/ROC.
+					</legend>
+					<table class="three-col">
+						<tr>
+							<td class="row-label"><p>d.</p></td>
+							<td>
+								<p>Unstageable due to coverage of wound bed by slough or eschar</p>
+							</td>
+							<td class="tight">
+								<input type="number" data-wrapper-class="number-rating">
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div id="M1730" class="moo-form">
+		<div class="label">
+			<div class="bg-azule-dark">
+				<span>M1730</span>
+			</div>
+			<div class="details">
+				<div class="text">
+					<h5>Depression screening</h5>
+				</div>
+				<div class="icons">
+					<i class="nc-icon-glyph ui-2_chat-content"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_time"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph business_chart-bar-33"></i>
+					<div class="divider"></div>
+					<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="ui-field-contain">
+				<fieldset data-role="controlgroup">
+					<legend>
+						Has the patient screened for depression, using a standardized, balidated depression screening tool?
+					</legend>
+					<input type="radio" name="radio-choice-h" id="radio-choice-1h" value="0" checked="checked">
+					<label for="radio-choice-1h">0 - No</label>
+
+					<div class="ui-radio">
+						<label for="radio-choice-2h" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-radio-off">1 - Yes, patient was screened using the phq-2 (c) scale</label>
+						<input type="radio" name="radio-choice-h" id="radio-choice-2h" value="1" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'hide')"></input>
+
+						<fieldset data-role="controlgroup" class="nested hide space-bot">
+							<legend>
+								PHQ-2 (C) Scale<br/>
+								Instructions for this two-question tool. Ask patient "Over the last two weeks, how often have you been bothered by any of the following problems?"
+							</legend>
+							<table>
+								<tr class="head">
+									<td class="row-label"><label>a.</label></td>
+									<td><label>Little interest or pleasure in doing things</label></td>
+								</tr>
+								<tr>
+									<td class="row-label"></td>
+									<td class="list">
+										<fieldset data-role="controlgroup">
+											<input type="radio" name="radio-choice-ha" id="radio-choice-1ha" value="0" checked="checked">
+											<label for="radio-choice-1ha">0 - Not at all, 0&ndash;1 day</label>
+
+											<input type="radio" name="radio-choice-ha" id="radio-choice-2ha" value="1">
+											<label for="radio-choice-2ha">1 - Several days, 2&ndash;6 days</label>
+
+											<input type="radio" name="radio-choice-ha" id="radio-choice-3ha" value="2">
+											<label for="radio-choice-3ha">2 - More than half of the days, 7&ndash;11 days</label>
+
+											<input type="radio" name="radio-choice-ha" id="radio-choice-4ha" value="3">
+											<label for="radio-choice-4ha">3 - Nearly every day, 12&ndash;14 days</label>
+
+											<input type="radio" name="radio-choice-ha" id="radio-choice-5ha" value="4">
+											<label for="radio-choice-5ha">NA - Unable to respond</label>
+									    </fieldset>
+									</td>
+								</tr>
+								<tr class="head">
+									<td class="row-label"><label>b.</label></td>
+									<td><label>Feeling down, depressed, or hopeless?</label></td>
+								</tr>
+								<tr>
+									<td class="row-label"></td>
+									<td class="list">
+										<fieldset data-role="controlgroup">
+											<input type="radio" name="radio-choice-hb" id="radio-choice-6hb" value="0" checked="checked">
+											<label for="radio-choice-6hb">0 - Not at all, 0&ndash;1 day</label>
+
+											<input type="radio" name="radio-choice-hb" id="radio-choice-7hb" value="1">
+											<label for="radio-choice-7hb">1 - Several days, 2&ndash;6 days</label>
+
+											<input type="radio" name="radio-choice-hb" id="radio-choice-8hb" value="2">
+											<label for="radio-choice-8hb">2 - More than half of the days, 7&ndash;11 days</label>
+
+											<input type="radio" name="radio-choice-hb" id="radio-choice-9hb" value="3">
+											<label for="radio-choice-9hb">3 - Nearly every day, 12&ndash;14 days</label>
+
+											<input type="radio" name="radio-choice-hb" id="radio-choice-10hb" value="4">
+											<label for="radio-choice-10hb">NA - Unable to respond</label>
+									    </fieldset>
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+					</div>
+
+					<input type="radio" name="radio-choice-h" id="radio-choice-3h" value="2">
+					<label for="radio-choice-3h">2 - Yes, patient was screened with a different standardized, validated assessment and the patient meets criteria for further evaluation for depression.</label>
+
+					<input type="radio" name="radio-choice-h" id="radio-choice-4h" value="3">
+					<label for="radio-choice-4h">3 - Yes, patient was screened with a different standardized, validated assessment and the patient does not meet criteria for further evaluation for depression.</label>
+				</fieldset>
+			</div>
+		</div>
+	</div>

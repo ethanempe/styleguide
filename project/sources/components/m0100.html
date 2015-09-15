@@ -1,0 +1,105 @@
+<div class="ui-optima">
+	<div style="padding: 45px 10px; background-color: #ededed; height: 100%;">
+
+		<div id="M0100" class="moo-form">
+			<div class="label">
+				<div class="bg-azule-dark">
+					<span>M0100</span>
+				</div>
+				<div class="details">
+					<div class="text">
+						<h5>This assesment is currently being completed for the following reason:</h5>
+					</div>
+					<div class="icons">
+						<i class="nc-icon-glyph ui-2_chat-content"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_time"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph business_chart-bar-33"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+						<legend>Start/resumption of care</legend>
+
+						<input type="checkbox" name="checkbox-1c" id="checkbox-1c" />
+						<label for="checkbox-1c">1 - Start of care - further visits planned</label>
+
+						<input type="checkbox" name="checkbox-2c" id="checkbox-2c" />
+						<label for="checkbox-2c">2 - Resumption of care (after inpatient stay)</label>
+					</fieldset>
+
+					<fieldset data-role="controlgroup">
+						<legend>Follow up</legend>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-3c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">3 - Recertification (follow-up) reassessment</label>
+							<input type="checkbox" id="checkbox-3c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input type="button" id="e2" value="M0100" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-4c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">4 - Other follow-up</label>
+							<input type="checkbox" name="checkbox-4c" id="checkbox-4c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"/>
+							<input type="button" id="e3" value="M0100" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+
+					</fieldset>
+
+					<fieldset data-role="controlgroup">
+						<legend>Transfer to an inpatient facility</legend>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-5c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">5 - Transferred to an inpatient facility - patient not discharged from agency</label>
+							<input type="checkbox" id="checkbox-5c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input type="button" id="e4" value="M01041" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-6c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">6 - Transferred to an inpatient facility - patient discharged from agency</label>
+							<input type="checkbox" id="checkbox-6c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input type="button" id="e5" value="M01041" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+					</fieldset>
+
+					<fieldset data-role="controlgroup">
+						<legend>Discharge from Agency - Not to an Inpatient Facility</legend>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-7c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">7 - Death at home</label>
+							<input type="checkbox" id="checkbox-7c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input type="button" id="e6" value="M0903" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+
+						<div class="ui-checkbox large">
+							<label for="checkbox-8c" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-checkbox-off">8 - Discharge from agency</label>
+							<input type="checkbox" id="checkbox-8c" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'ui-state-disabled')"></input>
+							<input type="button" id="e7" value="M0141" data-wrapper-class="nc-icon-glyph ui-1_simple-add btn btn-scnd ui-state-disabled" />
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	// This function has been written for demonstration purpose only.
+	var toggleNextEnabled = function (e, c) {
+		setInterval(function(last) {
+			if (e.checked == last) return;
+
+			if (e.checked)
+				$(e).next().removeClass(c);
+			else
+				$(e).next().addClass(c);
+
+			last = e.checked;
+		}, 0);
+	}
+</script>

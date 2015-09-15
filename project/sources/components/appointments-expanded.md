@@ -1,0 +1,372 @@
+    <div class="appointments-container">
+        <ul class="ui-nav-1">
+            <li><a href="#">Appointments</a></li>
+            <li class="active"><a href="#">Tasks</a></li>
+            <li><a href="#">Orders</a></li>
+        </ul>
+        <div class="ui-listbox-container pad-u">
+            <div class="top">
+                <div class="left">
+                    <a href="#">Download all</a>
+                </div>
+                <div class="right">
+                    <a href="#" class="active">Today</a>
+                    <div class="divider"></div>
+                    <a href="#" class="icon">
+                        <i class="nc-icon-glyph ui-1_calendar-grid-58"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="ui-listbox">
+                    <div class="boxes">
+                        <a class="box sync-box">
+                            <div class="container">
+                                <div href="#" class="icon">
+                                    <i class="nc-icon-glyph arrows-1_refresh-69"></i>
+                                    <i class="nc-icon-outline arrows-1_cloud-download-93"></i>
+                                </div>
+                                <p class="time">50m</p>
+                            </div>
+                        </a>
+                        <div class="box patient-box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-1_home-simple"></i>
+                                <i class="nc-icon-glyph health_bag-50"></i>
+                            </a>
+                            <div class="text">
+                                <h5>McCoy, Phillip</h5>
+                                <p>Routine Visit - (555) 321-6772</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-2_time"></i>
+                            </a>
+                            <div class="text">
+                                <h5>60 mins</h5>
+                                <p>7:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="box loc-box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph location_pin"></i>
+                            </a>
+                            <div class="text">
+                                <h5>West Palm Beach, FL</h5>
+                                <p>345 Longview Place #204</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="btn-wrap">
+                                <input type="button" value="View Record" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Map It" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Start Visit" data-wrapper-class="btn-lg btn-cfrm" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div>
+                                    <h5>Visit account</h5>
+                                    <p>7 of 12</p>
+                                </div>
+                                <div>
+                                    <h5>Gender</h5>
+                                    <p>Male</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div>
+                                    <h5>Start of care date</h5>
+                                    <p>July 1, 2015</p>
+                                </div>
+                                <div>
+                                    <h5>Payer info</h5>
+                                    <p>MCA | Medicare A PPS</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div>
+                                    <h5>Other appointments</h5>
+                                    <p>
+                                        8:00am - ST Janet Singer <br/>
+                                        2:30pm - OT Sarah Kirkland <br/>
+                                        1:15pm - PT James Johnson
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                </div>
+
+                <div class="ui-listbox open">
+                    <div class="boxes">
+                        <a class="box sync-box unsynced">
+                            <div class="container">
+                                <div href="#" class="icon">
+                                    <i class="nc-icon-glyph arrows-1_refresh-69"></i>
+                                    <i class="nc-icon-outline arrows-1_cloud-download-93"></i>
+                                </div>
+                                <p class="time">50m</p>
+                            </div>
+                        </a>
+                        <div class="box patient-box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-1_home-simple"></i>
+                                <i class="nc-icon-glyph health_bag-50"></i>
+                            </a>
+                            <div class="text">
+                                <h5>Pitts, Ethan</h5>
+                                <p>Routine Visit - (555) 321-6772</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-2_time"></i>
+                            </a>
+                            <div class="text">
+                                <h5>60 mins</h5>
+                                <p>7:30 AM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="btn-wrap">
+                                <input type="button" value="View Record" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Map It" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Start Visit" data-wrapper-class="btn-lg btn-cfrm" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div>
+                                    <h5>Visit account</h5>
+                                    <p>7 of 12</p>
+                                </div>
+                                <div>
+                                    <h5>Gender</h5>
+                                    <p>Male</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div>
+                                    <h5>Start of care date</h5>
+                                    <p>July 1, 2015</p>
+                                </div>
+                                <div>
+                                    <h5>Payer info</h5>
+                                    <p>MCA | Medicare A PPS</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div>
+                                    <h5>Other appointments</h5>
+                                    <p>
+                                        8:00am - ST Janet Singer <br/>
+                                        2:30pm - OT Sarah Kirkland <br/>
+                                        1:15pm - PT James Johnson
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                </div>
+
+                <div class="ui-listbox">
+                    <div class="boxes">
+                        <a class="box sync-box">
+                            <div class="container">
+                                <div href="#" class="icon">
+                                    <i class="nc-icon-glyph arrows-1_refresh-69"></i>
+                                    <i class="nc-icon-outline arrows-1_cloud-download-93"></i>
+                                </div>
+                                <p class="time">50m</p>
+                            </div>
+                        </a>
+                        <div class="box patient-box home">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-1_home-simple"></i>
+                                <i class="nc-icon-glyph health_bag-50"></i>
+                            </a>
+                            <div class="text">
+                                <h5>Suever, Jeff</h5>
+                                <p>Routine Visit - (555) 321-6772</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-2_time"></i>
+                            </a>
+                            <div class="text">
+                                <h5>60 mins</h5>
+                                <p>7:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="box loc-box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph location_pin"></i>
+                            </a>
+                            <div class="text">
+                                <h5>Canada, Probably</h5>
+                                <p>345 Longview Place #204</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="btn-wrap">
+                                <input type="button" value="View Record" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Map It" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Start Visit" data-wrapper-class="btn-lg btn-cfrm" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div>
+                                    <h5>Visit account</h5>
+                                    <p>7 of 12</p>
+                                </div>
+                                <div>
+                                    <h5>Gender</h5>
+                                    <p>Male</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div>
+                                    <h5>Start of care date</h5>
+                                    <p>July 1, 2015</p>
+                                </div>
+                                <div>
+                                    <h5>Payer info</h5>
+                                    <p>MCA | Medicare A PPS</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div>
+                                    <h5>Other appointments</h5>
+                                    <p>
+                                        8:00am - ST Janet Singer <br/>
+                                        2:30pm - OT Sarah Kirkland <br/>
+                                        1:15pm - PT James Johnson
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                </div>
+
+                <div class="ui-listbox">
+                    <div class="boxes">
+                        <a class="box sync-box unsynced">
+                            <div class="container">
+                                <div href="#" class="icon">
+                                    <i class="nc-icon-glyph arrows-1_refresh-69"></i>
+                                    <i class="nc-icon-outline arrows-1_cloud-download-93"></i>
+                                </div>
+                                <p class="time">50m</p>
+                            </div>
+                        </a>
+                        <div class="box patient-box home">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-1_home-simple"></i>
+                                <i class="nc-icon-glyph health_bag-50"></i>
+                            </a>
+                            <div class="text">
+                                <h5>Amesbury, Caleb</h5>
+                                <p>Routine Visit - (555) 321-6772</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph ui-2_time"></i>
+                            </a>
+                            <div class="text">
+                                <h5>60 mins</h5>
+                                <p>7:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="box loc-box">
+                            <a href="#" class="icon">
+                                <i class="nc-icon-glyph location_pin"></i>
+                            </a>
+                            <div class="text">
+                                <h5>Palm Beach Gardens, FL</h5>
+                                <p>345 Longview Place #204</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <div class="btn-wrap">
+                                <input type="button" value="View Record" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Map It" data-wrapper-class="btn-lg btn-scnd" />
+                            </div>
+                            <div class="btn-wrap">
+                                <input type="button" value="Start Visit" data-wrapper-class="btn-lg btn-cfrm" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div>
+                                    <h5>Visit account</h5>
+                                    <p>7 of 12</p>
+                                </div>
+                                <div>
+                                    <h5>Gender</h5>
+                                    <p>Male</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div>
+                                    <h5>Start of care date</h5>
+                                    <p>July 1, 2015</p>
+                                </div>
+                                <div>
+                                    <h5>Payer info</h5>
+                                    <p>MCA | Medicare A PPS</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div>
+                                    <h5>Other appointments</h5>
+                                    <p>
+                                        8:00am - ST Janet Singer <br/>
+                                        2:30pm - OT Sarah Kirkland <br/>
+                                        1:15pm - PT James Johnson
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

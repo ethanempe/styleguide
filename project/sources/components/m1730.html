@@ -1,0 +1,124 @@
+<div class="ui-optima">
+	<div style="padding: 45px 10px; background-color: #ededed; height: 100%;">
+
+		<div id="M1730" class="moo-form">
+			<div class="label">
+				<div class="bg-azule-dark">
+					<span>M1730</span>
+				</div>
+				<div class="details">
+					<div class="text">
+						<h5>Depression screening</h5>
+					</div>
+					<div class="icons">
+						<i class="nc-icon-glyph ui-2_chat-content"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_time"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph business_chart-bar-33"></i>
+						<div class="divider"></div>
+						<i class="nc-icon-glyph ui-2_alert-circle-i"></i>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+						<legend>
+							Has the patient screened for depression, using a standardized, balidated depression screening tool?
+						</legend>
+						<input type="radio" name="radio-choice-h" id="radio-choice-1h" value="0" checked="checked">
+						<label for="radio-choice-1h">0 - No</label>
+
+						<div class="ui-radio">
+							<label for="radio-choice-2h" class="ui-btn ui-btn-inherit ui-btn-icon-left ui-radio-off">1 - Yes, patient was screened using the phq-2 (c) scale</label>
+							<input type="radio" name="radio-choice-h" id="radio-choice-2h" value="1" data-corners="false" data-enhanced="true" onclick="toggleNextEnabled(this, 'hide')"></input>
+
+							<fieldset data-role="controlgroup" class="nested hide space-bot">
+								<legend>
+									PHQ-2 (C) Scale<br/>
+									Instructions for this two-question tool. Ask patient "Over the last two weeks, how often have you been bothered by any of the following problems?"
+								</legend>
+								<table>
+									<tr class="head">
+										<td class="row-label"><label>a.</label></td>
+										<td><label>Little interest or pleasure in doing things</label></td>
+									</tr>
+									<tr>
+										<td class="row-label"></td>
+										<td class="list">
+											<fieldset data-role="controlgroup">
+												<input type="radio" name="radio-choice-ha" id="radio-choice-1ha" value="0" checked="checked">
+												<label for="radio-choice-1ha">0 - Not at all, 0&ndash;1 day</label>
+
+												<input type="radio" name="radio-choice-ha" id="radio-choice-2ha" value="1">
+												<label for="radio-choice-2ha">1 - Several days, 2&ndash;6 days</label>
+
+												<input type="radio" name="radio-choice-ha" id="radio-choice-3ha" value="2">
+												<label for="radio-choice-3ha">2 - More than half of the days, 7&ndash;11 days</label>
+
+												<input type="radio" name="radio-choice-ha" id="radio-choice-4ha" value="3">
+												<label for="radio-choice-4ha">3 - Nearly every day, 12&ndash;14 days</label>
+
+												<input type="radio" name="radio-choice-ha" id="radio-choice-5ha" value="4">
+												<label for="radio-choice-5ha">NA - Unable to respond</label>
+											</fieldset>
+										</td>
+									</tr>
+									<tr class="head">
+										<td class="row-label"><label>b.</label></td>
+										<td><label>Feeling down, depressed, or hopeless?</label></td>
+									</tr>
+									<tr>
+										<td class="row-label"></td>
+										<td class="list">
+											<fieldset data-role="controlgroup">
+												<input type="radio" name="radio-choice-hb" id="radio-choice-6hb" value="0" checked="checked">
+												<label for="radio-choice-6hb">0 - Not at all, 0&ndash;1 day</label>
+
+												<input type="radio" name="radio-choice-hb" id="radio-choice-7hb" value="1">
+												<label for="radio-choice-7hb">1 - Several days, 2&ndash;6 days</label>
+
+												<input type="radio" name="radio-choice-hb" id="radio-choice-8hb" value="2">
+												<label for="radio-choice-8hb">2 - More than half of the days, 7&ndash;11 days</label>
+
+												<input type="radio" name="radio-choice-hb" id="radio-choice-9hb" value="3">
+												<label for="radio-choice-9hb">3 - Nearly every day, 12&ndash;14 days</label>
+
+												<input type="radio" name="radio-choice-hb" id="radio-choice-10hb" value="4">
+												<label for="radio-choice-10hb">NA - Unable to respond</label>
+											</fieldset>
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+
+						<input type="radio" name="radio-choice-h" id="radio-choice-3h" value="2">
+						<label for="radio-choice-3h">2 - Yes, patient was screened with a different standardized, validated assessment and the patient meets criteria for further evaluation for depression.</label>
+
+						<input type="radio" name="radio-choice-h" id="radio-choice-4h" value="3">
+						<label for="radio-choice-4h">3 - Yes, patient was screened with a different standardized, validated assessment and the patient does not meet criteria for further evaluation for depression.</label>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	// This function has been written for demonstration purpose only.
+	var toggleNextEnabled = function (e, c) {
+		setInterval(function(last) {
+			if (e.checked == last) return;
+
+			if (e.checked)
+				$(e).next().removeClass(c);
+			else
+				$(e).next().addClass(c);
+
+			last = e.checked;
+		}, 0);
+	}
+</script>

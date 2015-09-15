@@ -1,0 +1,115 @@
+	<div class="supplies-history bg-silver-light">
+		<div data-role="header" class = "sticky-header">
+	        <a href="#" class="ui-btn-left"><span class="icon-close"></span></a>
+	        <a href="javascript:toggleMenu()" class="ui-btn-right"><span class="nc-icon-outline ui-2_menu-34"></span></a>
+	        <span class="divider"></span>
+	        <a href="#" class="ui-btn-right"><span class="nc-icon-outline ui-1_email-84"></span></a>
+	        <h1>Philip McCoy</h1>
+
+	        <ul class="menu">
+	            <li><a href="#"><span class="icon-poc"></span> Point of Care</a></li>
+	            <li><a href="#"><span class="nc-icon-outline ui-1_calendar-check-59"></span> My Schedule</a></li>
+	            <li><a href="#"><span class="nc-icon-outline design_bullet-list-67"></span> Labor Log</a></li>
+	            <li><a href="#"><span class="nc-icon-outline users_square-31"></span> My Profile</a></li>
+	            <li><a href="#"><span class="nc-icon-outline arrows-1_log-in"></span> Sign Out</a></li>
+	        </ul>
+	    </div>
+
+		<ul class="ui-nav-1">
+		    <li><a href="#">Timeline</a></li>
+		    <li class="active"><a href="#">Medical</a></li>
+		    <li><a href="#">Visit</a></li>
+		    <li><a href="#">Orders</a></li>
+		    <li><a href="#">Schedule</a></li>
+		    <li><a href="#">Files</a></li>
+		    <li><a href="#">Profile</a></li>
+		</ul>
+
+		<ul class="ui-nav-3">
+	        <li><a href="#">Summary</a></li>
+	        <li><a href="#">Vitals</a></li>
+	        <li><a href="#">Tests</a></li>
+	        <li><a href="#">Goals</a></li>
+	        <li><a href="#">Supplies</a></li>
+	        <li class="active"><a href="#">Medications</a></li>
+	    </ul>
+
+		<ul class="ui-nav-4">
+	        <li><a href="#">Requested supplies</a></li>
+	        <li><a href="#">Search</a></li>
+	        <li class="active"><a href="#">Order history</a></li>
+	    </ul>
+
+		<div class="ui-listbox-container pad-u">
+			<div class="pad-top">
+				<div class="pad-v">
+					<label class="no-margin" for="">8/30/2015</label>
+				</div>
+				<div class="ui-listbox pad-u">
+					<div class="space-lg flex">
+						<h2 class="card-heading left">Aquaflo Hydrogel Wound Dressings by Covidien</h2>
+					</div>
+					<div>
+						<div class="left info">
+							<p class="dark"><strong>Dressing, Aquaflo, Hydrogel, 3”</strong></p>
+							<p class="dark sm">HCPCS Code: A6242</p>
+							<p class="dark sm">Manufacturer / supplier #: 8884476139</p>
+						</div>
+						<div class="left approve">
+							<label for="">Approved by</label>
+							<p class="dark">John Huntington</p>
+						</div>
+						<div class="left quantity">
+							<label for="">Quantity</label>
+							<p class="dark">3 rolls</p>
+						</div>
+					</div>
+				</div>
+				<div class="ui-listbox pad-u">
+					<div class="space-lg flex">
+						<h2 class="card-heading left">Needle Option 1</h2>
+					</div>
+					<div>
+						<div class="left info">
+							<p class="dark"><strong>Dressing, Aquaflo, Hydrogel, 3”</strong></p>
+							<p class="dark sm">HCPCS Code: A6242</p>
+							<p class="dark sm">Manufacturer / supplier #: 8884476139</p>
+						</div>
+						<div class="left approve">
+							<label for="">Approved by</label>
+							<p class="dark">Bethany Davidson</p>
+						</div>
+						<div class="left quantity">
+							<label for="">Quantity</label>
+							<p class="dark">3 boxes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pad-top">
+				<div class="pad-v">
+					<label class="no-margin" for="">8/27/2015</label>
+				</div>
+				<div class="ui-listbox pad-u">
+					<div class="space-lg flex">
+						<h2 class="card-heading left">Ultra-Fine Needle Insulin Syringes by Becton Dickinson</h2>
+					</div>
+					<div>
+						<div class="left info">
+							<p class="dark"><strong>Dressing, Aquaflo, Hydrogel, 3”</strong></p>
+							<p class="dark sm">HCPCS Code: A6242</p>
+							<p class="dark sm">Manufacturer / supplier #: 8884476139</p>
+						</div>
+						<div class="left approve">
+							<label for="">Approved by</label>
+							<p class="dark">John Huntington</p>
+						</div>
+						<div class="left quantity">
+							<label for="">Quantity</label>
+							<p class="dark">6 boxes</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- END SUPPLIES SEARCH -->

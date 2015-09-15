@@ -1,0 +1,9 @@
+version: 0.0
+os: linux
+files:
+  - source: /sources/
+    destination: /var/www/dev/
+hooks:
+    AfterInstall:
+        - location: scripts/create_package.sh
+          timeout: 300

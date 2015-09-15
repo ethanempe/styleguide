@@ -1,0 +1,22 @@
+<div class="row category-list">
+    <a href="" class="item-link" ng-class="activeElement($index)" ng-repeat="item in components[state.category].components" ng-click="selectElement($index)">{{ item.title }}</a>
+</div>
+
+
+<div class="row">
+    <basic-seamless-iframe src="{{ previewUrl() }}" style="height: {{ state.elementHeight }}px"></basic-seamless-iframe>
+</div>
+
+<div class="row code-snippet">
+    <a href="{{ previewUrl() }}" target="_blank" class="window-link">
+        View this in a blank window
+        <i class="nc-icon-glyph arrows-1_window-zoom-in"></i>
+    </a>
+
+    <div class="markdown container" ng-bind-html="markdownSection"></div>
+    <div hljs source="htmlSnippet" class="element-info"></div>
+</div>
+
+<script>
+    console.log("view.html loading...")
+</script>

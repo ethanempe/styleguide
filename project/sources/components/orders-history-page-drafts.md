@@ -1,0 +1,363 @@
+    <div data-role="header" class = "sticky-header">
+        <a href="#" class="ui-btn-left"><span class="icon-search"></span></a>
+        <a href="javascript:toggleMenu()" class="ui-btn-right"><span class="nc-icon-outline ui-2_menu-34"></span></a>
+        <span class="divider"></span>
+        <a href="#" class="ui-btn-right"><span class="nc-icon-outline ui-1_email-84"></span></a>
+        <h1><i class = "icon-logo"></i></h1>
+
+        <ul class="menu">
+            <li><a href="#"><span class="icon-poc"></span> Point of Care</a></li>
+            <li><a href="#"><span class="nc-icon-outline ui-1_calendar-check-59"></span> My Schedule</a></li>
+            <li><a href="#"><span class="nc-icon-outline design_bullet-list-67"></span> Labor Log</a></li>
+            <li><a href="#"><span class="nc-icon-outline users_square-31"></span> My Profile</a></li>
+            <li><a href="#"><span class="nc-icon-outline arrows-1_log-in"></span> Sign Out</a></li>
+        </ul>
+    </div>
+
+
+
+
+        <div class = "orders-summary history">
+        <ul class="ui-nav-1">
+            <li><a href="#">Timeline</a></li>
+            <li><a href="#">Medical</a></li>
+            <li><a href="#">Visit</a></li>
+            <li class="active"><a href="#">Orders</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+        <ul class="ui-nav-3">
+            <li class="active">
+                <a href="#">
+                    SN
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    PT
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    OT
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    ST
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    HHA
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    MSW
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    All
+                </a>
+            </li>
+        </ul>
+
+        <ul class="ui-nav-4">
+            <li>
+                <a href="#">
+                    Summary
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    History
+                </a>
+            </li>
+            <li class="active">
+                <a href="#">
+                    Drafts
+                </a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="single-column history-list">
+                <div class="two-column freq-duration">
+                    <div class="history-list-heading">
+                        <div class="fixed-row">
+                            <div class="left">
+                                <label class="">EFFECTIVE DATE</label>
+                                <p>07/16/2015</p>
+                            </div>
+                            <div class="left">
+                                <label class="">PHYSICIAN NAME</label>
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">Thomas Wheatley</span>
+                                    |
+                                    <span class="data-field">324-555-8694</span>
+                                </p>
+                            </div>
+                            <div class="left">
+                                <label class="">STATUS</label>
+                                <label class="mango-dark">Draft</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>1</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">2x/day</span>
+                                </p>
+                                <p>M, W, F</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>2</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">1x/day</span>
+                                </p>
+
+                                <p>T, Th <i class = "nc-icon-glyph ui-1_lock"></i> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Edit <i class = 'nc-icon-glyph ui-1_edit-71 button-icon'></i>" data-inline="true" data-wrapper-class="btn btn-prim ui-btn-right" />
+                        <input type="button" value="View More" data-inline="true" data-wrapper-class="btn btn-scnd ui-btn-right" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="single-column history-list">
+                <div class="two-column freq-duration">
+                    <div class="history-list-heading">
+                        <div class="fixed-row">
+                            <div class="left">
+                                <label class="">EFFECTIVE DATE</label>
+                                <p>07/16/2015</p>
+                            </div>
+                            <div class="left">
+                                <label class="frequency-duration-label">PHYSICIAN NAME</label>
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">Thomas Wheatley</span>
+                                    |
+                                    <span class="data-field">324-555-8694</span>
+                                </p>
+                            </div>
+                            <div class="left">
+                                <label class="">STATUS</label>
+                                <label class="mango-dark">Draft</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>1</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">1x/day</span>
+                                </p>
+
+                                <p>T, Th <i class = "nc-icon-glyph ui-1_lock"></i> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Verify <i class = 'nc-icon-glyph ui-1_check-simple button-icon'></i>" data-inline="true" data-wrapper-class="btn btn-prim ui-btn-right" />
+                        <input type="button" value="View More" data-inline="true" data-wrapper-class="btn btn-scnd ui-btn-right" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-column history-list">
+                <div class="two-column freq-duration">
+                    <div class="history-list-heading">
+                        <div class="fixed-row">
+                            <div class="left">
+                                <label class="">EFFECTIVE DATE</label>
+                                <p>07/16/2015</p>
+                            </div>
+                            <div class="left">
+                                <label class="">PHYSICIAN NAME</label>
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">Thomas Wheatley</span>
+                                    |
+                                    <span class="data-field">324-555-8694</span>
+                                </p>
+                            </div>
+                            <div class="left">
+                                <label class="">STATUS</label>
+                                <label class="mango-dark">Draft</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>1</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">2x/day</span>
+                                </p>
+                                <p>M, W, F</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>2</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">1x/day</span>
+                                </p>
+
+                                <p>T, Th <i class = "nc-icon-glyph ui-1_lock"></i> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Submit <i class = 'nc-icon-glyph arrows-3_super-bold-right button-icon'></i>" data-inline="true" data-wrapper-class="btn btn-prim ui-btn-right" />
+                        <input type="button" value="View More" data-inline="true" data-wrapper-class="btn btn-scnd ui-btn-right" />
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="single-column history-list">
+                <div class="two-column freq-duration">
+                    <div class="history-list-heading">
+                        <div class="fixed-row">
+                            <div class="left">
+                                <label class="">EFFECTIVE DATE</label>
+                                <p>07/16/2015</p>
+                            </div>
+                            <div class="left">
+                                <label class="">PHYSICIAN NAME</label>
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">Thomas Wheatley</span>
+                                    |
+                                    <span class="data-field">324-555-8694</span>
+                                </p>
+                            </div>
+                            <div class="left">
+                                <label class="">STATUS</label>
+                                <label class="mango-dark">Draft</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>1</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">2x/day</span>
+                                </p>
+                                <p>M, W, F</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group no-border np">
+                        <div class="number large">
+                            <p>2</p>
+                        </div>
+                        <div class="schedule">
+                            <div class="frequency-duration order-history">
+                                <label class="frequency-duration-label">FREQUENCY &amp; DURATION</label>
+                                <label>DAYS</label>
+                            </div>
+                            <div class="days">
+                                <p class="frequency-duration-label">
+                                    <span class="data-field">3x/week</span>
+                                    |
+                                    <span class="data-field">2 weeks</span>
+                                    |
+                                    <span class="data-field">1x/day</span>
+                                </p>
+
+                                <p>T, Th <i class = "nc-icon-glyph ui-1_lock"></i> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <input type="button" value="Edit <i class = 'nc-icon-glyph ui-1_edit-71 button-icon'></i>" data-inline="true" data-wrapper-class="btn btn-prim ui-btn-right" />
+                        <input type="button" value="View More" data-inline="true" data-wrapper-class="btn btn-scnd ui-btn-right" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>

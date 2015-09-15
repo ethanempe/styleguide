@@ -1,0 +1,132 @@
+<div class="ui-optima">
+  <div class="lightbox-background">
+    <div role="main">
+      <!-- This below <a> tag is what calls the below Light box -->
+        <a href="#addNewMedicationLightbox" data-rel="popup"><div class="ui-btn ui-input-btn btn btn-prim ui-corner-all ui-shadow ui-btn-inline">ADD NEW</div></a>
+    </div>
+    <!-- Lightbox code START -->
+    <div class="custom-lightbox ui-popup-screen ui-overlay-b ui-screen-hidden"></div>
+    <div class="ui-popup-container ui-popup-hidden ui-popup-truncate popup-lightbox-fullsize" id="addNewMedicationLightbox-popup">
+      <div data-role="popup" id="addNewMedicationLightbox" class="ui-popup ui-body-inherit popup-lightbox-content" data-dismissible="false" data-enhanced="true" data-overlay-theme="b">
+        <!-- Lightbox content goes here -->
+        <div class="add-medicine-container">
+          <div class = "section-group">
+            <div class="row np">
+              <div class="left"> <span class="new-section-heading lightbox-heading">Add medication</span> </div>
+              <a href="#" data-rel="back"><i class="right nc-icon-glyph ui-1_simple-remove"></i></a>                      
+            </div>
+            <hr class="lightbox-ruler lightbox-title-ruler">
+            <div class="full-size-box no-margin">
+              <label>Medication</label>
+              <input placeholder="Search medication" class="input-search" data-wrapper-class="no-box-shadow">
+            </div>
+            <div class="cf"></div>
+            <div class="hide btn-wrap right"> <!-- Remove 'hide' class to see the SEARCH button. Please add 'hide' to the next <div> tag when 'hide' class is removed here -->
+              <input type="button" value="SEARCH" data-inline="true" data-wrapper-class="btn-lg btn-prim  no-margin-right" />             
+            </div>
+            <div> <!-- Add 'hide' class to this <div> when you remove 'hide' class from the above <div>SEARCH BUTTON is ACTIVE -->
+              <div class="full-size-box no-margin">
+                <div class="small-size-box">
+                  <label>Strength</label>
+                  <input placeholder="Enter strength" data-wrapper-class="no-box-shadow">
+                </div>
+                <div class="small-size-box no-margin-right right">              
+                  <label for="select-type">Type</label>
+                  <select name="select-type" id="select-type" data-native-menu="false">
+                    <option value="0" disabled selected>Select type</option>
+                    <option value="1">Type X</option>
+                    <option value="2">Type Y</option>
+                    <option value="3">Type Z</option>
+                    <option value="4">Type A</option>
+                  </select>
+                </div>
+              </div>
+              <div class="full-size-box no-margin">
+                <div class="small-size-box">              
+                  <label for="select-route">Route</label>
+                  <select name="select-route" id="select-route" data-native-menu="false">
+                    <option value="0" disabled selected>Select route</option>
+                    <option value="1">Route X</option>
+                    <option value="2">Route Y</option>
+                    <option value="3">Route Z</option>
+                    <option value="4">Route A</option>
+                  </select>
+                </div>
+                <div class="small-size-box no-margin-right right">
+                  <label>Frequency</label>
+                  <input placeholder="Enter frequency" data-wrapper-class="no-box-shadow">
+                </div>
+              </div>
+              <div class="full-size-box no-margin">
+                <div class="small-size-box">
+                  <label>Effective Date</label>
+                  <div class="ui-input-text date-input-wrapper">
+                    <input type="number" maxlength="2" placeholder="MM" data-wrapper-class="date-month">
+                    <input type="number" maxlength="2" placeholder="DD" data-wrapper-class="date-day">
+                    <input type="number" maxlength="4" placeholder="YYYY" data-wrapper-class="date-year">
+                  </div>
+                </div>
+                <div class="small-size-box no-margin-right right">
+                  <label>Stop Date</label>
+                  <div class="ui-input-text date-input-wrapper">
+                    <input type="number" maxlength="2" placeholder="MM" data-wrapper-class="date-month">
+                    <input type="number" maxlength="2" placeholder="DD" data-wrapper-class="date-day">
+                    <input type="number" maxlength="4" placeholder="YYYY" data-wrapper-class="date-year">
+                  </div>
+                </div>
+              </div>
+              <div class="full-size-box">
+                <label>Physician</label>
+                <select name="select-physician" id="select-physician" data-native-menu="false">
+                  <option value="0" disabled selected>Enter physician</option>
+                  <option value="1">Physician X</option>
+                  <option value="2">Physician Y</option>
+                  <option value="3">Physician Z</option>
+                  <option value="4">Physician A</option>
+                </select>
+              </div>
+              <div class="full-size-box">
+                <label>Comments</label>
+                <textarea data-role="none" placeholder="Enter comments" resize="false"></textarea>
+              </div>
+              <div class="btn-wrap right">
+                <input type="button" value="ADD MEDICATION" data-inline="true" data-wrapper-class="btn-lg btn-prim  no-margin-right" />             
+              </div>
+            </div>
+          </div>
+        </div> 
+        <script>
+        $(document).on("change", "#select-type", function() {
+            if ( $(this).val() != null ) {
+                $(this).parent().addClass("select-option-color");
+            } else {
+                $(this).parent().removeClass("select-option-color");
+            }
+        });
+        $("#select-type").change();
+
+        $(document).on("change", "#select-route", function() {
+            if ( $(this).val() != null ) {
+                $(this).parent().addClass("select-option-color");
+            } else {
+                $(this).parent().removeClass("select-option-color");
+            }
+        });
+        $("#select-route").change();
+
+        $(document).on("change", "#select-physician", function() {
+            if ( $(this).val() != null ) {
+                $(this).parent().addClass("select-option-color");
+            } else {
+                $(this).parent().removeClass("select-option-color");
+            }
+        });
+        $("#select-physician").change();
+        
+        </script>
+      </div>
+    </div>
+    <!-- Lightbox code END -->
+  </div>
+</div>
+
