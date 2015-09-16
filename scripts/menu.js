@@ -1,27 +1,39 @@
-angular.module('StyleGuide', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs', 'masonry'])
+angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs', 'masonry'])
 
-.config(['hljsServiceProvider', '$routeProvider', '$locationProvider', function(hljsServiceProvider, $routeProvider, $locationProvider) {
+.config(['hljsServiceProvider', '$stateProvider', '$urlRouterProvider', function(hljsServiceProvider, $stateProvider, $urlRouterProvider) {
 	hljsServiceProvider.setOptions({
 		tabReplace: '    '
 	});
 
-	$locationProvider.html5Mode({
-		enabled: true,
-		requireBase: false
-	});
+	$urlRouterProvider.when('', '/home');
 
-	$routeProvider.otherwise({
-		redirectTo: '/details.html'
-	});
+	$stateProvider
+		.state('home', {
+			url: '/home',
+			templateUrl: 'partials/homepage.html',
+			controller: function($scope) {
+				$scope.state.isHomepage = true;
+			}
+		})
+		.state('element-view/:cat/:elem', {
+			url: '/element-view/:cat/:elem',
+			templateUrl: 'partials/view.html',
+			controller: function($scope, $stateParams) {
+				$scope.setCategory($stateParams.cat);
+				$scope.selectElement($stateParams.elem);
+				$scope.state.isHomepage = false;
+			}
+		});
 }])
 
-.controller('Menu', ['$scope', '$http', '$location', function($scope, $http, $location) {
+.controller('Menu', ['$scope', '$http', function($scope, $http, $stateProvider) {
 	$scope.state = {
 		category: 0,
 		menuCollapsed: true,
 		elementIndex: 0,
 		elementName: 'checkboxes',
-		elementMarkdown: ''
+		elementMarkdown: '',
+		pageTitle: 'Style Guide'
 	};
 
 	$scope.activeElement = function(index) {
@@ -38,15 +50,18 @@ angular.module('StyleGuide', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ui.bootstra
 		$scope.state.menuCollapsed = !$scope.state.menuCollapsed;
 	}
 
+	$scope.setCategory = function(cat) {
+		$scope.state.category = cat;
+	}
+
 	$scope.setTmpCategory = function(cat) {
 		$scope.tmpCategory = cat;
 	}
 
 	$scope.selectElement = function(index) {
-		// If the menu is open, we must change the category and close the menu.
+		// If the menu is open, we must close the menu.
 		if (!$scope.state.menuCollapsed) {
 			$scope.toggleMenu();
-			$scope.state.category = $scope.tmpCategory;
 		}
 
 		$scope.state.elementIndex = index;
@@ -57,9 +72,7 @@ angular.module('StyleGuide', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ui.bootstra
 	}
 
 	$scope.pageTitle = function() {
-		if (!$scope.components) { return; }
-
-		if ($location.hash() == '') {
+		if ($scope.components === undefined || $scope.state.isHomepage) {
 			if (_settings.projectName !== undefined) {
 				return _settings.projectName + " Style Guide";
 			}
@@ -67,6 +80,10 @@ angular.module('StyleGuide', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ui.bootstra
 		}
 
 		return $scope.components[$scope.state.category].title;
+	}
+
+	$scope.elementURL = function(cat, elem) {
+		return '#/element-view/' + cat + '/' + elem;
 	}
 
 	_elementHeight = function(index) {
@@ -121,14 +138,14 @@ angular.module('StyleGuide', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ui.bootstra
 
 	init = function() {
 		refresh();
-		$scope.selectElement($scope.state.elementIndex);
+		// $scope.selectElement($scope.state.elementIndex);
 	}
 
 	_modifySettings = function() {
 		for (var i = 0; i < _settings.updates.length; i++) {
 			var text = _settings.updates[i].text;
-			text = text.replace('*', '<em>');
-			text = text.replace('*', '</em>');
+			text = text.replace('*', '<a href="">');
+			text = text.replace('*', '</a>');
 			_settings.updates[i].text = text;
 		}
 	}

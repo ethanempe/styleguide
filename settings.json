@@ -1,9 +1,9 @@
 {
     "projectName": "Optima",
     "updates": [
-        { "date": "9.10.15", "type": "Update", "text": "HTML Update to *Level 4 Navigation*" },
-        { "date": "9.02.15", "type": "New", "text": "*M1730 - Multiple Choice with multiple choice in answer* new pattern added Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur." },
-        { "date": "9.01.15", "type": "Update", "text": "Small change to *Patient Summary*" },
-        { "date": "8.28.15", "type": "New", "text": "*Toggles* new pattern added" }
+        { "date": "9.10.15", "type": "Update", "text": "HTML Update to *Level 4 Navigation*", "element": "nav4" },
+        { "date": "9.02.15", "type": "New", "text": "*M1730 - Multiple Choice with multiple choice in answer* new pattern added Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur.", "element": "m1730" },
+        { "date": "9.01.15", "type": "Update", "text": "Small change to *Patient Summary*", "element": "patientsummary" },
+        { "date": "8.28.15", "type": "New", "text": "*Toggles* new pattern added", "element": "flipswitch-ui" }
     ]
 }

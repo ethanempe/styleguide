@@ -1,5 +1,5 @@
 <div class="row category-list">
-    <a href="" class="item-link" ng-class="activeElement($index)" ng-repeat="item in components[state.category].components" ng-click="selectElement($index)">{{ item.title }}</a>
+    <a href="{{ elementURL(state.category, $index) }}" class="item-link" ng-class="activeElement($index)" ng-repeat="item in components[state.category].components">{{ item.title }}</a>
 </div>
 
 
@@ -16,7 +16,3 @@
     <div class="markdown container" ng-bind-html="markdownSection"></div>
     <div hljs source="htmlSnippet" class="element-info"></div>
 </div>
-
-<script>
-    console.log("view.html loading...")
-</script>

@@ -2,6 +2,7 @@ $white: #ffffff;
 $iron: #979797;
 $silver: #c7c7c7;
 $silver-dark: #bababa;
+$silver-text: #686868;
 $coal-light: #333333;
 $coal: #282828;
 $coal-dark: #191919;
@@ -10,6 +11,8 @@ $black: #000;
 $mud-light: #727272;
 $mud: #636363;
 $mud-dark: #595959;
+
+$azule: #1657c6;
 
 @import url('fonts/nucleo-glyph.min.css');
 
@@ -30,12 +33,11 @@ $mud-dark: #595959;
 
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
-a, a:hover, a:visited, a:active, a:focus {
-    color: $white;
-    text-decoration: none;
+html, body, .main-wrapper {
+    height: 100%;
 }
 
-html, body, .main-wrapper {
+.main-container {
     height: 100%;
 }
 
@@ -49,6 +51,11 @@ html, body, .main-wrapper {
         -webkit-flex: 0 0 auto;
         flex: 0 0 auto;
     }
+}
+
+.fx-fill {
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
 }
 
 body {
@@ -78,6 +85,21 @@ body {
     }
 }
 
+a {
+    color: $white;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+
+    &:visited, &:active, &:focus {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
 
 .menu-btn {
 	background-color: $coal-dark;
@@ -106,12 +128,12 @@ body {
         	position: absolute;
         	height: 1px;
         	width: 100%;
-        	background: $white;
+        	background: $silver;
         	border-radius: 6px;
         	opacity: 1;
         	left: 0;
 
-        	transition: .25s ease-in-out;
+        	transition: all .25s ease-in-out;
 
             -webkit-transform-origin: left center;
             transform-origin: left center;
@@ -130,7 +152,7 @@ body {
             }
 
             &:nth-child(2) {
-            	width: 0%;
+            	width: 0;
             	opacity: 0;
             }
 
@@ -184,6 +206,16 @@ body {
 
     .right {
         text-align: right;
+        margin-top: 2px;
+
+        p {
+            text-transform: uppercase;
+            font-size: 12px;
+
+            strong {
+                text-transform: none;
+            }
+        }
     }
 }
 
@@ -230,6 +262,7 @@ body {
         position: relative;
 
         > a {
+            text-decoration: none;
             padding: 20px 10px;
             display: block;
 
@@ -271,6 +304,7 @@ body {
         &.active, &:hover {
             opacity: 1;
             position: relative;
+            text-decoration: none;
 
             &::after {
                 content: '';
@@ -311,7 +345,7 @@ basic-seamless-iframe {
     }
 
     code {
-        padding: 40px 40px 15px;
+        padding: 40px 30px 15px;
         width: 100%;
         color: white;
     }
@@ -344,6 +378,7 @@ basic-seamless-iframe {
 
         &:hover {
             background-color: $coal-light;
+            text-decoration: none;
         }
     }
 
@@ -393,6 +428,32 @@ basic-seamless-iframe {
         padding:40px;
         float: left;
 
+        h2 {
+            font-size: 20px;
+            font-family: 'ProximaNova-Light';
+            color: black;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            position: relative;
+
+            a {
+                color: $azule;
+                font-size: 14px;
+                line-height: 27px;
+                float: right;
+            }
+
+            &::after {
+                content: '';
+                height: 1px;
+                width: 100%;
+                background-color: $silver;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
         .update-entry {
             display: -webkit-flex;
             display: flex;
@@ -422,13 +483,14 @@ basic-seamless-iframe {
 
             .text {
                 font-size: 14px;
-                color: #686868;
+                color: $silver-text;
                 line-height: 16px;
                 -webkit-flex: 1 1 auto;
                 flex: 1 1 auto;
             }
 
-            em {
+            a {
+                color: $silver-text;
                 font-weight: bold;
                 position: relative;
 
@@ -446,12 +508,6 @@ basic-seamless-iframe {
         }
     }
 
-    .welcome-container h2 {
-        font-size: 20px;
-        font-family: 'ProximaNova-Light';
-        color: black;
-    }
-
     .menu-container{
         float: left;
         width: 100%;
@@ -462,6 +518,16 @@ basic-seamless-iframe {
         box-shadow: 0px 2px 0px 0px #D8D8D8;
     }
 
+    a {
+        color: $azule;
+        font-size: 14px;
+        line-height: 18px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     li.level-1{
         float:left;
         width: 100%;
@@ -469,23 +535,16 @@ basic-seamless-iframe {
         padding-right: 20px;
     }
 
-    li.level-1 h1{
+    li.level-1 h1 {
         font-size: 20px;
         color: #000000;
         line-height: 40px;
         margin: 0;
     }
 
-    li.level-1 a{
-        color:#1657C6;
-        font-size: 14px;
-        line-height: 18px;
+    li.level-1 a {
         padding-bottom: 8px;
         display: block;
-    }
-
-    li.level-1 a:hover{
-        text-decoration: underline;
     }
 
     ul.level-2 {

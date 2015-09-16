@@ -11,14 +11,14 @@
 
 		<!-- Webcomponents -->
 		<script src="scripts/webcomponents.min.js"></script>
-		<link rel="import" href="basic-seamless-iframe.html">
+		<link rel="import" href="partials/basic-seamless-iframe.html">
 
 		<!-- jQuery -->
 		<script src="scripts/jquery-1.11.3.js"></script>
 
 		<!-- Angular files -->
 		<script src="scripts/angular.min.js"></script>
-		<script src="scripts/angular-route.js"></script>
+		<script src="scripts/angular-ui-router.min.js"></script>
 		<script src="scripts/angular-animate.min.js"></script>
 		<script src="scripts/angular-sanitize.min.js"></script>
 
@@ -38,11 +38,11 @@
 		<script src="scripts/markdown.min.js"></script>
 
 		<!-- Angular Masonry -->
-		<script src="scripts/angular-deckgrid.min.js"></script>
-
+		<script src="scripts/masonry-docs.min.js"></script>
+		<script src="scripts/angular-masonry-directive.js"></script>
 	</head>
 	<body ng-app="StyleGuide">
-		<div class="container" ng-controller="Menu">
+		<div class="container main-container main-wrapper" ng-controller="Menu">
 			<div class="left menu-btn" ng-click="toggleMenu()">
 				<div class="hamburger-close" ng-class="{ 'open': !state.menuCollapsed }">
 					<span></span>
@@ -65,7 +65,8 @@
 
 				<div class="right">
 					<div>
-						<p class="text-light">Refresh</p>
+						<p class="text-light">Last Update</p>
+						<p><strong>8/7/15 4:15pm</strong></p>
 					</div>
 				</div>
 			</div>
@@ -73,19 +74,19 @@
 			<div class="row menu" id="menu" collapse="state.menuCollapsed">
 				<div class="menu-repeat panel" ng-repeat="category in components">
 					<div class="list-title" role="tab" id="menuItem{{ $index }}">
-						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed" ng-click="setTmpCategory($index)">{{ category.title }}</a>
+						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed">{{ category.title }}</a>
 					</div>
 					<div id="collapse{{ $index }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ $index }}">
 						<div class="list">
 							<div class="" ng-repeat="element in category.components">
-								<a href="" class="text" ng-click="selectElement( $index )">{{ element.title }}</a>
+								<a href="{{ elementURL($parent.$index, $index) }}" class="text">{{ element.title }}</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div ng-view></div>
+			<div ui-view class="main-wrapper fx-fill"></div>
 		</div>
 	</body>
 <html>
