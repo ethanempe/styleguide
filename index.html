@@ -26,8 +26,13 @@
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="scripts/ui-bootstrap-tpls-0.13.3.min.js"></script>
 
-		<!-- My JS files -->
+		<!-- My JS -->
+		<script src="scripts/packages.js"></script>
+		<script src="scripts/factories.js"></script>
+		<script src="scripts/config.js"></script>
 		<script src="scripts/menu.js"></script>
+		<script src="scripts/home.js"></script>
+		<script src="scripts/preview.js"></script>
 
 		<!-- Syntax Highlighting -->
 		<link rel="stylesheet" href="highlight/styles/monokai_sublime.css">
@@ -42,44 +47,46 @@
 		<script src="scripts/angular-masonry-directive.js"></script>
 	</head>
 	<body ng-app="StyleGuide">
-		<div class="container main-container main-wrapper" ng-controller="Menu">
-			<div class="left menu-btn" ng-click="toggleMenu()">
-				<div class="hamburger-close" ng-class="{ 'open': !state.menuCollapsed }">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<p class="menu-text text-light">MENU</p>
-			</div>
-
-			<div class="row header">
-				<div class="left menu-btn">
-					<div class="hamburger-close">
+		<div class="container main-container main-wrapper" ng-controller="Menu as menu">
+			<div class="header-wrapper">
+				<div class="left menu-btn" ng-click="menu.toggle()">
+					<div class="hamburger-close" ng-class="menu.btnClass()">
+						<span></span>
+						<span></span>
 						<span></span>
 					</div>
 					<p class="menu-text text-light">MENU</p>
 				</div>
-				<div class="title">
-					<p class="text-light">{{ pageTitle() }}</p>
-				</div>
 
-				<div class="right">
-					<div>
-						<p class="text-light">Last Update</p>
-						<p><strong>8/7/15 4:15pm</strong></p>
+				<div class="row header">
+					<div class="left menu-btn">
+						<div class="hamburger-close">
+							<span></span>
+						</div>
+						<p class="menu-text text-light">MENU</p>
+					</div>
+					<div class="title">
+						<p class="text-light">{{ menu.title() }}</p>
+					</div>
+
+					<div class="right">
+						<div>
+							<p class="text-light">Last Update</p>
+							<p><strong>8/7/15 4:15pm</strong></p>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="row menu" id="menu" collapse="state.menuCollapsed">
-				<div class="menu-repeat panel" ng-repeat="category in components">
+			<div class="row menu" id="menu" collapse="!menu.open()">
+				<div class="menu-repeat panel" ng-repeat="group in menu.groups()">
 					<div class="list-title" role="tab" id="menuItem{{ $index }}">
-						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed">{{ category.title }}</a>
+						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed">{{ group.title }}</a>
 					</div>
 					<div id="collapse{{ $index }}" class="collapse" role="tabpanel" aria-labelledby="heading{{ $index }}">
 						<div class="list">
-							<div class="" ng-repeat="element in category.components">
-								<a href="{{ elementURL($parent.$index, $index) }}" class="text">{{ element.title }}</a>
+							<div class="" ng-repeat="element in group.components">
+								<a href="{{ menu.elementLink(element.name) }}" class="text">{{ element.title }}</a>
 							</div>
 						</div>
 					</div>

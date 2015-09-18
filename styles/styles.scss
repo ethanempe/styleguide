@@ -335,7 +335,7 @@ basic-seamless-iframe {
 
     pre {
         padding: 0;
-        margin: 0;
+        margin: 0 -10px;
         border-radius: 0;
         border: none;
         display: -webkit-flex;
@@ -345,7 +345,7 @@ basic-seamless-iframe {
     }
 
     code {
-        padding: 40px 30px 15px;
+        padding: 40px 30px;
         width: 100%;
         color: white;
     }
@@ -366,7 +366,6 @@ basic-seamless-iframe {
         font-size: 18px;
         padding: 0 10px;
         margin-bottom: 10px;
-        border-radius: 2px;
         font-family: 'ProximaNova-Light';
 
         .nc-icon-glyph {
@@ -384,7 +383,6 @@ basic-seamless-iframe {
 
     .markdown {
         background-color: $coal;
-        border-radius: 2px;
         padding: 0 10px;
     }
 

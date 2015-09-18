@@ -1,18 +1,20 @@
-<div class="row category-list">
-    <a href="{{ elementURL(state.category, $index) }}" class="item-link" ng-class="activeElement($index)" ng-repeat="item in components[state.category].components">{{ item.title }}</a>
-</div>
+<div ng-controller="Preview as pre">
+    <div class="row category-list">
+        <a href="{{ menu.elementLink(element.name) }}" class="item-link" ng-class="pre.activeClass($index)" ng-repeat="element in menu.activeGroup()">{{ element.title }}</a>
+    </div>
 
 
-<div class="row">
-    <basic-seamless-iframe src="{{ previewUrl() }}" style="height: {{ state.elementHeight }}px"></basic-seamless-iframe>
-</div>
+    <div class="row">
+        <basic-seamless-iframe src="{{ pre.activePreviewURL() }}" ng-style="pre.heightStyle()"></basic-seamless-iframe>
+    </div>
 
-<div class="row code-snippet">
-    <a href="{{ previewUrl() }}" target="_blank" class="window-link">
-        View this in a blank window
-        <i class="nc-icon-glyph arrows-1_window-zoom-in"></i>
-    </a>
+    <div class="row code-snippet">
+        <a href="{{ pre.activePreviewURL() }}" target="_blank" class="window-link">
+            View this in a blank window
+            <i class="nc-icon-glyph arrows-1_window-zoom-in"></i>
+        </a>
 
-    <div class="markdown container" ng-bind-html="markdownSection"></div>
-    <div hljs source="htmlSnippet" class="element-info"></div>
+        <div class="markdown container" ng-bind-html="pre.markdownNotes()"></div>
+        <div hljs source="htmlSnippet" class="element-info"></div>
+    </div>
 </div>

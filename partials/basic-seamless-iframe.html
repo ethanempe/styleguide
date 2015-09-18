@@ -249,10 +249,13 @@ Polymer({
     var payload = {
       message: message
     };
-    if (detail != null) {
+    if (detail != null && detail != undefined) {
       payload.detail = detail;
     }
-    this.$.iframe.contentWindow.postMessage(payload, this._frameOrigin);
+
+    if (this.$.iframe.contentWindow != null) {
+      this.$.iframe.contentWindow.postMessage(payload, this._frameOrigin);    
+    }
   }
 
 });

@@ -1,19 +1,21 @@
-<div class="homepage-container row" ng-controller="Menu">
+<div class="homepage-container row" ng-controller="Home as home">
     <div class="welcome-container">
-        <h2>What's New <a href="">View All +</a></h2>
-        <div class="update-entry" ng-repeat="entry in getUpdates()">
-            <div class="date">{{ entry.date }}</div>
-            <div class="type">{{ entry.type }}</div>
-            <div class="text" ng-bind-html="entry.text"></div>
+        <div ng-show="home.displayUpdates()">
+            <h2>What's New <a href="" ng-click="home.toggleAllUpdates()">{{ home.allUpdatesText() }}</a></h2>
+            <div class="update-entry" ng-repeat="update in home.allUpdates()" ng-show="home.showUpdate($index)">
+                <div class="date">{{ update.date }}</div>
+                <div class="type">{{ update.type }}</div>
+                <div class="text" ng-bind-html="update.text"></div>
+            </div>
         </div>
     </div>
 
     <div class="menu-container">
         <ul masonry='{"transitionDuration": "0", "itemSelector": ".tile"}'>
-            <li masonry-tile class="level-1 tile" ng-repeat="category in components">
-                <h1>{{ category.title }}</h1>
+            <li masonry-tile class="level-1 tile" ng-repeat="group in menu.groups()">
+                <h1>{{ group.title }}</h1>
                 <ul class="level-2" data-category="$index">
-                    <li ng-repeat="element in category.components"><a href="{{ elementURL($parent.$index, $index) }}" >{{ element.title }}</a></li>
+                    <li ng-repeat="element in group.components"><a href="{{ menu.elementLink(element.name) }}" >{{ element.title }}</a></li>
                 </ul>
             </li>
         </ul>

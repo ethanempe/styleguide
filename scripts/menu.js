@@ -1,32 +1,50 @@
-angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootstrap', 'hljs', 'masonry'])
+angular.module('StyleGuide')
 
-.config(['hljsServiceProvider', '$stateProvider', '$urlRouterProvider', function(hljsServiceProvider, $stateProvider, $urlRouterProvider) {
-	hljsServiceProvider.setOptions({
-		tabReplace: '    '
-	});
+.controller('Menu', ['stateFactory', 'projectFactory', 'urlFactory', function(state, project, url) {
+	this.btnClass = function() {
+		if (state.menuOpen()) {
+			return 'open';
+		}
+		return '';
+	}
 
-	$urlRouterProvider.when('', '/home');
+	this.toggle = function() {
+		state.toggleMenu();
+	}
 
-	$stateProvider
-		.state('home', {
-			url: '/home',
-			templateUrl: 'partials/homepage.html',
-			controller: function($scope) {
-				$scope.state.isHomepage = true;
-			}
-		})
-		.state('element-view/:cat/:elem', {
-			url: '/element-view/:cat/:elem',
-			templateUrl: 'partials/view.html',
-			controller: function($scope, $stateParams) {
-				$scope.setCategory($stateParams.cat);
-				$scope.selectElement($stateParams.elem);
-				$scope.state.isHomepage = false;
-			}
-		});
+	this.title = function() {
+		if (state.page() == 'home') {
+			return project.name() + ' Style Guide';
+		}
+		else if (state.page() == 'preview') {
+			return state.category().title;
+		}
+	}
+
+	this.groups = function() {
+		return project.categories();
+	}
+
+	this.activeGroup = function() {
+		return project.category(state.category()).components;
+	}
+
+	this.isActiveElement = function(index) {
+		return index == state.elementIndex();
+	}
+
+	this.elementLink = function(elem) {
+		if (elem === undefined) return;
+		var e = project.catAndElem(elem);
+		return url.previewURL(e.cat, e.elem);
+	}
+
+	this.open = function() {
+		return state.menuOpen();
+	}
 }])
 
-.controller('Menu', ['$scope', '$http', function($scope, $http, $stateProvider) {
+.controller('All', ['$scope', '$http', 'stateFactory', function($scope, $http, state) {
 	$scope.state = {
 		category: 0,
 		menuCollapsed: true,
@@ -42,12 +60,28 @@ angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootst
 		}
 	}
 
-	$scope.previewUrl = function() {
-		return "project/sources/preview-1.html?" + $scope.state.elementName;
+	$scope.isMenuOpen = function() {
+		return state.menuOpen();
 	}
 
 	$scope.toggleMenu = function() {
-		$scope.state.menuCollapsed = !$scope.state.menuCollapsed;
+		state.toggleMenu();
+	}
+
+	$scope.getCategory = function() {
+		return $scope.state.category;
+	}
+
+	$scope.getCategoryComponents = function() {
+		return $scope.components[$scope.getCategory()].components;
+	}
+
+	$scope.getElementHeight = function() {
+		return $scope.state.elementHeight;
+	}
+
+	$scope.previewUrl = function() {
+		return "project/sources/preview-1.html?" + $scope.state.elementName;
 	}
 
 	$scope.setCategory = function(cat) {
@@ -84,6 +118,21 @@ angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootst
 
 	$scope.elementURL = function(cat, elem) {
 		return '#/element-view/' + cat + '/' + elem;
+	}
+
+	_catAndElem = {};
+	_setupCatAndElem = function() {
+		for (var i = 0; i < $scope.components.length; i++) {
+			var elements = $scope.components[i].components;
+
+			for (var j = 0; j < elements.length; j++) {
+				var elemName = elements[j].name;
+				_catAndElem[elemName] = {
+					cat: i,
+					elem: j
+				}
+			}
+		}
 	}
 
 	_elementHeight = function(index) {
@@ -138,13 +187,18 @@ angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootst
 
 	init = function() {
 		refresh();
+		_setupCatAndElem();
 		// $scope.selectElement($scope.state.elementIndex);
 	}
 
-	_modifySettings = function() {
+	_addLinksToUpdateNotes = function() {
 		for (var i = 0; i < _settings.updates.length; i++) {
 			var text = _settings.updates[i].text;
-			text = text.replace('*', '<a href="">');
+
+			var catElemObj = _catAndElem[_settings.updates[i].element];
+			var url = $scope.elementURL(catElemObj.cat, catElemObj.elem);
+
+			text = text.replace('*', '<a href="' + url + '">');
 			text = text.replace('*', '</a>');
 			_settings.updates[i].text = text;
 		}
@@ -155,27 +209,5 @@ angular.module('StyleGuide', ['ui.router', 'ngAnimate', 'ngSanitize', 'ui.bootst
 	}
 
 	_settings = {};
-
-
-	var responsePromise = $http.get('components.json');
-	responsePromise.success(function(data, status, headers, config) {
-		$scope.components = data;
-
-		// Initialize the page
-		init();
-	}).error(function(data, status, headers, config) {
-		console.log("There was an error making an AJAX call to \"components.json\"");
-		console.log("Status: " + status);
-	});
-
-
-	var responsePromise = $http.get('settings.json');
-	responsePromise.success(function(data, status, headers, config) {
-		_settings = data;
-		_modifySettings();
-	}).error(function(data, status, headers, config) {
-		console.log("There was an error making an AJAX call to \"settings.json\"");
-		console.log("Status: " + status);
-	});
 
 }]);
