@@ -72,13 +72,16 @@
 					<div class="right">
 						<div>
 							<p class="text-light">Last Update</p>
-							<p><strong>8/7/15 4:15pm</strong></p>
+							<p><strong ng-bind="menu.updateTime()">2/29/15 9:60am</strong></p>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="row menu" id="menu" collapse="!menu.open()">
+				<a href="#/home">
+					<i class="nc-icon-outline ui-1_home-simple"></i>
+				</a>
 				<div class="menu-repeat panel" ng-repeat="group in menu.groups()">
 					<div class="list-title" role="tab" id="menuItem{{ $index }}">
 						<a role="button" data-toggle="collapse" data-parent="#menu" href="#collapse{{ $index }}" aria-expanded="true" aria-controls="collapse{{ $index }}" class="text-light nc-icon-glyph arrows-1_minimal-up collapsed">{{ group.title }}</a>

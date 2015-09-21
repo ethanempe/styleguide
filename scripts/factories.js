@@ -101,6 +101,9 @@ angular.module('StyleGuide')
 			}
 			return _settings.projectName;
 		},
+		updateDateTime: function() {
+			return _settings.updateDateTime;
+		},
 		allUpdates: function(index) {
 			return _settings.updates;
 		},

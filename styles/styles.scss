@@ -15,6 +15,7 @@ $mud-dark: #595959;
 $azule: #1657c6;
 
 @import url('fonts/nucleo-glyph.min.css');
+@import url('fonts/nucleo-outline.min.css');
 
 * {
     box-sizing: border-box;
@@ -252,6 +253,18 @@ a {
         box-shadow: none;
     }
 
+    a i.nc-icon-outline {
+        color: $silver;
+        position: absolute;
+        left: 135px;
+        top: 7px;
+        padding: 12px 20px;
+        font-size: 26px;
+        background-color: $coal-dark;
+        height: 55px;
+        border-radius: 5px;
+    }
+
     .menu-repeat:first-of-type {
         margin-top: 70px;
         .list-title { border: none; }
@@ -388,7 +401,8 @@ basic-seamless-iframe {
 
     h2 {
         font-size: 18px;
-        margin-top: 15px;
+        margin-top: 0;
+        padding-top: 15px;
         padding-bottom: 10px;
         position: relative;
         font-family: 'ProximaNova-Light';

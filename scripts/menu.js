@@ -12,12 +12,17 @@ angular.module('StyleGuide')
 		state.toggleMenu();
 	}
 
+	this.updateTime = function() {
+		return project.updateDateTime();
+	}
+
 	this.title = function() {
 		if (state.page() == 'home') {
 			return project.name() + ' Style Guide';
 		}
 		else if (state.page() == 'preview') {
-			return state.category().title;
+			var catInd = state.category();
+			return project.category(catInd).title;
 		}
 	}
 
