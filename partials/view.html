@@ -1,4 +1,4 @@
-<div ng-controller="Preview as pre">
+<div class="main-wrapper" ng-controller="Preview as pre">
     <div class="row category-list">
         <a href="{{ menu.elementLink(element.name) }}" class="item-link" ng-class="pre.activeClass($index)" ng-repeat="element in menu.activeGroup()">{{ element.title }}</a>
     </div>
@@ -15,6 +15,5 @@
         </a>
 
         <div class="markdown" ng-bind-html="pre.markdownNotes()"></div>
-        <div hljs source="htmlSnippet" class="element-info"></div>
     </div>
 </div>

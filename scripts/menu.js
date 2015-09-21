@@ -3,7 +3,10 @@ angular.module('StyleGuide')
 .controller('Menu', ['stateFactory', 'projectFactory', 'urlFactory', function(state, project, url) {
 	this.btnClass = function() {
 		if (state.menuOpen()) {
+			$('html, body').addClass('box-open');
 			return 'open';
+		} else {
+			$('html, body').removeClass('box-open');
 		}
 		return '';
 	}
@@ -13,6 +16,8 @@ angular.module('StyleGuide')
 	}
 
 	this.updateTime = function() {
+		if (project.categories() === undefined)
+			return '';
 		return project.updateDateTime();
 	}
 
